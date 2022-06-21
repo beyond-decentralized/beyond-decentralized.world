@@ -1,0 +1,7 @@
+{
+    "name": "autonomous-interdependent-repositories.tech",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development nodemon"
+    }
+}

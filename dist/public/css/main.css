@@ -2230,7 +2230,7 @@ input::-moz-focus-inner {
   flex-flow: column nowrap;
   width: 300px;
   background-color: #151515;
-  padding-top: 6.4rem;
+  padding-top: 2.4rem;
   padding-right: 3.2rem;
   padding-left: 4.4rem;
   overflow-y: auto;
@@ -2281,7 +2281,7 @@ input::-moz-focus-inner {
   align-items: stretch;
   max-width: 100%;
   background-color: #151515;
-  margin-top: 3.2rem;
+  margin-top: 0rem;
 }
 
 .header__nav-wrap a {
