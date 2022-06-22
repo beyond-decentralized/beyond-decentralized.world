@@ -1,3 +1,3 @@
-# decentralized-relational.tech
+# beyond-decentralized.world
 
-AIRport blog
+Let's build what will come after data decentralization!
