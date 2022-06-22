@@ -1,0 +1,78 @@
+In 2015 I wrote a Family Organizer and very quickly realized that
+I would have to maintain a server where other families would keep
+their data.  That started me thinking that I can write a quick
+adapter for Google Docs to store data in.  Since then AIRport
+development has been driven by data decentralization.  Probably
+2 or 3 years back I started getting the idea that it can also
+work in centralized environments and seamlessly serve both
+centralized (though distributed) data along with decentralized
+data, without compromising privacy.  Now finally I'm seeing the
+picture of how it can be done.
+
+In the decentralized environment AIRport runs on user devices,
+apps are loaded in VMs and inter-operate through AIRport.  The
+key difference between this and current state of the art is
+that right now Apps call APIs vs in AIRport they all have
+access to the same relational database and can both make
+queries and share in persisting of the data (collectively,
+across apps).
+
+Luckily just I've been tasked at my day job to build an OAuth
+server.  This made me realized that the authorization
+infrastructure for such interoperation is already in place.
+Apps are already talking to APIs everywhere, they just aren't
+sharing a common database.  This is where Data Independence
+Network comes into the picture.  It has has been setup to
+answer the question of how do you share a database across
+organizations and jurisdictions.
+
+The technical solution for common databases is already in
+place - relational databases like CockroachDB already let
+you partition relational tables and schemas geographically
+or in just about any other way.  But this still means
+that you have to be on the same database and the
+decentralization features of AIRport's Autonomous
+Interdependent Repositories (AIR) are not required.  That that
+is required is access to the truly shared database.
+
+But, realistically, you can't expect organizations and
+governments to sign up for sharing all of their data with
+everybody else.  There has to be a way to share just
+the right amount of data to fulfill the needs of the
+calling App and receive something material in return.
+And this is where AIR excels - each AIRepository is meant
+to have all of the information need to fulfill functions
+associated with that data and also can automatically be
+linked with more related data, if and when needed.  And
+controls for exactly how and exactly to whom, and via
+which links that data is shared is built into AIR since
+there is a separate request to return each linked
+Repository.
+
+This sharing granularity, combined with ability to
+separate data providers from application providers
+gives the ability for applications to share data
+across companies and jurisdictions without compromising
+privacy of those companies and jurisdictions, just like
+it is meant for Applications to share data of end users
+without compromising their privacy.  This can be
+accomplished because there is the AIRport layer, which
+acts as a temporary custodian for the data.  Applications
+just run in locked down VMs and can't send or receive
+data from anything other than AIRport.  But they
+can interoperate with other Applications that run
+on an AIRport, any AIRport server that has network
+connectivity the the AIRport server running this App.
+All that remains is to ensure that AIRport servers
+run in a fair way and can be trusted to enforce.  This
+is where public blockchain technology is comes into the
+picture.  Public blockchains like Koinos provide a
+controlled and checked environment in which data can be
+run.  If we can set up a globally trusted blockchain
+network that can seamless and securely share data
+between Applications, on top of a well known relational
+database (which provides a way to understand the
+underlying structure of the data and the true and
+tried query engine with by far the biggest developer
+base on the planet) - we can change the way data is
+shared, period.
