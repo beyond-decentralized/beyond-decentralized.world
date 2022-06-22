@@ -64,15 +64,24 @@ can interoperate with other Applications that run
 on an AIRport, any AIRport server that has network
 connectivity the the AIRport server running this App.
 All that remains is to ensure that AIRport servers
-run in a fair way and can be trusted to enforce.  This
-is where public blockchain technology is comes into the
-picture.  Public blockchains like Koinos provide a
-controlled and checked environment in which data can be
-run.  If we can set up a globally trusted blockchain
-network that can seamless and securely share data
-between Applications, on top of a well known relational
-database (which provides a way to understand the
-underlying structure of the data and the true and
-tried query engine with by far the biggest developer
-base on the planet) - we can change the way data is
-shared, period.
+run in a fair way and can be trusted to enforce.  
+
+<img src="./images/koinos_logo.png">
+
+This is where public blockchain technology is comes into
+the picture.  Public blockchains like Koinos (the <a
+href="https://www.youtube.com/watch?v=kp9wTz5f_Yo">
+most advanced public blockchain on the planet</a>)
+provide a controlled and checked environment in which 
+data can be run.  If we can set up a globally trusted
+network that can seamlessly and securely share data
+between organizations, governments and the people, on
+top of a well known relational database technology
+then we provide an easy migration path for the 
+biggest developer base on the planet to write an
+internet of post-decentralized apps.  And with
+AIRport's most advanced ORM framework on the planet
+(at least it is my dream framework of how I want to
+work with the database) and it can just be the right
+combination of technologies to change the way 
+applications are written, period.
