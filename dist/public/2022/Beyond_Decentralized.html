@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>AIRport Blog</title>
+    <meta name="description" content="Application Interoperability">
+    <meta name="author" content="Artem V Shamsutdinov">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+</head>
+
+<body class="ss-bg-white">
+
+    <!-- preloader
+================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+    ================================================== -->
+        <header class="s-header header">
+        </header> <!-- end s-header -->
+
+
+        <!-- site content
+    ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+
+                <article class="column large-full entry format-standard">
+
+                    <div class="media-wrap entry__media">
+                        <div class="entry__post-thumb">
+                            <img alt="Helium Pre Exposure" sizes="(max-width: 1000px) 100vw, 1000px"
+                                src="images/helium-pre-exposure-in-1.jpg">
+                            <p style="text-align: center; width: 100%">
+                                Researches at <a href="https://english.hf.cas.cn/">
+                                    Hefei Institutes of Physical Science
+                                </a> found that helium pre-exposure
+                                <a
+                                    href="https://phys.org/news/2022-06-helium-pre-exposure-inhibits-hydrogen-isotope.html">
+                                    inhibits penetration of hydrogen</a> into reactor walls.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="content__page-header entry__header">
+                        <h1 class="display-1 entry__title">
+                            Beyond Decentralized
+                        </h1>
+                        <ul class="entry__header-meta">
+                            <li class="author">By Artem V. Shamsutdinov</li>
+                            <li class="date">June 23nd, 2022</li>
+                        </ul>
+                    </div> <!-- end entry__header -->
+
+                    <div class="entry__content">
+                        <p>
+                            In 2015 I wrote a Family Organizer and realized that families
+                            would have to trust a company with their plans. I started to write
+                            <a
+                                href="https://autonomousinterdependentrepositories.wordpress.com/2016/04/23/first-blog-post/">
+                                a relational adapter</a> for Google Docs to store data in
+                            personal accounts. Overtime it evolved into
+                            <a href="https://github.com/beyond-decentralized/AIRport">
+                                AIRport </a>. I have been thinking that AIRport can also
+                            work in centralized environments and seamlessly serve both
+                            centralized and decentralized data. Now I'm realizing how siloed,
+                            centralized databases can join a fine-grained, privacy oriented
+                            network of databases.
+                        </p>
+                        <h2>Decentralized</h2>
+                        <p>
+                            In the decentralized environment AIRport runs on user devices.
+                            Apps are loaded in VMs and inter-operate through AIRport. Data
+                            never goes out to third-party servers and stays in a database
+                            on user's device. Repositories are maintained in
+                            <a href="https://ipfs.io/">IFPS</a> and
+                            <a href="https://www.arweave.org/">Arweave</a>. This works well
+                            for family and friends data but does not work for situations where
+                            data is shared with the general public. AIRport Applications can
+                            with the data from central servers but that data would still be
+                            siloed.
+                        </p>
+                        <h2>Organizational</h2>
+                        <p>
+                            Luckily, I had to learn OAuth recently. This made me realize that
+                            there already is an authorization infrastructure for internet-scale
+                            interoperation. Apps are already talking to APIs everywhere, they
+                            just aren't sharing a common database. This is what the
+                            <a href="https://dataindependence.net/">
+                                Data Independence Network</a> tries to answer - how to keep data
+                            locally and allow to share it globally, in a secure and fair
+                            way.
+                        </p>
+                        <p>
+                            The industry already has a technical solution for a global database.
+                            Relational databases like CockroachDB already let
+                            you partition relational tables and schemas geographically
+                            or in just about any other way. But this means
+                            that everyone has to be on the same distributed database. Singing
+                            up everyone for (and placing everything in) the same database is not
+                            likely to work. What is needed is an internet of databases. There has
+                            to be a way to share just the right amount of data to fulfill the needs
+                            of the calling App for a particular User.
+                        </p>
+                        <h2>How</h2>
+                        <p>
+                            This is where AIRport excels - each Repository is meant to have all of
+                            the information needed to fulfill functions associated with that data
+                            and also can automatically be linked with more related data, if and
+                            when needed. Because each Repository hop is a distinct operation,
+                            AIRport answers the who, what, when, where, why and how questions
+                            on data sharing.
+                        </p>
+                        <h3>Permissions</h3>
+                        <p>
+                            Of course enforcing rules on per-repository basis is
+                            hard to accomplish manually. The technical side of doing
+                            so is easily accomplished by OAuth but figuring out if
+                            a given App+User should have a permsission to a given
+                            repository is not a trivial task. It is possible to come
+                            with and maintain a database of permissions (and in some
+                            cases it will be the way to go) but for (likely) the vast
+                            majority of the cases large scale data modeling,
+                            per-repository pre-flight text processing and artificial
+                            intelligence will be required.
+                        </p>
+                        <h3>Adapting Repositories</h3>
+                        <p>
+                            Another question is how to take an existing centralized
+                            relational database and break it up into pieces. After
+                            adding REPOSITORY_ID and REPOSITORY_ACTOR_ID columns
+                            something will have to figure out what data belongs to
+                            which repository. Here, for fast majority of the cases
+                            following the @OneToMany and @ManyToOne links in the
+                            data will allow you to isolate data groupings eligible
+                            for being Repositories. If there are logical rules for
+                            spitting the data, filters can be written that will
+                            narrow the boundaries of Repositories as they are first
+                            being retrieved and defined. And for very large databases,
+                            models can be trained on data samples and then deployed
+                            to govern Repository boundaries for all of the data.
+                        </p>
+                        <h3>Or just plugging in</h3>
+                        <p>
+                            In certain cases it may not be required to split up
+                            relational databases at all. This can be done when
+                            AIRport is running in an environment protected by the
+                            organization that is sharing its data. With additional
+                            AIRport hooks that Organization can write apps that
+                            will provide security rules for all queries performed
+                            against it's data. This will allow other third-party
+                            Applications to Run on the same server and to join
+                            Repositories from other databases to still-centralized
+                            data of this Organization. The core requirement for
+                            interoperability at this level is publishing of the
+                            Organization's schema definition for others to see
+                            and build queries against.
+                        </p>
+                        <p>
+                            Ultimately the sharing granularity provided by Repositories,
+                            combined with ability to separate Data providers from
+                            Application providers gives the ability for Applications
+                            to share data across companies and jurisdictions without
+                            compromising privacy of those companies and jurisdictions.
+                            This is accomplished because AIRport controls all database
+                            access and API operation flow, and acts as a temporary
+                            custodian for the data. Applications just run in locked down
+                            VMs and can't send or receive data from anything other than
+                            AIRport server. AIRport controls all interoperation with other
+                            local Applications and other AIRport servers.
+                        </p>
+                        <p>
+                            AIRport will prove that it is technically possible to share
+                            data in end-users best interests - in the interestests of the
+                            people. There is lots of work ahead to get it there. And when
+                            it's ready the next big question will be - how to ensure that
+                            AIRport servers can be trusted by all parties involved.
+                        </p>
+                    </div> <!-- end entry content -->
+
+                </article> <!-- end column large-full entry-->
+
+                <div class="comments-wrap">
+                </div> <!-- end comment-respond -->
+
+            </main>
+
+        </div> <!-- end s-content -->
+
+
+        <!-- footer
+    ================================================== -->
+        <footer class="s-footer footer">
+        </footer>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+================================================== -->
+    <script src="../js/post-component-loader.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>

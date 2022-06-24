@@ -2,14 +2,13 @@
 
     <div class="header__top">
         <div class="header__logo">
-            <a class="logo-text" href="https://github.com/autonomous-interdependent-repositories/AIRport">
-                Decentralized Relational
+            <a class="logo-text" href="https://github.com/sponsors/beyond-decentralized/AIRport">
+                Beyond Decentralized
             </a>
         </div>
         <!-- toggles -->
         <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
     </div>
-
 
     <style>
         header.s-header.header {
@@ -25,61 +24,116 @@
             font-size: 10px;
         }
 
-        .used-in table {
-            color: black;
-            font-size: 15px;
+        @media screen and (max-width:600px) {
+            iframe.support-AIRport {
+                height: 160px;
+                padding-left: 0px;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:340px) {
+            iframe.support-AIRport {
+                height: 180px;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            table.used-in td img {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width:1100px) {
+            div header.s-header.header {
+                padding: 0px;
+            }
+
+            table.used-in img {
+                width: 40%;
+            }
+
+            table.used-in {
+                background-color: #111111;
+                margin-top: 8.2rem;
+            }
+
+            body div.s-content {
+                padding-top: 0rem;
+            }
+        }
+
+        @media screen and (min-width:401px) and (max-width:1099px) {
+            table.used-in {
+                margin-top: 7.5rem;
+            }
+
+        }
+
+        @media screen and (min-width:1100px) {
+            header .header__logo {
+                text-align: center;
+            }
+
+            table.used-in {
+                margin-bottom: 0px;
+            }
+
+            table.used-in .used-in-description {
+                font-size: 13px;
+            }
+
+            table.used-in img {
+                width: 90%;
+            }
+
+            table.used-in a {
+                width: 100%;
+            }
+        }
+
+        .used-in {
+            color: white;
             width: 100%;
         }
 
         .used-in td {
+            border: 0px;
+            line-height: 1;
+            padding: 3px;
             text-align: center;
-            width: 50%;
+            width: 25%;
         }
 
-        .used-in .usin-description {
-            width: 100%;
-            font-size: 17px;
+        .used-in td:first-child {
+            text-align: right;
+        }
+
+        .used-in .used-in-description {
+            font-size: 15px;
         }
 
         .used-in img {
-            width: calc(100% - 30px);
             border-radius: 200px;
-        }
-
-        .used-in img.votecube {
-            width: 100%;
+            width: 30%;
         }
     </style>
-    <table>
+    <table class="used-in">
         <tr>
-            <td class="usin-description" colspan="2">
-                used in
+            <td class="used-in-description">
+                by
             </td>
-        </tr>
-        <tr>
             <td>
                 <a href="https://dataindependence.net">
-                    <img src="./images/brands/data-independence-network/logo_black_background.png">
+                    <img src="../images/brands/data-independence-network/logo_black_background.png">
                 </a>
             </td>
             <td>
                 <a href="https://turbase.app">
-                    <img src="./images/brands/turbase/turbase-logo.png">
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="https://votecube.com/#!/poll/info/Cube/vote/kBSVLFHn01lMtvPXYIzu/4vz9cPyZiMoaGG4JOh6t">
-                    <img src="./images/brands/votecube/Votecube_Logo.png">
+                    <img src="../images/brands/turbase/turbase-turbine-small.png">
                 </a>
             </td>
             <td>
-                <a href="https://dataindependence.net/sapoto-ui-demo/#/situation-list/Children">
-                    <img class="sapoto" src="./images//brands/sapoto.net/icon.png">
-                </a>
-                <br>
-                Sapoto.net
             </td>
         </tr>
     </table>
@@ -88,6 +142,7 @@
             <li class="has-children current">
                 <a href="../index.html" title="" class="sub-menu-is-open">Blog</a>
                 <ul class="sub-menu" style="display: block;">
+                    <li><a href="../2022/Beyond_Decentralized.html">Beyond Decentralized</a></li>
                     <li><a href="../2022/Cross-Repository_operations.html">Cross-Repository operations</a></li>
                     <li><a href="../2022/Solving_Id_Problems.html">Solving Id Problems</a></li>
                     <li><a href="../2022/Short_Queries.html">Short Queries</a></li>
@@ -123,7 +178,7 @@
 
         <ul class="header__social">
             <li class="ss-github">
-                <a href="https://github.com/autonomous-interdependent-repositories/AIRport">
+                <a href="https://github.com/sponsors/beyond-decentralized/AIRport">
                     <span class="screen-reader-text">Github</span>
                 </a>
             </li>

@@ -1,7 +1,7 @@
 {
-  "name": "autonomous-interdependent-repositories.tech",
+  "name": "beyond-decentralized.world",
   "version": "1.0.0",
-  "description": "Autonomous Interdependent Repositories tech blog",
+  "description": "AIRport blog",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
     "rebuild": "rimraf dist && tsc",
