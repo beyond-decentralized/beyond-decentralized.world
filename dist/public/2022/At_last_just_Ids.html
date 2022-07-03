@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>AIRport Blog</title>
+    <meta name="description" content="Application Interoperability">
+    <meta name="author" content="Artem V Shamsutdinov">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+</head>
+
+<body class="ss-bg-white">
+
+    <!-- preloader
+================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+    ================================================== -->
+        <header class="s-header header">
+        </header> <!-- end s-header -->
+
+
+        <!-- site content
+    ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+
+                <article class="column large-full entry format-standard">
+
+                    <div class="media-wrap entry__media">
+                        <div class="entry__post-thumb">
+                            <img alt="table-top Orbitron" sizes="(max-width: 1000px) 100vw, 1000px"
+                                src="images/table_top_orbitron.png">
+                            <p style="text-align: center; width: 100%">
+                                <a href="https://www.avalanche.energy/">Avalanche Energy</a>
+                                is developing a table-top "Orbitron" fusion reactor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="content__page-header entry__header">
+                        <h1 class="display-1 entry__title">
+                            At last, just Ids
+                        </h1>
+                        <ul class="entry__header-meta">
+                            <li class="author">By Artem V. Shamsutdinov</li>
+                            <li class="date">July 2nd, 2022</li>
+                        </ul>
+                    </div> <!-- end entry__header -->
+
+                    <div class="entry__content">
+                        <p>
+                            As I'm using AIRport APIs I'm realizing that the
+                            existing records passed into AIRport APIs need to be
+                            verified as such. This is leading me to finalize the
+                            Id API for AIRport.
+                        </p>
+                        <h2>
+                            Duality of Ids
+                        </h2>
+                        <p>
+                            Id validation is usually taken care of automatically.
+                            If you are doing an update operation and the key for
+                            the updated or referenced entity is not found, the
+                            update operation will fail in the database.
+                        </p>
+                        <p>
+                            AIRport stores all records in memory (in Web version and
+                            in app server caches). To <a href="AIR_UuId.html#performance">save
+                                on the RAM</a>
+                            (required to store tables and indexes) AIRport uses local
+                            numeric Ids (or just local ids) to identify all of the
+                            objects within the local database.
+                        </p>
+                        <p>
+                            For AIRport Clients and Apps each object contains a
+                            computed <a href="./AIR_UuId.html">GUID field</a>
+                            (previously described as "uuId"). The
+                            Client is expected to use GUIDs and ignore
+                            local Ids.  This will cause to bugs if inexperienced
+                            developers use local Ids. This is a likely scenario
+                            since currently local ids are named "id".
+                        </p>
+                        <h2>
+                            Renaming Ids
+                        </h2>
+                        <p>
+                            To reduce developer confusion the "id" field will be
+                            renamed to "_local_key".  This accurately
+                            describes the purpose of this field - it is there to
+                            link records together in the local database (often
+                            in memory).  The name also doesn't immediately stand
+                            out as something to be used as an identifier. The
+                            "actorRecordId" is also numeric but is unique for
+                            an actor within a repository and hence is globally
+                            unique.
+                        </p>
+                        <p>
+                            To make things clear the GUID  field is now renamed to
+                            be "id". It is globally unique for all Entity
+                            records and naming it "id" clearly indicates to the user
+                            that it is what should be used as the identifier.
+                        </p>
+                        <h2>
+                            Checking Entity Existence
+                        </h2>
+                        <p>
+                            The renaming "GUID" to just "id" also clarifies record
+                            existence checks. AIRport will automatically perform this
+                            functionality (just like raw relational databases), at the
+                            cost of making additional queries:
+                        </p>
+                        <p>
+                            AIRport will create an in-memory cache
+                            for the top level transaction (also used by all nested
+                            transactions). All objects passed into "save" operations
+                            (including nested objects) are added to this
+                            cache. At the time of "save" operation, AIRport will scan
+                            the passed in object graph and mark all objects not yet proven
+                            to already exist. It then will query for those objects by
+                            GUIDs and update numeric ids in the passed in object graph
+                            (with what is present in the local database). If there are
+                            non-existing objects the "save" operation will throw an
+                            Error.
+                        </p>
+                        <p>
+                            As an additional bonus, this will verify that all referenced
+                            repositories
+                            <a href="https://beyond-decentralized.world/2022/Cross-Repository_operations.html">pull in
+                                are loaded into the local database</a>.
+
+                        </p>
+                        <p>
+                            The query operations to retrieve the objects boil down to finding
+                            all of the Repositories and Actors present in the passed-in
+                            object graph. That's just two distinct queries (regardless of
+                            the side of the object graph) and won't have a significat impact
+                            on AIRport performance.
+                        </p>
+                    </div><!-- end entry content -->
+
+                </article> <!-- end column large-full entry-->
+
+                <div class="comments-wrap">
+                </div> <!-- end comment-respond -->
+
+            </main>
+
+        </div> <!-- end s-content -->
+
+
+        <!-- footer
+    ================================================== -->
+        <footer class="s-footer footer">
+        </footer>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../js/post-component-loader.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>

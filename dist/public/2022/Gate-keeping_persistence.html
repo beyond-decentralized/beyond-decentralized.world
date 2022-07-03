@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>AIRport Blog</title>
+    <meta name="description" content="Application Interoperability">
+    <meta name="author" content="Artem V Shamsutdinov">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+</head>
+
+<body class="ss-bg-white">
+
+    <!-- preloader
+================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+    ================================================== -->
+        <header class="s-header header">
+        </header> <!-- end s-header -->
+
+
+        <!-- site content
+    ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+
+                <article class="column large-full entry format-standard">
+
+                    <div class="media-wrap entry__media">
+                        <div class="entry__post-thumb">
+                            <img alt="Zap Energy reactor" sizes="(max-width: 1000px) 100vw, 1000px"
+                                src="images/zap_energy_reactor.png">
+                            <p style="text-align: center; width: 100%">
+                                <a href="https://www.zapenergyinc.com/">Zap Energy</a>
+                                uses sheared flow rather than magnetic fields to stabilize plazma.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="content__page-header entry__header">
+                        <h1 class="display-1 entry__title">
+                            Gate-keeping persistence
+                        </h1>
+                        <ul class="entry__header-meta">
+                            <li class="author">By Artem V. Shamsutdinov</li>
+                            <li class="date">July 2nd, 2022</li>
+                        </ul>
+                    </div> <!-- end entry__header -->
+
+                    <div class="entry__content">
+                        <p>
+                            AIRport has a very useful feature: all objects passed into
+                            @Api() methods get updated with the latest state (when
+                            they are returned back to the Client). This is very
+                            useful - the Client doesn't have to re-query the object
+                            to get the latest state: less code to write and
+                            maintain (and faster applications). But, there may be cases
+                            where this becomes problematic.
+                        </p>
+                        <p>
+                            AIRport uses <a
+                                href="https://autonomousinterdependentrepositories.wordpress.com/2019/09/06/entity-management/">hidden
+                                state in the entity objects</a> to
+                            keep track of the original state of those objects. This
+                            was done to avoid the complexity of managing a database
+                            session (a la Hibernate) and also removes the need for
+                            an extra query to get the original state of an object
+                            (when performing an update on that object). Plus,
+                            querying for the current state of an object in the
+                            database does not work when that object was modified
+                            by another operation. This is expecially true for modern
+                            SPA applications where the user might keep the page with
+                            modifications open for a long period of time, before
+                            submitting. In that case, modifications made
+                            by the other (remote) operation will get inadvertently
+                            reverted.
+                        </p>
+                        <h2>The edge case</h2>
+                        <p>
+                            There is an edge case in AIRport where an object might be
+                            saved even if the developer did not intend
+                            to save it. This will happen if the user modifies the
+                            object in the Client and then passes it in as a nested object
+                            to a "save" operation of another object.
+                        </p>
+                        <p>
+                            This is an anti-pattern and really should never be done
+                            by developers. And even if this happens, it is largely
+                            mitigated by AIRport running "save"s <a
+                                href="https://beyond-decentralized.world/2022/Cross-Repository_operations.html">
+                                within repository boundaries</a>.  Since
+                            repositories are meant to be small and focused (and often
+                            time-bound) the chances of the Client wanting to perform
+                            multiple update operations in separate @Api() calls (and making
+                            all of the modifications before calling either one of
+                            the @Api() calls) are slim to none. But, it is technically
+                            possible.
+                        </p>
+                        <p>
+                            For example in <a
+                                href="https://votecube.com/#!/poll/info/Cube/vote/kBSVLFHn01lMtvPXYIzu/4vz9cPyZiMoaGG4JOh6t">
+                                Votecube</a>
+                            (the first application being written with AIRport) Ideas
+                            can stem from other Ideas.  When saving a new idea the
+                            parent idea is passed in to signify that this is the case.
+                            The Votecube App wants to persist the child Idea but doesn't
+                            want to update the parent (in case it was modified for some
+                            reason).
+                        </p>
+                        <p>
+                            In the case described above Ideas will live in separate
+                            repositories and the operation will be repository-scoped
+                            (as is the default case for AIRport).  But one could
+                            imagine a scenario where a @CrossRepository operation
+                            passes in an object graph and some of the objects
+                            where modified in the Client (possibly inadvertently
+                            and weren't intended for persistence).
+
+                        </p>
+                        <p>
+                            Note that this really isn't any different from
+                            the current state of things. This is exactly how
+                            a save operation will work in Hibernate. But,
+                            unfortunatelly I can't think of any way to make
+                            AIRport handle this better, besides it's nature
+                            of breaking data into Repositories.
+                        </p>
+                    </div><!-- end entry content -->
+
+                </article> <!-- end column large-full entry-->
+
+                <div class="comments-wrap">
+                </div> <!-- end comment-respond -->
+
+            </main>
+
+        </div> <!-- end s-content -->
+
+
+        <!-- footer
+    ================================================== -->
+        <footer class="s-footer footer">
+        </footer>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../js/post-component-loader.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>

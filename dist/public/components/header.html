@@ -117,6 +117,11 @@
             border-radius: 200px;
             width: 30%;
         }
+
+        .year-heading {
+            color: orange;
+            font-weight: bold;
+        }
     </style>
     <table class="used-in">
         <tr>
@@ -141,7 +146,10 @@
         <ul class="header__nav">
             <li class="has-children current">
                 <a href="../index.html" title="" class="sub-menu-is-open">Blog</a>
-                <ul class="sub-menu" style="display: block;">
+                <div onclick="selectYearOnPage(2022)" class="year-heading">2022</div>
+                <ul id="2022-articles" class="sub-menu" style="display: block;">
+                    <li><a href="../2022/Gate-keeping_persistence.html">Gate-keeping_persistence</a></li>
+                    <li><a href="../2022/At_last_just_Ids.html">At last, just Ids</a></li>
                     <li><a href="../2022/Beyond_Decentralized.html">Beyond Decentralized</a></li>
                     <li><a href="../2022/Cross-Repository_operations.html">Cross-Repository operations</a></li>
                     <li><a href="../2022/Solving_Id_Problems.html">Solving Id Problems</a></li>
@@ -149,6 +157,9 @@
                     <li><a href="../2022/AIR_UuId.html">AIR UuId</a></li>
                     <li><a href="../2022/Dependency_Injection.html">Dependency Injection</a></li>
                     <li><a href="../2022/Application_Interoperability.html">Application Interoperability</a></li>
+                </ul>
+                <div onclick="selectYearOnPage(2021)" class="year-heading">2021</div>
+                <ul id="2021-articles">
                     <li><a href="../2021/Follow_the_Many_to_Ones.html">Follow the Many to Ones</a></li>
                     <li><a href="../2021/More_on_APIs.html">More on APIs</a></li>
                     <li><a href="../2021/Everything_as_Repository.html">Everything as Repository</a></li>
@@ -162,6 +173,9 @@
                     <li><a href="../2021/To_boldly_Go_and_isolate.html">To boldly Go and isolate</a></li>
                     <li><a href="../2021/Free_at_Last.html">Free at Last</a></li>
                     <li><a href="../2021/Highway_The_Beginning.html">Highway - The Beginning</a></li>
+                </ul>
+                <div onclick="selectYearOnPage(2020)" class="year-heading">2020</div>
+                <ul id="2020-articles">
                     <li><a href="../2020/Transactionality.html">Transactionality</a></li>
                     <li><a href="../2020/Its_your_way_or_the_Highway.html">Highway</a></li>
                     <li><a href="../2020/Air_Tower.html">Air Tower</a></li>
@@ -169,6 +183,9 @@
                     <li><a href="../2020/Build_time_Queries.html">Build time Queries</a></li>
                     <li><a href="../2020/Verifying_Persistence.html">Verifying Persistence</a>
                     </li>
+                </ul>
+                <div onclick="selectYearOnPage(2019)" class="year-heading">2019</div>
+                <ul id="2019-articles">
                     <li><a href="../2019/First_Application.html">First Application</a></li>
                     <li><a href="https://autonomousinterdependentrepositories.wordpress.com/">Previous</a>
                     </li>
