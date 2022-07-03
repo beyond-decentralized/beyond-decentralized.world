@@ -33,7 +33,7 @@
 
 </head>
 
-<body class="ss-bg-white">
+<body onload="updateMenu('Highway_-_Repository_Turn', 2021)" class="ss-bg-white">
 
     <!-- preloader
 ================================================== -->
@@ -52,7 +52,6 @@
         <header class="s-header header">
         </header> <!-- end s-header -->
 
-
         <!-- site content
     ================================================== -->
         <div class="s-content content">
@@ -60,10 +59,20 @@
 
                 <article class="column large-full entry format-standard">
 
+                    <!-- site summary
+                ================================================== -->
+                    <summary></summary>
+                    <!-- end site summary -->
+
                     <div class="media-wrap entry__media">
                         <div class="entry__post-thumb">
-                            <img alt="A view of a road, with Singapore in the background"
-                                sizes="(max-width: 1000px) 100vw, 1000px" src="images/Singapore-Skyline-Empty-Road.jpg">
+                            <img alt="Compact fusion simulation" sizes="(max-width: 1000px) 100vw, 1000px"
+                                src="images/compact_fusion_simulation.jpg">
+                            <p style="text-align: center; width: 100%">
+                                <a href="https://phys.org/news/2021-09-simulate-compact-fusion-power-concept.html">
+                                    Researchers simulate
+                                </a> compact fusion power plant concept
+                            </p>
                         </div>
                     </div>
 
@@ -73,7 +82,7 @@
                         </h1>
                         <ul class="entry__header-meta">
                             <li class="author">By Artem V. Shamsutdinov</li>
-                            <li class="date">Jan 15th, 2021</li>
+                            <li class="date">Oct 10, 2021</li>
                         </ul>
                     </div> <!-- end entry__header -->
 
@@ -91,38 +100,38 @@
                         <p>
                             Repositories are meant to be autonomous units of knowledge that
                             are used across multiple applications and tie in all of the
-                            functionality realted to that knowledge unit.  What I was missing
+                            functionality realted to that knowledge unit. What I was missing
                             before is that for the bulk of use cases any given UI will
-                            present data for one repository at a time.  In the cases where 
+                            present data for one repository at a time. In the cases where
                             UIs need to present data across repositories it is possible
                             to create new, aggregate repositories for that usecase and still
                             present the bulk of the data for one central repository.
                         </p>
                         <h2>Proposed implementation</h2>
                         <p>
-                            With these usage patterns in mind it is possible constrain
+                            With these usage patterns in mind it is possible to constrain
                             all UI operations to a single repository (or a set of related
-                            repositories).  Then presenting a screen (or a set of
+                            repositories). Then presenting a screen (or a set of
                             related screens) can become a matter of loading the repository
                             transaction logs (or in some cases, like a chat thread, just the
                             recent entries in the transaction log).
                         </p>
                         <p>
                             The next piece of the puzzle is the fact that AIRport in its
-                            entirety (from framework to client applications) is runnable in 
-                            the browser.  Upon SPA intialization for of the application
+                            entirety (from framework to client applications) is runnable in
+                            the browser. Upon SPA intialization for of the application
                             it along with sql.js can be loaded into memory and subsequently
-                            retrieve repository transaction logs from the server, turn them 
-                            into traditional relational data and serve complex queries needed 
-                            by the UI.  The overall system diagram in that case can look like 
+                            retrieve repository transaction logs from the server, turn them
+                            into traditional relational data and serve complex queries needed
+                            by the UI. The overall system diagram in that case can look like
                             this:
                         </p>
                         <img src="./images/Highway_diagram.png">
                         <p>
                             All of Highway write operations will be sent to an AIRport
                             installation on the server-side, where all of operations can be
-                            propertly validated.  Server-side AIRport will contain an
-                            additional module that will write serlialized transaction logs
+                            propertly validated. Server-side AIRport will contain an
+                            additional module that will write serialized transaction logs
                             to wide column storage, where they can be quickly retrieved
                             by the repository Id (and optionally a time-frame constraint).
                             In addition to that server-side AIRport can maintain a full
@@ -131,24 +140,24 @@
                             Log entry that contains the match.
                         </p>
                         <p>
-                            Further details on this setup are yet to be flushed out but I'm 
-                            very excited about this approach.  In my mind it represents
+                            Further details on this setup are yet to be flushed out but I'm
+                            very excited about this approach. In my mind it represents
                             best of both worlds of centrialized data processing and
-                            utilization of modern client side hardware.   It should serve
-                            the bulk of use-cases I can think off while providing a fallback
+                            utilization of modern client side hardware. It should serve
+                            the bulk of use-cases I can think of, while providing a fallback
                             schenario where querying the server-side relational database
                             is possible.
                         </p>
                         <h2>Observables as a bonus</h2>
                         <p>
                             A nice bonus to this approach is that it comes with a very
-                            strait forward implemntation of observable behavior.  The client
+                            strait forward implemetation of observable behavior. The client
                             can simply subscribe to all new transaction log entries for a
                             given repository and then process the data to see if any
                             of the fields in the obserable query are affected by latest
-                            entries.  If they are an updated result will be sent to the UI. 
+                            entries. If they are updated, result will be sent to the UI.
                             Again everything in this approach keys off the fact that queries
-                            will be limited by a Repository ID. 
+                            will be limited by a Repository ID.
                         </p>
                     </div> <!-- end entry content -->
 

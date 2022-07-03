@@ -52,6 +52,10 @@
         <header class="s-header header">
         </header> <!-- end s-header -->
 
+        <!-- site summary
+    ================================================== -->
+        <summary></summary>
+        <!-- end site summary -->
 
         <!-- site content
     ================================================== -->
@@ -75,12 +79,19 @@
                         </h1>
                         <ul class="entry__header-meta">
                             <li class="author">By Artem V. Shamsutdinov</li>
-                            <li class="date">August 19th, 2022</li>
+                            <li class="date">August 19th, 2021</li>
                         </ul>
                     </div> <!-- end entry__header -->
 
                     <div class="entry__content">
-                        <h2>Authentic schema & logic</h2>
+                        <p>With logic running in isloates there will be locally-run,
+                            vetted components. This brings up the problem of
+                            validating and (with the save
+                            operation) cascading joins across schemas. Here is my first take
+                            on how it can be solved (along with the first take on schema
+                            permissions).
+                        </p>
+                        <h2>Authentic schema & logic (7/2/2022 will be stored in a specialized Repository)</h2>
                         <p>
                             Because the schema library code is signed by the private key
                             of it's creator, schema code can easily be proven to be
@@ -91,18 +102,8 @@
                             user can check for the features of the application and make
                             the determination of installing the schema in the first place.
                         </p>
-                        <h2>Enabling validation</h2>
-
-                        <p>With the realization that the logic in isloates
-                            means locally-run vetted components comes the problem of
-                            validating And, with the save
-                            operation cascading defined an even more important problem
-                            of cross schema joins becomes apparent. Here is my first take
-                            on how it can be solved (along with the first take on schema
-                            permissions).
-                        </p>
                         <p>
-                            Besides basic assurance having of authentic schemas this also
+                            Besides basic assurance of having authentic schemas this also
                             enables schema creators to provide access rules for their
                             schemas. My initial thoughts are that schema creators can
                             specify while and black lists for what schemas from other
@@ -170,11 +171,12 @@
                             ApiB.operationB are opened to 'aschema' and 'bschema' of 'adomain.com',
                             and for all schemas 'bdomain.com'
                         </p>
+                        <h2>Validation logic (7/2/2022 - obsoleted by <a href="./Interdependent_Components.html">just
+                                code</a>)</h2>
                         <p>
-                            These access rules will be parsed a build time and will be converted into
+                            These rules reference already defined operations. They will be parsed at
+                            build time and will be converted into
                             a JSON definition that will be read by the core framework at runtime.
-                            This is because for schema interoperability
-                            Notice that these rules reference already defined operations. These may be
                             <br>
                             The above case illustrates the most basic save API - a Parent object with any combination
                             of properties, values and child objects will be accepted (as long as they pass the
@@ -208,7 +210,7 @@
 }
                     </code></pre>
                         <p>
-                            In the above example there are two distinct APIs, one accepts Parent entity by itself only
+                            In the above example there are two distinct APIs, one accepts Parent entity by itself only,
                             and the other accepts Parent entity with children. These are very easy to read and
                             understand
                             and make perfect sense at a glance. However, they are limited in functionality and
@@ -357,7 +359,8 @@
 }
 DI.set(PARENT_DAO, ParentDao);
                     </code></pre>
-                        <h2>Controlling cross-schema persistence</h2>
+                        <h2>Controlling cross-schema persistence (7/2/2022 - obsoleted by <a
+                                href="../2022/Application_Interoperability.html">@Api()</a>)</h2>
                         <p>
                             This scheme enables a fine-grained control over cross-schema persistence
                             of the objects via either exposing or hiding .save access. If .save is exposed
@@ -368,13 +371,13 @@ DI.set(PARENT_DAO, ParentDao);
                             be forced to use the CustomApi in a @Transactional() context
                         </p>
 
-                        <h2>@Transactional() is back</h2>
+                        <h3>@Transactional() is back</h3>
                         <p>This reminds me to mention something that I missed in the last post, with
                             custom schema logic @Transactional() methods are back. This means that it's
                             very natural and simple to make complex transactions that might not only
                             do .save calls but also embedded queries, inserts, updates and deletes.</p>
 
-                        <h2>Remembering the old schema</h2>
+                        <h2>Remembering the old schema (7/2/2022 - obsoleted, will be rudimentary at first)</h2>
                         <p>
                             The above also allows for more natural schema upgrades
                             The basic concept behind new schema upgrades is that new versions
@@ -404,7 +407,7 @@ DI.set(PARENT_DAO, ParentDao);
                             of older versions of the tables so that they may be used by other schemas
                             that have not yet upgraded.
                         </p>
-                        <h2>Naturally migrating data</h2>
+                        <h3>Naturally migrating data</h3>
                         <p>
                             Lastly, having custom executable logic allows for very natural data
                             migration code to be written as part of the regular schema code. A new

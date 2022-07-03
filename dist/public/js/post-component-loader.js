@@ -1,7 +1,8 @@
 function loadPostComponents() {
+    loadIntoTag('../components/header.html', 'header');
+    loadIntoTag('../components/summary.html', 'summary');
     loadIntoClass('../components/comments.html', 'comments-wrap');
     loadIntoTag('../components/footer.html', 'footer');
-    loadIntoTag('../components/header.html', 'header');
 }
 
 function loadIntoTag(url, selector) {
@@ -17,10 +18,19 @@ function loadContent(url, docMethod, selector) {
         .then(response => response.text())
         .then(htmlText => {
             var elementList = document[docMethod](selector)
-            if(elementList.length) {
+            if (elementList.length) {
                 elementList[0].outerHTML = htmlText;
             }
         });
+}
+
+function updateMenu(
+    articleId,
+    year
+) {
+    const articleMenuItem = document.querySelectorAll('[href="../' + year + '/' + articleId + '.html"]')[0];
+    articleMenuItem.classList.add('highlighted')
+    selectYearOnPage(year)
 }
 
 loadPostComponents();

@@ -12,7 +12,7 @@ function loadContent(url, docMethod, selector) {
         .then(response => response.text())
         .then(htmlText => {
             var elementList = document[docMethod](selector)
-            if(elementList.length) {
+            if (elementList.length) {
                 elementList[0].outerHTML = htmlText;
             }
         });
