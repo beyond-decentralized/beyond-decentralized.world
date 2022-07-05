@@ -153,7 +153,7 @@
                             AIRport will create an in-memory cache
                             for the top level transaction (also used by all nested
                             transactions). All objects passed into "save" operations
-                            (including nested objects) are added to this
+                            (including nested objects) will be added to this
                             cache. At the time of "save" operation, AIRport will scan
                             the passed in object graph and mark all objects not yet proven
                             to already exist. It then will query for those objects by
