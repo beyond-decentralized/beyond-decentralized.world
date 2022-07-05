@@ -122,15 +122,16 @@
                             Renaming Ids
                         </h2>
                         <p>
-                            To reduce developer confusion the "id" field will be
-                            renamed to "_local_key".  This accurately
+                            To reduce developer confusion the "id" field is now
+                            renamed to "_localId".  This accurately
                             describes the purpose of this field - it is there to
                             link records together in the local database (often
                             in memory).  The name also doesn't immediately stand
                             out as something to be used as an identifier. The
                             "actorRecordId" is also numeric but is unique for
                             an actor within a repository and hence is globally
-                            unique.
+                            unique. It is now renamed to "_actorRecordId" to signify
+                            its "internal usage" nature.
                         </p>
                         <p>
                             To make things clear the GUID  field is now renamed to
@@ -147,6 +148,7 @@
                             functionality (just like raw relational databases), at the
                             cost of making additional queries:
                         </p>
+                        <h3>On save - TODO</h3>
                         <p>
                             AIRport will create an in-memory cache
                             for the top level transaction (also used by all nested
@@ -162,17 +164,19 @@
                         </p>
                         <p>
                             As an additional bonus, this will verify that all referenced
-                            repositories
-                            <a href="https://beyond-decentralized.world/2022/Cross-Repository_operations.html">pull in
-                                are loaded into the local database</a>.
+                            repositories (that are pulled in) are
+                            <a href="https://beyond-decentralized.world/2022/Cross-Repository_operations.html">
+                                loaded into the local database</a>.
 
                         </p>
+                        <h3>On query - done (updated 7/4/2022)</h3>
                         <p>
-                            The query operations to retrieve the objects boil down to finding
-                            all of the Repositories and Actors present in the passed-in
-                            object graph. That's just two distinct queries (regardless of
-                            the side of the object graph) and won't have a significat impact
-                            on AIRport performance.
+                            All entity query operations now find all
+                            all of the Repositories and Actors (along with Users and their
+                            locations, since that is likely to be used in UIs) present in
+                            the passed-in object graph. That's just two distinct queries (
+                            regardless of the side of the object graph) and won't have
+                            a significat impact on AIRport performance.
                         </p>
                     </div><!-- end entry content -->
 
