@@ -28,9 +28,13 @@ function updateMenu(
     articleId,
     year
 ) {
-    const articleMenuItem = document.querySelectorAll('[href="../' + year + '/' + articleId + '.html"]')[0];
-    articleMenuItem.classList.add('highlighted')
-    selectYearOnPage(year)
+    setTimeout(function () {
+        setTimeout(function () {
+            const articleMenuItem = document.querySelectorAll('[href="../' + year + '/' + articleId + '.html"]')[0];
+            articleMenuItem.classList.add('highlighted')
+            selectYearOnPage(year)
+        }, 250)
+    }, 250)
 }
 
 loadPostComponents();

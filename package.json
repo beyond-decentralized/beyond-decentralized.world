@@ -1,7 +1,7 @@
 {
   "name": "beyond-decentralized.world",
   "version": "1.0.0",
-  "description": "AIRport blog",
+  "description": "Beyond Decentralized site",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
     "rebuild": "rimraf dist && tsc",
