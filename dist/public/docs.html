@@ -22,6 +22,44 @@
   <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+
+  <style>
+    header {
+      padding-left: 15px;
+      padding-top: 25px;
+    }
+
+    header .header__logo img {
+      width: 85px;
+      height: 44px;
+    }
+
+    header a.logo-text {
+      color: white;
+      font-size: 19px;
+      line-height: 19px;
+      margin-bottom: 15px;
+      margin-top: 7px;
+    }
+
+    header table {
+      margin-bottom: 0px;
+    }
+
+    header td {
+      padding: 0rem;
+      text-align: left;
+      border-bottom: 0px;
+    }
+
+    .idocs-navigation>.nav {
+      padding-bottom: 0px;
+    }
+
+    .idocs-navigation>.external.nav {
+      padding: 0px;
+    }
+  </style>
 </head>
 
 <body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
@@ -48,21 +86,25 @@
       <!-- Sidebar Navigation
 	============================ -->
       <div class="idocs-navigation bg-dark docs-navigation-dark">
-        <table>
-          <tr>
-            <td>
-              <img src="./images/brands/beyond-decentralized/beyond-decentralized-logo.svg"
-                alt="Beyond Decentralized logo" />
-            </td>
-            <td>
-              <a class="logo-text" href="https://github.com/sponsors/beyond-decentralized/">
-                Beyond Decentralized
-              </a>
-            </td>
-          </tr>
-        </table>
-        <ul class="nav flex-column ">
-          <li class="nav-item"><a class="nav-link active" href="#idocs_start">Getting Started</a>
+        <header>
+          <div class="header__logo">
+            <table>
+              <tr>
+                <td>
+                  <img src="./images/brands/beyond-decentralized/beyond-decentralized-logo.svg"
+                    alt="Beyond Decentralized logo" />
+                </td>
+                <td>
+                  <a class="logo-text" href="https://github.com/sponsors/beyond-decentralized/">
+                    Beyond Decentralized
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </header>
+        <ul class="site-navigation nav flex-column ">
+          <li class="nav-item"><a class="nav-link active" href="#idocs_start">Introduction</a>
             <ul class="nav flex-column">
               <li class="nav-item"><a class="nav-link" href="#idocs_installation">Installation</a></li>
               <li class="nav-item"><a class="nav-link" href="#idocs_html_structure">HTML Structure</a></li>
@@ -110,6 +152,9 @@
             </ul>
           </li>
         </ul>
+        <ul class="external nav flex-column ">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Blog</a></li>
+        </ul>
       </div>
 
       <!-- Docs Content
@@ -120,28 +165,31 @@
           <!-- Getting Started
 		============================ -->
           <section id="idocs_start">
-            <h1>Documentation</h1>
-            <h2>Your ThemeForest Item Name Here</h2>
-            <p class="lead">Thank you so much for purchasing our item from themeforest.</p>
+            <h1>Beyond Decentralized</h1>
+            <h2>Introduction</h2>
+            <p class="lead">In 2015 I wrote a family organizer and realized that family data would
+              have to be stored centrally. That's how Beyond Decentralized started.</p>
+            <p>Artem V. Shamsutdinov</p>
             <hr>
             <div class="row">
               <div class="col-sm-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><strong>Version:</strong> 1.0</li>
-                  <li><strong>Author:</strong> <a href="http://www.harnishdesign.net" target="_blank">Harnish Design</a>
+                  <li><strong>Version:</strong> 0.1</li>
                   </li>
                 </ul>
               </div>
               <div class="col-sm-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><strong class="font-weight-700">Created:</strong> 8 April, 2020</li>
-                  <li><strong>Update:</strong> 12 May, 2020</li>
+                  <li><strong class="font-weight-700">Created:</strong> July 16th, 2022</li>
+                  <!--
+                  <li><strong>Update:</strong> July 16th, 2020</li>
+                  -->
                 </ul>
               </div>
             </div>
-            <p class="alert alert-info">If you have any questions that are beyond the scope of this help file, Please
-              feel free to email via <a target="_blank"
-                href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Item Support Page</a>.</p>
+            <p class="alert alert-info">If you have additional questions please email
+              <a target="_blank" href="mailto:Artem.V.Shamsutdinov@dataindependence.net">Artem</a>.
+            </p>
           </section>
 
           <hr class="divider">
