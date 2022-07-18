@@ -111,27 +111,24 @@
               <li class="nav-item"><a class="nav-link" href="#the-story">The Story</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#Autonomous-Interdependent-Repositories">A&nbsp;&nbsp;I&nbsp;&nbsp;R</a>
-            <!--
+          <li class="nav-item"><a class="nav-link" href="#Autonomous-Interdependent-Repositories">AIR</a>
             <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#idocs_header">Header</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_navbar">Navbar</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_sidebar">Sidebar</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_footer">Footer</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_box_layout">Box Layout</a></li>
+              <li class="nav-item"><a class="nav-link" href="#AIR-relational">Relational</a></li>
+              <li class="nav-item"><a class="nav-link" href="#AIR-ids">IDs</a></li>
+              <li class="nav-item"><a class="nav-link" href="#AIR-transaction-logs">Transaction Logs</a></li>
+              <li class="nav-item"><a class="nav-link" href="#AIR-autonomous">Autonomous</a></li>
+              <li class="nav-item"><a class="nav-link" href="#AIR-interdependent">Interdependent</a></li>
             </ul>
-            -->
           </li>
           <li class="nav-item"><a class="nav-link" href="#airport">AIRport</a>
-            <!--
             <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#idocs_header">Header</a></li>
+              <!--
               <li class="nav-item"><a class="nav-link" href="#idocs_navbar">Navbar</a></li>
               <li class="nav-item"><a class="nav-link" href="#idocs_sidebar">Sidebar</a></li>
               <li class="nav-item"><a class="nav-link" href="#idocs_footer">Footer</a></li>
               <li class="nav-item"><a class="nav-link" href="#idocs_box_layout">Box Layout</a></li>
-            </ul>
             -->
+            </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#highway">Highway</a>
             <!--
@@ -182,9 +179,7 @@
               <div class="col-sm-6 col-lg-4">
                 <ul class="list-unstyled">
                   <li><strong class="font-weight-700">Created:</strong> July 16th, 2022</li>
-                  <!--
-                  <li><strong>Update:</strong> July 16th, 2020</li>
-                  -->
+                  <li><strong>Updated:</strong> July 17th, 2022</li>
                 </ul>
               </div>
             </div>
@@ -230,7 +225,8 @@
 		============================ -->
           <section id="technologies">
             <h3>Technologies</h3>
-            <p class="lead">If it deals with data decentralization, it can be associated with Beyond Decentralized.</p>
+            <p class="lead">Initial project deals with data decentralization.
+              Upcoming and planned efforts are Beyond Decentralized.</p>
             <ol>
               <li>
                 <a href="https://github.com/beyond-decentralized/AIRport">AIRport</a> is
@@ -309,16 +305,224 @@
           <section id="Autonomous-Interdependent-Repositories">
             <h2>Autonomous Interdependent Repositories</h2>
             <p class="lead mb-5">
-              TODO: add Autonomous Interdependent Repositories architectural and high level documentation
+              Autonomous Interdependent Repositories are about taking relational data
+              and breaking it up into pieces that can be shared across devices.
+            </p>
+            <p>
+              This works because there is always a limit to the dataset that is
+              being presented to the user at a given time. For example a thread
+              on a forum is a unit of data. Repository represents that dataset.
+              Repositories are meant to be small and focused.
+            </p>
+            <p>During the design
+              process of an Application, if the planned repositories are getting
+              too big that means that they should be split up further. For
+              example one part of the screen can be covered by one Repository
+              while another part of the screen is backed by a second Repository.
+            </p>
+            <p>
+              It is also possible to have repositories with aggregate data
+              computed based on contents of other repositories.
             </p>
           </section>
 
 
+          <!-- AIR -  Relational
+		============================ -->
+          <section id="AIR-relational">
+            <h3>AIR - Relational</h3>
+            <p>
+              Repositories are loaded into relational databases. A Repository can
+              span any number of relational tables.
+            </p>
+            <img src="./images/AIRport_diagram_2.png" class="img-fluid" alt="A I R Repositories in tables">
+            <div class="alert alert-info mb-4">
+              <span class="badge badge-info text-uppercase">Example:</span> AIRport
+              database contains 2 schemas,
+              one from App A and one from App B. App A Schema contains table A__TABLE_II
+              and App B Schema contains table B__TABLE_I. There are 3 repositories.
+              Repository B1 spans both tables (and both schemas). Repository B2
+              is contained in B__TABLE_I. Repository C1 only spans tables in App
+              B Schema (other tables are not pictured).
+            </div>
+          </section>
+
+          <!-- AIR - IDs
+		============================ -->
+          <section id="AIR-ids">
+            <h3>AIR - IDs</h3>
+            <p>
+              All records in Repositories are identified by 3 keys:
+            </p>
+            <ul>
+              <li>
+                <b>Repository GUID</b> - a globally unique identifier for the
+                repository
+              </li>
+              <li>
+                <b>Actor GUID</b> - a globally unique identifier for the
+                "Actor" that created the record.
+              </li>
+              <li>
+                <b>Actor Record ID</b> - a numeric identifier unique to
+                the actor (normally unique the the physical database on which
+                the record was created)
+              </li>
+            </ul>
+            <p>
+              "Actor" is a given User, using a given Application on a particular
+              physical Database/Device. In practice it Actor is even more
+              specific:
+            </p>
+            <ul>
+              <li>
+                A given <b>User</b> - identified by an email address.
+              </li>
+              <li>
+                Using a given <b>Application</b> - identified by the URL of
+                the Application (domain + path)
+              </li>
+              <li>
+                via a particular <b>Client</b> - identified
+                by the domain of the Client (Ex: "a-user-interface.com")
+              </li>
+              <li>
+                on a particular <b>Database</b> - identified by a random GUID
+              </li>
+            </ul>
+            <p>The distinction between Application and Client is there because
+              Applications run in controlled environments (IFrames with different
+              domains, within the AIRport tab), while Clients are the UIs that
+              use AIRports.
+            </p>
+          </section>
+
           <!-- Header
 		============================ -->
+          <section id="AIR-transaction-logs">
+            <h3>AIR - Transaction Logs</h3>
+            <p>
+              When stored on shared file systems or NoSQL databases Repositories are
+              stored as Transaction logs. Each repository gets its own independent
+              transaction log. Transaction logs are structured as:
+            </p>
+            <ul>
+              <li>
+                <b>Transaction History</b> - this is a record of the transaction, with a
+                unique identifier and a timestamp of when the transaction took place.
+                <ul>
+                  <b>Operation History</b> - records an operation
+                  in a particular relational table. It has the schema and table names,
+                  the GUID of the <u>Actor</u> that performed this operation, the operation type (Create/Update/Delete)
+                  and the order of that operation in the Transaction History.
+                  <ul>
+                    <b>Record History</b> - contains the <u>Actor GUID</u> and the
+                    <u>Actor Record Id</u> for the record. The Actor GUID represents
+                    the Actor that created the record and is needed for Update
+                    and Delete operations (where the Actor in <u>Operation History</u>
+                    may be a different one).
+                    <ul>
+                      <li><b>Record History New Value</b> - has the column name
+                        and the value that is being Inserted or Updated in that column
+                        (for the record of the containing <u>Record history</u>)</li>
+                      <li><b>Record History Old Value</b> - has the column name
+                        and the value that is being Deleted or Replaced (with an Update
+                        operation)</li>
+                    </ul>
+
+                  </ul>
+                </ul>
+              </li>
+            </ul>
+            <p>
+              Each Transaction History carries with it all of the information
+              on the Actors that caused the operations in that transaction.
+            </p>
+            <div class="alert alert-info mb-4">
+              <span class="badge badge-info text-uppercase">Note:</span> In
+              practice, each operation also stores the API signature
+              that was used to make that operation as well as the chain
+              of all parent API calls (if any). This allows for Application
+              discoverability by the users that are loading the Repository.
+              AIRport can then suggest what Applications should be
+              used to handle the Repository (and the Application descriptor can
+              suggest what clients should be used to view the data).
+            </div>
+          </section>
+
+          <hr class="divider">
+
+          <section id="AIR-autonomous">
+            <h3>AIR - Autonomous</h3>
+            <p>Repositories are <b>Autonomous</b> because each Repository
+              contains all of the information needed to be useful. That is,
+              it can be used by itself, without any other Repositories. This
+              refers to the fact that Repositories may reference each other's
+              records. That is, a record in one Repository may have a
+              foreign key to a record in another Repository.
+            </p>
+            <p>To make repositories fully autonomous all records from other
+              Repositories get copied to the Repository with the foreign keys.
+              The copied records have the state of the original records as it
+              was when it was first referenced via a foreign keys. The new
+              record copies may then be updated and may diverge from the
+              state of the records they were copied from.
+            </p>
+            <p>The copy process is repeated for all records that are, in turn,
+              pointed to by the foreign keys in the copied records. This means
+              that no matter how deep the foreign key references go, they
+              all get copied into the Repository with the top level
+              foreign key.
+            </p>
+            <p>This has the effect of making sure that Joins (made on the
+              tables where the Repository resides) always return data
+              for the views to display. Thus, a Repository may be loaded
+              (and will always be usable) by itself, even if it has nested
+              references to records in many other Repositories.
+            </p>
+          </section>
+
+          <hr class="divider">
+
+          <section id="AIR-interdependent">
+            <h3>AIR - Interdependent</h3>
+            <p>When the records are copied into a Repository from
+              other Repositories, the original <b>Repository GUID</b>,
+              <b>Actor GUID</b> and <b>Actor Record Id</b> are retained
+              in separate columns. Along with them, the global address of the
+              Repository is retained as well, allowing AIRport to
+              lookup that Repository (where the copied records came
+              from).
+            </p>
+            <p>These "original" Ids are retained in another set of keys
+              that do not have foreign key constraints on them. AIRport
+              can then be instructed to take a given Query and run it
+              in cross-Repository mode. When doing so AIRport
+              will use LEFT JOINs and progressively load missing
+              Repositories and re-query until it returns complete
+              object graphs with all of the records from the original
+              Repositories.
+            </p>
+            <p>
+              The query process may be slow (due to necessary network
+              round trips to retrieve additional Repositories) but
+              may be served via Observables, allowing the UIs to
+              progressively load more data as it becomes available.
+            </p>
+            <p>Thus Repositories are <b>Interdependent</b> and the UIs
+              can make the choice of viewing the Repository-local
+              data only, or loading the cross-Repository view,
+              that may at first return Repository-local data and
+              then can fill in the data across referenced
+              Repositories.
+            </p>
+          </section>
+
+          <hr class="divider">
+
           <!--
           <section id="idocs_header">
-            <h2>Header</h2>
+            <h3>Header</h3>
             <p>The list of various header types & its descriptions are provided below for your reference:</p>
           </section>
 
@@ -339,7 +543,7 @@
 		============================ -->
           <!--
           <section id="idocs_header">
-            <h2>Header</h2>
+            <h3>Header</h3>
             <p>The list of various header types & its descriptions are provided below for your reference:</p>
           </section>
 
@@ -360,7 +564,7 @@
 		============================ -->
           <!--
           <section id="idocs_header">
-            <h2>Header</h2>
+            <h3>Header</h3>
             <p>The list of various header types & its descriptions are provided below for your reference:</p>
           </section>
 
@@ -381,7 +585,7 @@
 		============================ -->
           <!--
           <section id="idocs_header">
-            <h2>Header</h2>
+            <h3>Header</h3>
             <p>The list of various header types & its descriptions are provided below for your reference:</p>
           </section>
 
