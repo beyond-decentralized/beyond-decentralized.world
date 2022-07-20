@@ -120,14 +120,13 @@
               <li class="nav-item"><a class="nav-link" href="#AIR-interdependent">Interdependent</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#airport">AIRport</a>
+          <li class="nav-item"><a class="nav-link" href="#AIRport">AIRport</a>
             <ul class="nav flex-column">
-              <!--
-              <li class="nav-item"><a class="nav-link" href="#idocs_navbar">Navbar</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_sidebar">Sidebar</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_footer">Footer</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_box_layout">Box Layout</a></li>
-            -->
+              <li class="nav-item"><a class="nav-link" href="#AIRport-ORM">ORM & State</a></li>
+              <li class="nav-item"><a class="nav-link" href="#AIRport-API">API</a></li>
+              <li class="nav-item"><a class="nav-link" href="#AIRport-Transactions-n-Scope">Transactions & Scope</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#AIRport-Synchronization">Synchronization</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#highway">Highway</a>
@@ -520,61 +519,116 @@
 
           <hr class="divider">
 
-          <!--
-          <section id="idocs_header">
-            <h3>Header</h3>
-            <p>The list of various header types & its descriptions are provided below for your reference:</p>
-          </section>
-
-          <hr class="divider">
-          -->
-
           <!-- AIRport
 		============================ -->
-          <section id="airport">
+          <section id="AIRport">
             <h2>AIRport</h2>
             <p class="lead mb-5">
-		AIRport is a DApp Runtime.  It abstracts away decentralized storage behind
-		    a relational database.
+              AIRport is a DApp Runtime. It abstracts away decentralized storage behind
+              a relational database.
             </p>
             <p>
-                AIRport provides a common runtime on which Decentralized Applications can
-                run and be accessed by Clients such as Web UIs.  The core functionality
-                provided by AIRport is:    
+              AIRport implements Autonomous Interdependent Repositories. It provides
+              a common runtime on which Decentralized Applications can
+              run and be accessed by Clients such as Web UIs. The core functionality
+              provided by AIRport is:
             </p>
             <ul>
-                <li>
-                    API interfaces for UI-to-App and App-to-App interaction.
-                </li>
-                <li>
-                    Database ORMs.
-                </li>
-                <li>
-                    Entity state management.
-                </li>
-                <li>
-                    Transaction Management.
-                </li>
-                <li>
-                    Request scope.
-                </li>
-                <li>
-                    Cross-database data synchronization.
-                </li>
+              <li>
+                Database ORMs and entity state management.
+              </li>
+              <li>
+                API interfaces for UI-to-App and App-to-App interaction.
+              </li>
+              <li>
+                Transactions & Scope.
+              </li>
+              <li>
+                Cross-database data synchronization.
+              </li>
             </ul>
           </section>
 
-
-          <!-- Header
+          <!-- 
 		============================ -->
-          <!--
-          <section id="idocs_header">
-            <h3>Header</h3>
-            <p>The list of various header types & its descriptions are provided below for your reference:</p>
+          <!-- ORM
+          -->
+          <section id="AIRport-ORM">
+            <h3>ORM & State</h3>
+            <p>
+              Default <a href="https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping">
+                ORM framework</a> for AIRport is
+              <a href="https://github.com/beyond-decentralized/AIRport/tree/master/ORMs/tarmaq">
+                Tarmaq</a>. It provides:
+            </p>
+            <ul>
+              <li><b><a href="https://github.com/beyond-decentralized/AIRport/tree/master/ORMs/tarmaq/entity">Entity
+                    Mapping API</a></b>: Entity and Property decorators in JPA style.</li>
+              <li><b><a href="https://github.com/beyond-decentralized/AIRport/tree/master/ORMs/tarmaq/query">Query
+                    API</a></b>: TypeScript integrated SQL statements with SELECT clase as entity tree.</li>
+              <li><b><a href="https://github.com/beyond-decentralized/AIRport/tree/master/ORMs/tarmaq/dao">DAO
+                    API</a></b>: Stongly typed entry points into the Query API.</li>
+            </ul>
+            <p>AIRport supports creation of additional
+              <a href="https://github.com/beyond-decentralized/AIRport/tree/master/ORMs">
+                ORMs</a>. All ORMs can return
+              <a
+                href="https://github.com/beyond-decentralized/AIRport/blob/master/ORMs/tarmaq/query/doc/query/query_types/entity_graph_query.md">
+                fully interlinked graphs
+              </a> of Entity objects. Support for traditional SQL result sets is also available.
+            </p>
+            <p>
+              AIRport has sessionless entity state management. All entity
+              objects returned by the ORM contain a hidden property with the
+              original entity state. After entities are updated and are
+              returned to AIRport for persistence it calculates diffs on the
+              objects and peforms the necessary updates. This removes the
+              need for maintaining Hibernate-like ORM sessions and insulates
+              edited objects from possible state ovewrites due to remotely
+              made update to the same objects.
+            </p>
           </section>
 
           <hr class="divider">
+
+          <!-- API
+		============================ -->
+          <!--
           -->
+          <section id="AIRport-API">
+            <h3>API</h3>
+            <p>
+              TODO: add API description
+            </p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- 
+		============================ -->
+          <!-- Transactions
+          -->
+          <section id="AIRport-Transactions-n-Scope">
+            <h3>Transactions & Scope</h3>
+            <p>
+              TODO: add Transactions & Scope description
+            </p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- 
+		============================ -->
+          <!-- Synchronization
+          -->
+          <section id="AIRport-Synchronization">
+            <h3>Synchronization</h3>
+            <p>
+              TODO: add Synchronization description
+            </p>
+          </section>
+
+          <hr class="divider">
 
           <!-- Highway
 		============================ -->
