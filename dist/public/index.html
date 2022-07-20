@@ -530,8 +530,35 @@
             <p>
               AIRport implements Autonomous Interdependent Repositories. It provides
               a common runtime on which Decentralized Applications can
-              run and be accessed by Clients such as Web UIs. The core functionality
-              provided by AIRport is:
+              run and be accessed by Clients such as Web UIs.
+            </p>
+
+            <img src="./images/AIRport_diagram_1.png" class="img-fluid"
+              alt="AIRport Autonomous Interdependent Repository implementation">
+            <div class="alert alert-info mb-4">
+              <span class="badge badge-info text-uppercase">Example:</span>
+              An Event App (A) creates a schema for tracking events. Another App (B) builds
+              a Chat for event participants and uses the Event App (A) schema
+              (as well as its own schema). Another App (C) builds Event Voting and uses
+              the schema for Event Chat (B).
+              <br>
+              <br>
+              Alice has the Event App (A) and the Chat App (B) installed in AIRport (
+              on her device). Charlie has the Chat App (B) and the Voting App (C)
+              installed on his device.
+              <br>
+              <br>
+              The data for all three Apps is
+              stored in Event specific Repositories, one repository per event. Alice
+              defined events A1 and A2 but has not shared them with Charlie. Alice and
+              Charlie share event B1 and its chat. They have a separate chat
+              B2 that isn't associated with any event (yet). Charlie has a chat C1
+              (with proposed votes on what to do) but hasn't shared it with Alice yet
+              and hasn't associated it with an event.
+            </div>
+
+            <p>
+              The core functionality provided by AIRport is:
             </p>
             <ul>
               <li>
@@ -565,9 +592,9 @@
               <li><b><a href="https://github.com/beyond-decentralized/AIRport/tree/master/ORMs/tarmaq/entity">Entity
                     Mapping API</a></b>: Entity and Property decorators in JPA style.</li>
               <li><b><a href="https://github.com/beyond-decentralized/AIRport/tree/master/ORMs/tarmaq/query">Query
-                    API</a></b>: TypeScript integrated SQL statements with SELECT clase as entity tree.</li>
+                    API</a></b>: TypeScript integrated SQL statements with SELECT clause as entity tree.</li>
               <li><b><a href="https://github.com/beyond-decentralized/AIRport/tree/master/ORMs/tarmaq/dao">DAO
-                    API</a></b>: Stongly typed entry points into the Query API.</li>
+                    API</a></b>: Strongly typed entry points into the Query API.</li>
             </ul>
             <p>AIRport supports creation of additional
               <a href="https://github.com/beyond-decentralized/AIRport/tree/master/ORMs">
@@ -580,12 +607,12 @@
             <p>
               AIRport has sessionless entity state management. All entity
               objects returned by the ORM contain a hidden property with the
-              original entity state. After entities are updated and are
-              returned to AIRport for persistence it calculates diffs on the
-              objects and peforms the necessary updates. This removes the
-              need for maintaining Hibernate-like ORM sessions and insulates
-              edited objects from possible state ovewrites due to remotely
-              made update to the same objects.
+              original state of the entity. When the entities are updated AIRport
+              calculates diffs on the entity objects (using the original object
+              state) and performs the necessary updates. Tracking original state
+              removes the need for maintaining Hibernate-like ORM sessions and
+              insulates edited objects from possible state overwrites (due to remotely
+              made updates to the same objects).
             </p>
           </section>
 
@@ -598,7 +625,34 @@
           <section id="AIRport-API">
             <h3>API</h3>
             <p>
-              TODO: add API description
+              AIRport Apps run in isolated VMs inside AIRport. Clients (UIs)
+              communicate with Apps via AIRport:
+            </p>
+            <img src="./images/AIRport_architectural_diagram.drawio.png" class="img-fluid"
+              alt="AIRport Client to App communication">
+            <p>
+              Apps define API methods by decorating them with @Api() decorator.
+              AIRport generates SOAP like stubs that Clients and other Apps
+              use to communicate with the Application that defined the API
+              calls. The application project bundle is just those stubs (with
+              the Application runtime being a separate bundle). Importing
+              the application in either a Client or another App will
+              automatically call AIRport, which will handle the call and forward
+              it to the Application.
+            </p>
+            <p>
+              App VMs are isolated because they run in IFrames belonging to the
+              Application domain. Thus the only way they can interact with
+              AIRport and other Applications is via the API framework defined
+              by AIRport.
+            </p>
+            <p>Apps cannot directly access the relational database
+              hosted by AIRport and must make standardized persistence requests
+              (via provided ORMs) that are pre-processed by AIRport.
+            </p>
+            <p>Apps can join to tables in schemas of other Apps. Apps cannot
+              modify data in schemas of other Apps and must call
+              APIs of those Apps (to make data modifications).
             </p>
           </section>
 
