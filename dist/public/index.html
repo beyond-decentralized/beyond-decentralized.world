@@ -534,6 +534,7 @@
 
             <img src="./images/AIRport_diagram_1.png" class="img-fluid"
               alt="AIRport Autonomous Interdependent Repository implementation">
+
             <div class="alert alert-info mb-4">
               <span class="badge badge-info text-uppercase">Example:</span>
               An Event App (A) creates a schema for tracking events. Another App (B) builds
@@ -735,42 +736,67 @@
           <section id="highway">
             <h2>Highway</h2>
             <p class="lead mb-5">
-              TODO: add Highway architectural and high level documentation
+              Highway is AIR for the server environment.
+            </p>
+
+            <p>
+              Goal of Highway is to let local communities own their
+              data while allowing global users to search it and contribute
+              to it. The initial use case for it is a social network
+              where locally operated (where possible community owned)
+              franchises host community data.
+            </p>
+            <p>Technologically this can be accomplished by leveraging
+              existing technologies such as globally shardable
+              <a href="https://www.cockroachlabs.com/">
+                CockroachDB</a> and <a href="https://www.scylladb.com/">
+                ScyllaDB</a>. Autonomous Interdependent repositories
+              are used for integration with private user data,
+              for performance benefits and to provide an eventual
+              migration path to <a href="#maglev">Maglev</a>.
+            </p>
+
+            <img src="./images/Highway_architecture.drawio.png" class="img-fluid" alt="Highway architecture">
+
+            <p>
+              Highway will work by sending modification requests to the
+              server, where they will be processed and placed into
+              a distributed relational database. Because Highway
+              data is stored in Repositories, read queries will go
+              against a wide column store. Transaction logs will be
+              pulled into the client-side AIRport engine where
+              relational data will be reconstructed and queried. AIRport
+              will monitor incoming transaction log entries and serve
+              data via Observable feeds.
             </p>
           </section>
-
-
-          <!-- Header
-		============================ -->
-          <!--
-          <section id="idocs_header">
-            <h3>Header</h3>
-            <p>The list of various header types & its descriptions are provided below for your reference:</p>
-          </section>
-
-          <hr class="divider">
-          -->
 
           <!-- Maglev
 		============================ -->
           <section id="maglev">
             <h2>Maglev</h2>
             <p class="lead mb-5">
-              TODO: add description of Maglev
+              Maglev is AIR across organizations.
+            </p>
+            <p>
+              Maglev is about allowing organizations that interoperate
+              in an ecosystem of Repositories.
+            </p>
+
+            <img src="./images/Maglev_architecture.drawio.png" class="img-fluid" alt="Highway architecture">
+
+            <p>
+              AIRport can run on a trusted network of execution nodes
+              (a la blockchain validator nodes) and work with Repositories
+              from multiple Organizations. Running AIRport on execution
+              nodes ensures fairness and security of data processing and
+              protects organizations and their data. AIRport can
+              enforce data sharing and modification rules specified by
+              each organization and can work in concern with a
+              Client side AIRport engine to give combined decentralized
+              and "organization distributed" data views to the user.
             </p>
           </section>
-
-
-          <!-- Header
-		============================ -->
-          <!--
-          <section id="idocs_header">
-            <h3>Header</h3>
-            <p>The list of various header types & its descriptions are provided below for your reference:</p>
-          </section>
-
-          <hr class="divider">
-          -->
 
 
         </div>
