@@ -178,7 +178,7 @@
               <div class="col-sm-6 col-lg-4">
                 <ul class="list-unstyled">
                   <li><strong class="font-weight-700">Created:</strong> July 16th, 2022</li>
-                  <li><strong>Updated:</strong> July 17th, 2022</li>
+                  <li><strong>Updated:</strong> July 21st, 2022</li>
                 </ul>
               </div>
             </div>
@@ -264,10 +264,9 @@
 		============================ -->
           <section id="the-story">
             <h3>The Story of Beyond Decentralized</h3>
-            <p>In 2015 I wrote "Hans the Organizator" - a family organizer. As
-              soon as I started thinking about hosting it I realized that families
-              had to give up information on their daily activities and future
-              plans. So I set off to first write an adapter for cloud storage
+            <p>In 2015 I wrote "Hans the Organizator" (a family organizer)
+              and realized that families would have to store data on someone else's
+              servers. So I set off to first write an adapter for cloud storage
               where people could store data under their own accounts. Over time
               that adapter grew to become AIRport.
             </p>
@@ -646,14 +645,23 @@
               AIRport and other Applications is via the API framework defined
               by AIRport.
             </p>
-            <p>Apps cannot directly access the relational database
+            <p>
+              Apps cannot directly access the relational database
               hosted by AIRport and must make standardized persistence requests
               (via provided ORMs) that are pre-processed by AIRport.
             </p>
-            <p>Apps can join to tables in schemas of other Apps. Apps cannot
+            <p>
+              Apps can join to tables in schemas of other Apps. Apps cannot
               modify data in schemas of other Apps and must call
               APIs of those Apps (to make data modifications).
             </p>
+            <div class="alert alert-info mb-4">
+              <span class="badge badge-info text-uppercase">NOTE:</span>
+              AIRport is designed to remove the client-server gap. Objects passed in
+              from the client retain all server-side changes. And, because objects
+              passed into DAO.save methods are also updated, there is no need to
+              re-query the database for the new state of a just saved entity object.
+            </div>
           </section>
 
           <hr class="divider">
@@ -665,8 +673,38 @@
           <section id="AIRport-Transactions-n-Scope">
             <h3>Transactions & Scope</h3>
             <p>
-              TODO: add Transactions & Scope description
+              Every API call that goes through AIRport get's its own
+              savepoint. This means that if an API method fails and
+              throws an Error all of its database operations (and
+              operations of API methods it itself called) will be
+              rolled back. If an API method is wrapped in a
+              "try {} catch(e) {}" block, catching the exception will
+              allow the calling API method to do additional processing
+              (and database operations) even if its nested API calls
+              failed.
             </p>
+
+            <div class="alert alert-warning mb-4">
+              <span class="badge badge-warning text-uppercase">NOTE:</span>
+              Currently, API methods called from other API methods within
+              the same Application will NOT get their own savepoints.
+              That is, there will only be one savepoint for
+              API calls made across different Applications.
+            </div>
+
+            <p>
+              Transaction tracking is implemented behind the scenes,
+              without requiring the developers to pass transaction objects
+              around. In the same way request information for an API
+              operation is also implemented in the background. API
+              services and DAOs can just:
+            </p>
+            <pre><code>
+    @Inject()
+    requestManager: RequestManager
+            </code></pre>
+            to get access to the Actor and User of the API call (
+            as well as additional information about the request).
           </section>
 
           <hr class="divider">
@@ -678,7 +716,15 @@
           <section id="AIRport-Synchronization">
             <h3>Synchronization</h3>
             <p>
-              TODO: add Synchronization description
+              AIRport handles synchronization of Repositories
+              across multiple devices. If there are synchronization conflicts
+              AIRport automatically resolves them based on modification
+              timestamps (with latest modification winning) and records conflict
+              resolutions and their outcomes in Repository transaction history.
+              UIs can hook into that resolution history and notify the Users
+              that there were conflicts. UIs can also present to the Users
+              what the conflicting values were and allow the Users to manually
+              overwrite automatic resolution outcomes.
             </p>
           </section>
 
