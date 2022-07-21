@@ -676,10 +676,10 @@
             <p>
               Every API call that goes through AIRport get's its own
               savepoint. This means that if an API method fails and
-              throws an Error all of its database operations (and
+              throws an Error, all of its database operations (and
               operations of API methods it itself called) will be
               rolled back. If an API method is wrapped in a
-              "try {} catch(e) {}" block, catching the exception will
+              "try {} catch(e) {}" block, catching the Error will
               allow the calling API method to do additional processing
               (and database operations) even if its nested API calls
               failed.
@@ -687,10 +687,10 @@
 
             <div class="alert alert-warning mb-4">
               <span class="badge badge-warning text-uppercase">NOTE:</span>
-              Currently, API methods called from other API methods within
+              Currently, API methods called within
               the same Application will NOT get their own savepoints.
-              That is, there will only be one savepoint for
-              API calls made across different Applications.
+              That is, there are only savepoints for
+              API calls made across Applications.
             </div>
 
             <p>
@@ -777,7 +777,7 @@
               community owned hosting franchises.
             </p>
             <p>
-              Application VMs will run in sandboxes will have access to
+              Applications will run in VMs and will have access to
               only the APIs specified by AIRport, thus preventing
               abuse of community data.
             </p>
