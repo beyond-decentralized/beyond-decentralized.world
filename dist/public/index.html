@@ -124,6 +124,7 @@
             <ul class="nav flex-column">
               <li class="nav-item"><a class="nav-link" href="#AIRport-ORM">ORM & State</a></li>
               <li class="nav-item"><a class="nav-link" href="#AIRport-API">API</a></li>
+              <li class="nav-item"><a class="nav-link" href="#AIRport-Validation">Validation</a></li>
               <li class="nav-item"><a class="nav-link" href="#AIRport-Transactions-n-Scope">Transactions & Scope</a>
               </li>
               <li class="nav-item"><a class="nav-link" href="#AIRport-Synchronization">Synchronization</a></li>
@@ -656,12 +657,46 @@
               modify data in schemas of other Apps and must call
               APIs of those Apps (to make data modifications).
             </p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Validation
+		============================ -->
+          <!--
+          -->
+          <section id="AIRport-Validation">
+            <h3>Validation</h3>
+            <p>
+              AIRport is designed to bridge the client-server gap. The entity objects
+              returned by APIs contain their original/previous state in a private property.
+              Objects passed in from the client retain all API-side changes when the
+              call returns. And, objects passed into DAO.save methods are updated with
+              the latest state. Thus, there is no need to re-query the database for
+              the new state of a just saved entity object - it is automatically updated
+              in the client (and the new state is set in the private property that keeps
+              track of the previous state).
+            </p>
+            <p>This seamless integration of client and server requires strict validation
+              of all data that is passed into the server. Validating via standard
+              procedural calls is both verbose and error prone. AIRport includes
+              a <a href="https://github.com/beyond-decentralized/AIRport/tree/master/libs/airbridge/validate">
+                library</a> that abstracts away the CRUD of validating API inputs.
+            </p>
+            <p>
+              AIRport validation leverages the Database Entity definitions and provides
+              a type safe, declarative API that naturally describes the passed in
+              state tree. It provides a functional DSL to specify the required validations.
+              All passed in state that is not validated is automatically flagged as such.
+              All objects that are not validated are excluded from persistence operations.
+              Modified properties on validated objects that are themselves not validated
+              throw errors.
+            </p>
             <div class="alert alert-info mb-4">
               <span class="badge badge-info text-uppercase">NOTE:</span>
-              AIRport is designed to bridge the client-server gap. Objects passed in
-              from the client retain all server-side changes. And, because objects
-              passed into DAO.save methods are also updated, there is no need to
-              re-query the database for the new state of a just saved entity object.
+              Passing entity objects across API boundaries is optional in AIRport. The
+              developer can also choose to not use AIRport's declarative validation engine
+              and instead write manual validation logic.
             </div>
           </section>
 
