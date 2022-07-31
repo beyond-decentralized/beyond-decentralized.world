@@ -131,26 +131,8 @@
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#highway">Highway</a>
-            <!--
-            <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#idocs_typography">Typography</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_code">Code</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_table">Table</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_icons">Icons</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_image">Image</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_video">Video</a></li>
-            </ul>
-            -->
           </li>
           <li class="nav-item"><a class="nav-link" href="#maglev">Maglev</a>
-            <!--
-            <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#idocs_accordion">Accordion</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_tabs">Tabs</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_social_icon">Social Icon</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_helper_classes">Helper Classes</a></li>
-            </ul>
-            -->
           </li>
         </ul>
         <ul class="external nav flex-column ">
@@ -265,7 +247,8 @@
 		============================ -->
           <section id="the-story">
             <h3>The Story of Beyond Decentralized</h3>
-            <p>In 2015 I wrote "Hans the Organizator" (a family organizer)
+            <p>
+              In 2015 I wrote "Hans the Organizator" (a family organizer)
               and realized that families would have to store data on someone else's
               servers. So I set off to first write an adapter for cloud storage
               where people could store data under their own accounts. Over time
@@ -280,18 +263,21 @@
               Application concerns from Data concerns and (at least for me)
               changed how applications can be written.
             </p>
-            <p>All along I had the idea that globally shared data can also be stored
+            <p>
+              All along I had the idea that globally shared data can also be stored
               and used in a fair way. The idea there centered around a large
               organization using data that stays in the communities
               where it originated. Under that umbrella 3rd party applications
               can be written that also use the same data.
             </p>
-            Autonomous Interdependent Repositories allow any number of databases
-            (of any size) to be joined on demand on execution nodes.
-            Now (in 2022) <a href="https://beyond-decentralized.world/2022/Beyond_Decentralized.html">I realized</a>
-            that it is possible to combine multiple large databases on a
-            network of independently operated execution nodes. This means that large
-            organizations can interoperate in a fair data ecosystem.</p>
+            <p>
+              Autonomous Interdependent Repositories allow any number of databases
+              (of any size) to be joined on demand on execution nodes.
+              Now (in 2022) <a href="https://beyond-decentralized.world/2022/Beyond_Decentralized.html">I realized</a>
+              that it is possible to combine multiple large databases on a
+              network of independently operated execution nodes. This means that large
+              organizations can interoperate in a fair data ecosystem.
+            </p>
             <p>
               Artem V. Shamsutdinov
             </p>
@@ -524,8 +510,9 @@
           <section id="AIRport">
             <h2>AIRport</h2>
             <p class="lead mb-5">
-              AIRport is a DApp Runtime. It abstracts away decentralized storage behind
-              a relational database.
+              AIRport is a DApp Runtime. It encapsulates decentralized storage,
+              provides persistance and validation frameworks, standardizes
+              API calls.
             </p>
             <p>
               AIRport implements Autonomous Interdependent Repositories. It provides
@@ -538,24 +525,24 @@
 
             <div class="alert alert-info mb-4">
               <span class="badge badge-info text-uppercase">Example:</span>
-              An Event App (A) creates a schema for tracking events. Another App (B) builds
-              a Chat for event participants and uses the Event App (A) schema
-              (as well as its own schema). Another App (C) builds Event Voting and uses
-              the schema for Event Chat (B).
+              An Chat App creates a schema for storing user conversations. A second
+              App for Events has an event management schema and uses the Chat App schema
+              for chats associated with events. A third App computes Event Statistics
+              and uses the schema of the Events App.
               <br>
               <br>
-              Alice has the Event App (A) and the Chat App (B) installed in AIRport (
-              on her device). Charlie has the Chat App (B) and the Voting App (C)
-              installed on his device.
+              Alice has the Event App and the Chat App installed in AIRport (
+              on her device). Charlie has the Chat App and the Event Stats App
+              installed on his device. The Event Stats App automatically installs
+              the Event App and it's schema.
               <br>
               <br>
               The data for all three Apps is
-              stored in Event specific Repositories, one repository per event. Alice
-              defined events A1 and A2 but has not shared them with Charlie. Alice and
-              Charlie share event B1 and its chat. They have a separate chat
-              B2 that isn't associated with any event (yet). Charlie has a chat C1
-              (with proposed votes on what to do) but hasn't shared it with Alice yet
-              and hasn't associated it with an event.
+              stored in Chat/Event specific Repositories, one repository per chat/event.
+              Alice has Events A and B that are not shared with Charlie. Alice and
+              Charlie share event C and its chat. They participate another chat
+              D that isn't associated with any event. Charlie has a chat E
+              that isn't shared with Alice.
             </div>
 
             <p>
@@ -567,6 +554,9 @@
               </li>
               <li>
                 API interfaces for UI-to-App and App-to-App interaction.
+              </li>
+              <li>
+                Entity validation.
               </li>
               <li>
                 Transactions & Scope.
@@ -608,7 +598,7 @@
             <p>
               AIRport has sessionless entity state management. All entity
               objects returned by the ORM contain a hidden property with the
-              original state of the entity. When the entities are updated AIRport
+              original state of the entity. When the entities are saved, AIRport
               calculates diffs on the entity objects (using the original object
               state) and performs the necessary updates. Tracking original state
               removes the need for maintaining Hibernate-like ORM sessions and
@@ -633,29 +623,32 @@
               alt="AIRport Client to App communication">
             <p>
               Apps define API methods by decorating them with @Api() decorator.
-              AIRport generates SOAP like stubs that Clients and other Apps
-              use to communicate with the Application that defined the API
-              calls. The application project bundle is just those stubs (with
-              the Application runtime being a separate bundle). Importing
-              the application in either a Client or another App will
-              automatically call AIRport, which will handle the call and forward
-              it to the Application.
+              AIRport generates SOAP like stubs for Clients and other Apps
+              to use. Invoking those stubs sends requests to AIRport which
+              forwards them to Apps where they are from (loading missing Apps
+              when necessary).
+              The default import of an Application contains just the API
+              stubs. A separate bundle is created for Application itself (and
+              is deployed a standardized URL for AIRport to load into IFrames).
             </p>
             <p>
-              App VMs are isolated because they run in IFrames belonging to the
-              Application domain. Thus the only way they can interact with
-              AIRport and other Applications is via the API framework defined
+              App VMs are run in IFrames. Because Application server domains
+              differ, Apps are isolated from AIRport and other Apps (from
+              different domains). The only way Apps can interact with
+              AIRport and other Apps is via the API framework defined
               by AIRport.
             </p>
             <p>
               Apps cannot directly access the relational database
               hosted by AIRport and must make standardized persistence requests
-              (via provided ORMs) that are pre-processed by AIRport.
+              (via provided ORMs) that are pre-processed and sanitized by
+              AIRport.
             </p>
             <p>
               Apps can join to tables in schemas of other Apps. Apps cannot
-              modify data in schemas of other Apps and must call
-              APIs of those Apps (to make data modifications).
+              directly modify data in schemas that belong to other Apps.
+              Apps must call APIs defined by other Apps to make data
+              modifications (in schemas of those other Apps).
             </p>
           </section>
 
@@ -668,35 +661,48 @@
           <section id="AIRport-Validation">
             <h3>Validation</h3>
             <p>
-              AIRport is designed to bridge the client-server gap. The entity objects
-              returned by APIs contain their original/previous state in a private property.
-              Objects passed in from the client retain all API-side changes when the
-              call returns. And, objects passed into DAO.save methods are updated with
-              the latest state. Thus, there is no need to re-query the database for
-              the new state of a just saved entity object - it is automatically updated
-              in the client (and the new state is set in the private property that keeps
-              track of the previous state).
+              AIRport is designed to bridge the client-server gap.
+              Objects passed as parameters to API calls retain all changes when returned
+              to the Client. And, objects passed into DAO.save methods are automatically
+              updated to the saved state. Thus, there is no need the the Client to query for
+              the new entity state (of the just saved entity objects). That state is
+              automatically updated in the parameter object passed from the Client (the
+              objects that were send to the API to be saved).
+            </p>
+            <p>
+              Likewise, AIRport integrates data in the opposite (Client to Server)
+              direction. The entity objects returned by APIs contain their original
+              (previous) state (in a hidden/private property). The Client make
+              modifications to objects and sends them back. DAO.save calls then use the
+              original (previous) state to determine which properties where modified.
+              If the passed-in objects don't have the original state (or IDs) they are
+              treated as new objects. DAO.save calls will persist all objects in the
+              passed in object trees that are new/updated/to be deleted (as long as
+              those objects are in the schema of the Application).
             </p>
             <p>This seamless integration of client and server requires strict validation
-              of all data that is passed into the server. Validating via standard
+              of all data that is passed into Application APIs. Validating via standard
               procedural calls is both verbose and error prone. AIRport includes
               a <a href="https://github.com/beyond-decentralized/AIRport/tree/master/libs/airbridge/validate">
                 library</a> that abstracts away the CRUD of validating API inputs.
             </p>
             <p>
               AIRport validation leverages the Database Entity definitions and provides
-              a type safe, declarative API that naturally describes the passed in
-              state tree. It provides a functional DSL to specify the required validations.
-              All passed in state that is not validated is automatically flagged as such.
+              a type safe API that declaratively describes the desired (valid)
+              state of the passed in entity tree. AIRport provides a validation DSL (in
+              the form of
+              validation functions, tied to the JSON entity tree declaration).
+              All passed in state that is not validated is automatically flagged.
               All objects that are not validated are excluded from persistence operations.
-              Modified properties on validated objects that are themselves not validated
-              throw errors.
+              Non-validated properties (with new/modified values) on validated objects
+              cause validation to fail.
             </p>
             <div class="alert alert-info mb-4">
               <span class="badge badge-info text-uppercase">NOTE:</span>
-              Passing entity objects across API boundaries is optional in AIRport. The
-              developer can also choose to not use AIRport's declarative validation engine
-              and instead write manual validation logic.
+              Passing entity objects across API boundaries is optional in AIRport.
+              Developers can choose to use <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTOs</a>.
+              Also, developers are not required use AIRport's declarative validation
+              engine and can write manual validation logic.
             </div>
           </section>
 
