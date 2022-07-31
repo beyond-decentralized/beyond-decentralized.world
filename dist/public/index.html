@@ -155,7 +155,7 @@
             <div class="row">
               <div class="col-sm-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><strong>Version:</strong> 0.2.0</li>
+                  <li><strong>Version:</strong> 0.2.1</li>
                 </ul>
               </div>
               <div class="col-sm-6 col-lg-4">
@@ -173,7 +173,7 @@
               At the core of Beyond Decentralized stack is
               <a href="https://en.wikipedia.org/wiki/Relational_database">relational
                 database</a> technology. It
-              structures data in relational tables and exposes it's structure as <a
+              structures data in relational tables and exposes its structure as <a
                 href="https://en.wikipedia.org/wiki/Database_schema">schemas</a>.
               Developers are able to read these schemas and understand how data is structured.
               In turn, Applications are able
@@ -323,7 +323,7 @@
               one from Event App and one from Chat App. Event App Schema contains the
               EVENTS table and Chat App Schema contains the POSTS table. There are 3
               Repositories. 'Event A' Repository spans both tables and schemas.
-              Repository 'Chat B' is contained in POSTS table. Repository 'Chat C'
+              Repository 'Chat B' is contained in the POSTS table. Repository 'Chat C'
               spans tables in the Chat App Schema (other tables are not pictured).
             </div>
           </section>
@@ -382,7 +382,7 @@
           <section id="AIR-transaction-logs">
             <h3>AIR - Transaction Logs</h3>
             <p>
-              Repositories are stored "at rest" on dectralized file systems as
+              Repositories are stored "at rest" on decentralized file systems as
               Transaction logs. Each Repository gets its own, independent
               Transaction log. Transaction logs are structured in:
             </p>
@@ -446,12 +446,12 @@
               Repositories those records get copied to the referring Repository.
               This is what allows the referring repository to remain autonomous.
               The copied records have the state of the original records as it
-              was when it there were copied. The new
+              was when they were copied. The new
               record copies may then be updated and may diverge from the
               state of the records they were copied from (in referenced
               Repositories).
             </p>
-            <p>The copy process recurses for all records that are, in turn,
+            <p>The copy process is recursive for all records that are, in turn,
               pointed to by the foreign keys in the (top level) copied records.
               This means that no matter how deep the foreign key references go,
               they all get copied into the referring Repository.
@@ -508,7 +508,7 @@
             <h2>AIRport</h2>
             <p class="lead mb-5">
               AIRport is a DApp Runtime. It encapsulates decentralized storage,
-              provides persistance and validation frameworks, standardizes
+              provides persistence and validation frameworks, and standardizes
               API calls.
             </p>
             <p>
@@ -531,14 +531,14 @@
               Alice has the Event App and the Chat App installed in AIRport (
               on her device). Charlie has the Chat App and the Event Stats App
               installed on his device. The Event Stats App automatically installs
-              the Event App and it's schema.
+              the Event App and its schema.
               <br>
               <br>
               The data for all three Apps is
               stored in Chat/Event specific Repositories, one repository per chat/event.
-              Alice has Events A and B that are not shared with Charlie. Alice and
-              Charlie share event C and its chat. They participate another chat
-              D that isn't associated with any event. Charlie has a chat E
+              Alice has "Event A" and "Event B" that are not shared with Charlie. Alice and
+              Charlie share "Event C" and its chat. They participate in another "Chat
+              D" that isn't associated with any event. Charlie has a "Chat E"
               that isn't shared with Alice.
             </div>
 
@@ -626,7 +626,7 @@
               when necessary).
               The default import of an Application contains just the API
               stubs. A separate bundle is created for Application itself (and
-              is deployed a standardized URL for AIRport to load into IFrames).
+              is deployed as a standardized URL for AIRport to load into IFrames).
             </p>
             <p>
               App VMs are run in IFrames. Because Application server domains
@@ -661,17 +661,17 @@
               AIRport is designed to bridge the client-server gap.
               Objects passed as parameters to API calls retain all changes when returned
               to the Client. And, objects passed into DAO.save methods are automatically
-              updated to the saved state. Thus, there is no need the the Client to query for
+              updated to the saved state. Thus, there is no need for the Client to query for
               the new entity state (of the just saved entity objects). That state is
               automatically updated in the parameter object passed from the Client (the
-              objects that were send to the API to be saved).
+              objects that were sent to the API to be saved).
             </p>
             <p>
               Likewise, AIRport integrates data in the opposite (Client to Server)
               direction. The entity objects returned by APIs contain their original
-              (previous) state (in a hidden/private property). The Client make
+              (previous) state (in a hidden/private property). The Client makes
               modifications to objects and sends them back. DAO.save calls then use the
-              original (previous) state to determine which properties where modified.
+              original (previous) state to determine which properties were modified.
               If the passed-in objects don't have the original state (or IDs) they are
               treated as new objects. DAO.save calls will persist all objects in the
               passed in object trees that are new/updated/to be deleted (as long as
@@ -698,7 +698,7 @@
               <span class="badge badge-info text-uppercase">NOTE:</span>
               Passing entity objects across API boundaries is optional in AIRport.
               Developers can choose to use <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTOs</a>.
-              Also, developers are not required use AIRport's declarative validation
+              Also, developers are not required to use AIRport's declarative validation
               engine and can write manual validation logic.
             </div>
           </section>
@@ -734,8 +734,8 @@
             <p>
               Transaction tracking is implemented behind the scenes,
               without requiring the developers to pass transaction objects
-              around. In the same way request information for an API
-              operation is also implemented in the background. API
+              around. In the same way, request information for an API
+              operations is also implemented in the background. API
               services and DAOs can just:
             </p>
             <pre><code>
@@ -821,8 +821,8 @@
             </p>
             <div class="alert alert-info mb-4">
               Based on work done by <a href="https://turbase.app">Turbase DAO</a>,
-              advertisement revenue recieved from using
-              community data will stay in the locally owned francizes.
+              advertisement revenue received from using
+              community data will stay in the locally owned franchises.
             </div>
           </section>
 
