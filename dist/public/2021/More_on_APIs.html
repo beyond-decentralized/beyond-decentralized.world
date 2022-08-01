@@ -6,8 +6,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Beyond Decentralized Blog</title>
-    <meta name="description" content="The solution for natural Dao logic">
+    <title>Blog</title>
     <meta name="author" content="Artem V Shamsutdinov">
 
     <!-- mobile specific metas
@@ -26,7 +25,6 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
     <link rel="icon" type="image/svg+xml" href="../images/brands/beyond-decentralized/favicon.svg">
     <link rel="icon" type="image/png" href="../images/brands/beyond-decentralized/favicon.png">
     <link rel="manifest" href="../site.webmanifest">
@@ -67,7 +65,8 @@
                     <div class="media-wrap entry__media">
                         <div class="entry__post-thumb">
                             <img alt="Tokamak Energy developed a quench resistant magnet"
-                                sizes="(max-width: 1000px) 100vw, 1000px" src="images/Tokamak_Energy_quench_resistant_partially_insulated_magnet.jpg">
+                                sizes="(max-width: 1000px) 100vw, 1000px"
+                                src="images/Tokamak_Energy_quench_resistant_partially_insulated_magnet.jpg">
                             <p style="text-align: center; width: 100%">
                                 <a href="https://www.tokamakenergy.co.uk/">Tokamak Energy</a> develops a
                                 <a
@@ -150,21 +149,21 @@
                         </code>
                         This API allows the developers to explicitly mark a given
                         object as deleted and also detect if an object has been
-                        marked as deleted.  This delete API is rather crude but
+                        marked as deleted. This delete API is rather crude but
                         purposely makes the "save" operation the segway for
                         all entity based insert, update and delete operations (
-                        there is also no explicit update for entity API).  Of
+                        there is also no explicit update for entity API). Of
                         course the developers are always free to write explicit
                         update and delete statements, expecially for bulk operations.
 
                         <h3>Rare deletes</h3>
                         It is worth noting that I don't exect deletes to be a
-                        common operation.  There really shouldn't be much
+                        common operation. There really shouldn't be much
                         reason to delete records, expecially since they can
                         be split into time bound Repositories and archived
-                        when no longer actively needed.  On top of that in AIRport
+                        when no longer actively needed. On top of that in AIRport
                         no data is really ever deleted since it is preseved in the
-                        transaction logs.  Hence I don't exect high usage for the
+                        transaction logs. Hence I don't exect high usage for the
                         delete operation, just lots of archiving.
 
                         <h2>Locking down object state</h2>
@@ -190,32 +189,32 @@
                             </pre>
                         </code>
 
-                        Again the default will be to leave the API open to external 
+                        Again the default will be to leave the API open to external
                         modifications, at this point it is hard to determine what will
-                        likely be the most common scenario - direct modifications from 
-                        modern think UIs or more traditional lockdown approach of 
+                        likely be the most common scenario - direct modifications from
+                        modern think UIs or more traditional lockdown approach of
                         server side development.
 
                         <h2>@SaveEntryPoint()</h2>
                         To build on top of <a href="./Solidifying_Interop.html">initial
-                        application interability thoughts</a> I'm proposing a new
-                        decorator to mark points where save operations can cascade.  As
+                            application interability thoughts</a> I'm proposing a new
+                        decorator to mark points where save operations can cascade. As
                         a recap - save operations that cross application schema boundaries
                         will call into the logic of the Applications that contain the
-                        schemas with nested objects.  That way the application always
+                        schemas with nested objects. That way the application always
                         has control over how the objects in it's schema get saved
                         and can run the necessary validation logic to make sure
                         that records are maintained in a proper order.
                         <br>
                         <br>
-                        A accomplish this a new @SaveEntryPoint() decorator will 
+                        A accomplish this a new @SaveEntryPoint() decorator will
                         be introduced. A method decorated with this decorator will always
                         take an array of the corresponding entity objects and nothing else
                         and there may only be one @EntitySave() method per entity type.
                         This is necessary for the framework to make a determination what
                         method to invoke for a given entity- if there is more than one than
-                        it becomes unclear what method to invoke.  Note that for any given
-                        save operation, this acts as an entry point.  The entire object
+                        it becomes unclear what method to invoke. Note that for any given
+                        save operation, this acts as an entry point. The entire object
                         sub-graph that belongs to this Application's schema will be
                         processed without calling any other @SaveEntryPoint()s for nested
                         objects.

@@ -6,8 +6,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Beyond Decentralized Blog</title>
-    <meta name="description" content="The solution for natural Dao logic">
+    <title>Blog</title>
     <meta name="author" content="Artem V Shamsutdinov">
 
     <!-- mobile specific metas
@@ -26,7 +25,6 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
     <link rel="icon" type="image/svg+xml" href="../images/brands/beyond-decentralized/favicon.svg">
     <link rel="icon" type="image/png" href="../images/brands/beyond-decentralized/favicon.png">
     <link rel="manifest" href="../site.webmanifest">
@@ -130,12 +128,12 @@
                         problems of schema migration. Of course the way of actually accomplishing this
                         is yet to present itself, but a few facts will likely be present in the
                         implementation:
-                        
+
                         <h2>Virtual Views</h2>
-                        The insertable views won't be traditional database views.  Instead every operation
-                        coming in will contain the schema version it's operating against.  Since the API for
+                        The insertable views won't be traditional database views. Instead every operation
+                        coming in will contain the schema version it's operating against. Since the API for
                         that version will already be based on that version there is no need to come up with
-                        extra views.  Instead AIRport will internally adjust the operations, based on 
+                        extra views. Instead AIRport will internally adjust the operations, based on
                         "migration view hooks" provided for the schema.
                         <br>
                         <br>
@@ -147,7 +145,7 @@
 
                         <h2>View Hooks</h2>
                         It's hard to say exactly how the view hooks will look but a desireable way is to keep
-                        them declarative where possible and programmatic where necessary.  For example, if
+                        them declarative where possible and programmatic where necessary. For example, if
                         a column moved from one table to another then that can be specified declaratively.
                         But if a column got split into multiple ones, based on some logic then that will
                         have to be done programmatically.
@@ -155,7 +153,7 @@
                         <h2>DDL restrictions</h2>
                         There will likely have to be a number of DDL restrictions to make it all work. For
                         example, most definitely all new NON NULL columns will have to have a default value
-                        in order to enable insertion from older views.  Actually there probably won't be
+                        in order to enable insertion from older views. Actually there probably won't be
                         any NON NULL columns that are not IDs, but that's a discussion for a different
                         post (related to how repositories will work).
                         <br>
@@ -163,7 +161,7 @@
                         Another restriction likely to be required is disallowing column removal - columns
                         may only be expanded, renamed or moved to another table. Columns can be split
                         but cannot be deleted since that is loss of data that may be of interest for
-                        inspection for repository history.  Backward compatibily for older schema versions
+                        inspection for repository history. Backward compatibily for older schema versions
                         probably won't have to be required (if a record got entered with into a new
                         schema version the old column value will just be NULL).
 
@@ -181,7 +179,7 @@
                                 Publish
                             </li>
                         </ul>
-                        The harness will make it easy to plugin upgrade scripts.  Per cell handlers will
+                        The harness will make it easy to plugin upgrade scripts. Per cell handlers will
                         be generated based on schema diffs (previous version vs new version).
 
                         <h3>Version</h3>
@@ -196,7 +194,7 @@
                             <li>Patch version - no schema changes, only code</li>
                             <li>Minor version - expansion of columns string (allowing for more characters) and number
                                 (higher precision)
-                                columns. Addition of nullable columns (NOT NULL columns won't be supported due to 
+                                columns. Addition of nullable columns (NOT NULL columns won't be supported due to
                                 how repositories will work, but more on that in the following post).
                                 Addition of new tables.</li>
                             <li>
@@ -207,7 +205,7 @@
                         <h3>Snapshot publishing</h3>
                         Publishing is snapshot is beneficial to developers of applications that depend on this schema
                         they can start migrating their Apps to the latest schema version. Snapshots can be published
-                        without data migration scripts being in place.  Snapshots will also fix schema migration
+                        without data migration scripts being in place. Snapshots will also fix schema migration
                         scripts - once you publish a snapshot next version run will go from this snapshot (that is
                         it will diff the the last snapshot or publish against whatever new changes where provided,
                         though this can be made configurable)
@@ -226,7 +224,7 @@
                         of wiring in the upgrade jobs into the upgrade system.
 
                         <h3>Details to come</h3>
-                        This post only outlines the general approach for schema migration.  Details will come
+                        This post only outlines the general approach for schema migration. Details will come
                         at a later point once actual implementation will take place.
 
                     </div> <!-- end entry content -->
@@ -235,7 +233,7 @@
 
 
 
-                 
+
                 <div class="comments-wrap">
                 </div> <!-- end comment-respond -->
 
