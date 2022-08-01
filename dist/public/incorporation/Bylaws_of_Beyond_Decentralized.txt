@@ -213,7 +213,7 @@ Section 13.5.Contracts. The Board of Directors may authorize any officer or offi
 Section 13.6.Counterpart Execution: Facsimile Execution. Any document requiring the signature of the directors and/or members may be executed in any number of counterparts with the same effect as if all of the required signatories had signed the same document. Such executions may be transmitted to the corporation and/or the other directors and/or members by facsimile and such facsimile execution shall have the full force and effect of an original signature. All fully executed counterparts, whether original executions or facsimile executions or a combination, shall be construed together and shall constitute one and the same agreement.
 
 
-THESE BYLAWS WERE READ, APPROVED AND ADOPTED BY THE BOARD OF DIRECTORS OF THE APACHE SOFTWARE FOUNDATION ON THE 30TH DAY OF JULY, 2022.
+THESE BYLAWS WERE READ, APPROVED AND ADOPTED BY THE BOARD OF DIRECTORS OF BEYOND DECENTRALIZED ON THE 30TH DAY OF JULY, 2022.
 
 (signed)
 
