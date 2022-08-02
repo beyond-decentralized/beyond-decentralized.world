@@ -8,7 +8,7 @@ The name of the corporation (hereinafter called the "Corporation") is:
 BEYOND DECENTRALIZED
 
 
-The address of the registered office of the Corporation in the State of Colorado is 9037 Southurst St., Highlands Ranch CO, 80129; the name of the registered agent of the Corporation at such address is Corporation Service Company.
+The address of the registered office of the Corporation in the State of Colorado is (elided) Highlands Ranch CO; the name of the registered agent of the Corporation at such address is Corporation Service Company.
 
 The purpose of the Corporation is to engage in any lawful act or activity for which corporations which are organized not for profit may be organized under the General Corporation Law of the State of Colorado, including the creation and maintenance of "open source" software distributed by the Corporation to the public at no charge. Notwithstanding the forgoing, if the Board of Directors of the Corporation elects to seek and obtains an exemption for the Corporation from federal taxation pursuant to Section 501(a) of the Internal Revenue Code, as amended (the "IRC"), and until such time, if ever, that such exemption is denied or lost, the Corporation shall not be empowered to engage directly or indirectly in any activity which the Corporation believes would be likely to invalidate its status as an organization exempt from federal taxation under Section 501(a) of the IRC as an organization described in Section 501(c) of the IRC.
 
