@@ -136,15 +136,25 @@
             <ul class="nav flex-column">
               <li class="nav-item"><a class="nav-link" href="#AIRport-ORM">ORM & State</a></li>
               <li class="nav-item"><a class="nav-link" href="#AIRport-API">API</a></li>
-              <li class="nav-item"><a class="nav-link" href="#AIRport-Validation">Validation</a></li>
               <li class="nav-item"><a class="nav-link" href="#AIRport-Transactions-n-Scope">Transactions & Scope</a>
               </li>
               <li class="nav-item"><a class="nav-link" href="#AIRport-Synchronization">Synchronization</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#highway">Highway</a>
+          <li class="nav-item"><a class="nav-link" href="#AIRbridge">AIRbridge</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#AIRbridge-Blockchain">Blockchain</a></li>
+              <li class="nav-item"><a class="nav-link" href="#AIRbridge-SSO">SSO</a></li>
+              <li class="nav-item"><a class="nav-link" href="#AIRbridge-Transfer">Transfer</a></li>
+              <li class="nav-item"><a class="nav-link" href="#AIRbridge-Validation">Validation</a>
+              </li>
+            </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#maglev">Maglev</a>
+          <li class="nav-item"><a class="nav-link" href="#AIRway">AIRway</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#Highway">Highway</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#Maglev">Maglev</a>
           </li>
         </ul>
         <ul class="bottom-external nav flex-column ">
@@ -169,13 +179,13 @@
             <div class="row">
               <div class="col-sm-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><strong>Version:</strong> 0.2.1</li>
+                  <li><strong>Version:</strong> 0.3.0</li>
                 </ul>
               </div>
               <div class="col-sm-6 col-lg-4">
                 <ul class="list-unstyled">
                   <li><strong class="font-weight-700">Created:</strong> July 16th, 2022</li>
-                  <li><strong>Updated:</strong> July 31st, 2022</li>
+                  <li><strong>Updated:</strong> August 7th, 2022</li>
                 </ul>
               </div>
             </div>
@@ -522,8 +532,7 @@
             <h2>AIRport</h2>
             <p class="lead mb-5">
               AIRport is a DApp Runtime. It encapsulates decentralized storage,
-              provides persistence and validation frameworks, and standardizes
-              API calls.
+              provides API and persistence frameworks, and standardizes API calls.
             </p>
             <p>
               AIRport implements Autonomous Interdependent Repositories. It provides
@@ -565,9 +574,6 @@
               </li>
               <li>
                 API interfaces for UI-to-App and App-to-App interaction.
-              </li>
-              <li>
-                Entity validation.
               </li>
               <li>
                 Transactions & Scope.
@@ -665,60 +671,6 @@
 
           <hr class="divider">
 
-          <!-- Validation
-		============================ -->
-          <!--
-          -->
-          <section id="AIRport-Validation">
-            <h3>Validation</h3>
-            <p>
-              AIRport is designed to bridge the client-server gap.
-              Objects passed as parameters to API calls retain all changes when returned
-              to the Client. And, objects passed into DAO.save methods are automatically
-              updated to the saved state. Thus, there is no need for the Client to query for
-              the new entity state (of the just saved entity objects). That state is
-              automatically updated in the parameter object passed from the Client (the
-              objects that were sent to the API to be saved).
-            </p>
-            <p>
-              Likewise, AIRport integrates data in the opposite (Client to Server)
-              direction. The entity objects returned by APIs contain their original
-              (previous) state (in a hidden/private property). The Client makes
-              modifications to objects and sends them back. DAO.save calls then use the
-              original (previous) state to determine which properties were modified.
-              If the passed-in objects don't have the original state (or IDs) they are
-              treated as new objects. DAO.save calls will persist all objects in the
-              passed in object trees that are new/updated/to be deleted (as long as
-              those objects are in the schema of the Application).
-            </p>
-            <p>This seamless integration of client and server requires strict validation
-              of all data that is passed into Application APIs. Validating via standard
-              procedural calls is both verbose and error prone. AIRport includes
-              a <a href="https://github.com/beyond-decentralized/AIRport/tree/master/libs/airbridge/validate">
-                library</a> that abstracts away the CRUD of validating API inputs.
-            </p>
-            <p>
-              AIRport validation leverages the Database Entity definitions and provides
-              a type safe API that declaratively describes the desired (valid)
-              state of the passed in entity tree. AIRport provides a validation DSL (in
-              the form of
-              validation functions, tied to the JSON entity tree declaration).
-              All passed in state that is not validated is automatically flagged.
-              All objects that are not validated are excluded from persistence operations.
-              Non-validated properties (with new/modified values) on validated objects
-              cause validation to fail.
-            </p>
-            <div class="alert alert-info mb-4">
-              <span class="badge badge-info text-uppercase">NOTE:</span>
-              Passing entity objects across API boundaries is optional in AIRport.
-              Developers can choose to use <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTOs</a>.
-              Also, developers are not required to use AIRport's declarative validation
-              engine and can write manual validation logic.
-            </div>
-          </section>
-
-          <hr class="divider">
-
           <!-- 
 		============================ -->
           <!-- Transactions
@@ -783,9 +735,207 @@
 
           <hr class="divider">
 
+
+          <!-- AIRbridge
+		============================ -->
+          <section id="AIRbridge">
+            <h2>AIRbridge</h2>
+            <p class="lead mb-5">
+              AIRbridge is a collection of libraries that will integrate
+              AIRport with Applications and Storage platforms.
+            </p>
+
+            <p>
+              The currently scoped-out functionality to be provided by AIRbridge is:
+            </p>
+            <ul>
+              <li>
+                Per-Repository private blockchain.
+              </li>
+              <li>
+                A convenient Single Sign On solution and a high security one.
+              </li>
+              <li>
+                Optimized data transfer library with support for future use cases.
+              </li>
+              <li>
+                Entity based validation library for closing the Client-Server gap.
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Blockchain
+		============================ -->
+          <!--
+          -->
+          <section id="AIRbridge-Blockchain">
+            <h3>Blockchain</h3>
+            <p>
+              Each Repository should be secured by its own private blockchain.
+              Each Actor will sign its transactions with its own private key.
+              Actor keys will be stored in a User specific Repository,
+              dedicated to key storage. All key in this Repository will be
+              encrypted by user's Master key.
+            </p>
+            <p>
+              A Repository can, optionally, be encrypted by a symmetric key.
+              This key should be distributed to each of the Repository
+              members.
+            </p>
+            <p>
+              Blockchains keep track of the order of the transactions. There
+              may be multiple sub-chains, depending on the state of the
+              chained Transaction Logs on each of the member relational
+              databases. Automatic conflict resolution will put new
+              blocks in the chain. The blockchain should be eventually
+              consistent, always leading to a consistent state from all
+              sub-chains.
+            </p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- SSO
+		============================ -->
+          <!--
+          -->
+          <section id="AIRbridge-SSO">
+            <h3>SSO</h3>
+            <p>
+              There should be an easy and convenient way for Users to
+              sign into their local AIRport instance. AIRbridge should
+              implement Open ID protocol for validating users. There
+              should be a convenient way for users to recover their
+              passwords.
+            </p>
+            <p>
+              There should also be a high securty way to authenticate
+              in AIRport that does not rely on third parties for
+              handling sensitive data.
+            </p>
+            <p>
+              User Master key should be derivable from the User's
+              password, which should be secure against sub-quantum
+              attacks in the convenient implementation (Ex: 15 characters,
+              numbers and special, different caseing) and resistant to
+              quantum attacks in the high security implementation.
+            </p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Transfer
+		============================ -->
+          <!--
+          -->
+          <section id="AIRbridge-Transfer">
+            <h3>Transfer</h3>
+            <p>
+              There should be a way for data to be correctly and efficiently
+              transferred between the Clients and the Apps within AIRport.
+              It should protect Apps from any code injection and alike
+              attacks. It should allow for passing API (method) parameter
+              modifications back to the calling clients.
+            </p>
+            <p>
+              Data transfer should be designed with future use cases in mind.
+              It should support multi-source scenarios where Client may
+              query both a remote Application host (via server-side AIRport
+              nodes) and a local (private) AIRport instance, at the same
+              time.
+            </p>
+            <p>
+              The data transfer library should support all major decentralized
+              storage technologies, free cloud storage solutions like Google
+              Drive, and should also work in scenarios where
+              Repositories are stored centrally.
+            </p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Validation
+		============================ -->
+          <!--
+          -->
+          <section id="AIRbridge-Validation">
+            <h3>Validation</h3>
+
+            <div class="alert alert-info mb-4">
+              <span class="badge badge-info text-uppercase">NOTE:</span>
+              AIRport is designed to bridge the client-server gap.
+              Objects passed as parameters to API calls retain all changes when returned
+              to the Client. And, objects passed into DAO.save methods are automatically
+              updated to the saved state. Thus, there is no need for the Client to query for
+              the new entity state (of the just saved entity objects). That state is
+              automatically updated in the parameter object passed from the Client (the
+              objects that were sent to the API to be saved).
+              <br>
+              <br>
+              Likewise, AIRport integrates data in the opposite (Client to Server)
+              direction. The entity objects returned by APIs contain their original
+              (previous) state (in a hidden/private property). The Client makes
+              modifications to objects and sends them back. DAO.save calls then use the
+              original (previous) state to determine which properties were modified.
+              If the passed-in objects don't have the original state (or IDs) they are
+              treated as new objects. DAO.save calls will persist all objects in the
+              passed in object trees that are new/updated/to be deleted (as long as
+              those objects are in the schema of the Application).
+            </div>
+            <p>Seamless integration of client and server requires strict validation
+              of all data that is passed into Application APIs. Validating with standard
+              procedural code is both verbose and error prone. AIRbridge validation
+              uses declarative programming and automation to distil validation logic
+              down to its essence.
+            </p>
+            <p>
+              AIRport validation leverages the Database Entity definitions and provides
+              a type safe API that declaratively describes the desired (valid)
+              state of the passed in entity tree. AIRport provides a validation DSL (in
+              the form of
+              validation functions, tied to the JSON entity tree declaration).
+              All passed in state that is not validated is automatically flagged.
+              All objects that are not validated are excluded from persistence operations.
+              Non-validated properties (with new/modified values) on validated objects
+              cause validation to fail.
+            </p>
+            <div class="alert alert-info mb-4">
+              <span class="badge badge-info text-uppercase">NOTE:</span>
+              Passing entity objects across API boundaries is optional in AIRport.
+              Developers can choose to use <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTOs</a>.
+              Also, developers are not required to use then AIRbridge declarative
+              validation engine and can write manual validation logic.
+            </div>
+          </section>
+
+          <hr class="divider">
+
+          <!-- AIRway
+		============================ -->
+          <section id="AIRway">
+            <h2>AIRway</h2>
+            <p class="lead mb-5">
+              User devices should be able to communicate directly with each other.
+            </p>
+
+            <p>
+              AIRport stores repositories in decentralized file systems. Keeping
+              track of new modifications to these requires constant polling. This
+              is slow and adds extra load on the storage providers, increasing costs.
+              There should be a way for end user devices to communicate directly
+              with each other. The devices should be aware of what Repositories
+              are shared between them and should pass updates to those Repositories
+              appropriately.
+            </p>
+          </section>
+
+          <hr class="divider">
+
           <!-- Highway
 		============================ -->
-          <section id="highway">
+          <section id="Highway">
             <h2>Highway</h2>
             <p class="lead mb-5">
               Highway is AIR for the server environment.
@@ -844,7 +994,7 @@
 
           <!-- Maglev
 		============================ -->
-          <section id="maglev">
+          <section id="Maglev">
             <h2>Maglev</h2>
             <p class="lead mb-5">
               Maglev is the AIR Internet. It connects Highway providers.
