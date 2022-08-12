@@ -174,12 +174,12 @@
             <h1>Documentation</h1>
             <h2 id="introduction">Introduction</h2>
             <p class="lead">Beyond Decentralized technology enables <a href="index.html">Fair
-              Data Ownership and Independent Software Development</a>.</p>
+                Data Ownership and Independent Software Development</a>.</p>
             <hr>
             <div class="row">
               <div class="col-sm-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><strong>Version:</strong> 0.3.2</li>
+                  <li><strong>Version:</strong> 0.3.3</li>
                 </ul>
               </div>
               <div class="col-sm-6 col-lg-4">
@@ -236,18 +236,31 @@
             <ol>
               <li>
                 <a href="https://github.com/beyond-decentralized/AIRport">AIRport</a> is
-                the founding project of Beyond Decentralized. It manages data Repositories
+                the founding and core project of Beyond Decentralized. It manages data Repositories
                 and controls data access by Applications. It provides:
                 <ul>
-                  <li>Object Relational Mapping</li>
-                  <li>Query and Persistence layer</li>
-                  <li>Application VM management</li>
-                  <li>Data validation</li>
-                  <li>Repository access and maintenance</li>
+                  <li>Object Relational Mapping (with Entity state management, SQL based querying and SQL and entity
+                    based persistence)</li>
+                  <li>API framework (that closes the Client/Server gap by passing entities directly and abstracts away
+                    communication details)</li>
+                  <li>Cross-Application transaction management and request & session management</li>
+                  <li>Synchronization of data across AIRport instances</li>
                 </ul>
                 <br>
                 AIRport runs entirely in-browser and can also run as a native application
                 on end user devices.
+              </li>
+              <li>AIRbridge is a supporting project. It will provide additional functionality
+                that is necessary for AIRport applications to function effectively:
+                <ul>
+                  <li>A private Blockchain for every Repository</li>
+                  <li>Single Sign On solutions</li>
+                  <li>Data transfer management and optimization</li>
+                  <li>Data validation</li>
+                </ul>
+              </li>
+              <li>AIRway is a supporting project that enables AIRport instances to operate in
+                a peer-to-peer mode.
               </li>
               <li>Highway is an upcoming project that will let organizations
                 work on data owned by local communities. It will facilitate
@@ -294,7 +307,7 @@
             <p>
               Autonomous Interdependent Repositories allow any number of databases
               to be jointly processed on execution nodes.
-              Now, in 2022, <a href="https://beyond-decentralized.world/2022/Beyond_Decentralized.html">I realized</a>
+              Now (in 2022) <a href="https://beyond-decentralized.world/2022/Beyond_Decentralized.html">I realize</a>
               that it is possible to combine databases on a
               network of independently operated execution nodes. This means that
               multiple data hosting organizations can interoperate in a fair data
