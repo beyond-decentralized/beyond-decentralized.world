@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 156 80" xmlns="http://www.w3.org/2000/svg">
-  <text style="white-space: pre; fill: orange; font-family: Arial, sans-serif; font-size: 18.8px;" x="-99.42" y="196.437" transform="matrix(-6.149288, 0, 0, 5.258929, -535.392822, -956.997253)">B</text>
-  <text style="white-space: pre; fill: orange; font-family: Arial, sans-serif; font-size: 18.8px;" x="165.203" y="220.627" transform="matrix(6.470979, 0, 0, 5.248079, -1000.409973, -1081.962646)">D</text>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <ellipse style="fill: #FFA500; stroke: #FFA500;" cx="250" cy="250" rx="250" ry="250"/>
+  <path d="M 250 250 L 400 300 L 100 300 L 250 250 Z" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0);" bx:shape="triangle 100 200 300 100 0.5 0 1@7711831d"/>
+  <path d="M 250 160 L 300 300 L 200 300 L 250 160 Z" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0);"/>
+  <ellipse style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0);" cx="250" cy="290" rx="55" ry="55"/>
+  <path d="M 250 -340 L 400 -300 L 100 -300 L 250 -340 Z" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0);" transform="matrix(1, 0, 0, -1, 0, 0)" bx:shape="triangle 100 -300 300 26.344 0.5 0 1@03e9bed3"/>
 </svg>

@@ -18,57 +18,57 @@
   "sourceBin" : [
     {
       "id" : 1,
-      "src" : "Slide 01.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T233143",
+      "src" : "Slide 01.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T000003",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 106022708],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -19.016035458212,
+          "peakLevel" : 0.629411578178406,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.157666"
+        "timeAdded" : "20220815T124555.913688"
       }
     },
     {
       "id" : 2,
-      "src" : "Slide 02.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230235",
+      "src" : "Slide 01.02.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T001759",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 80209791],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.4385471361778,
+          "peakLevel" : 0.51432067155838,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.159672"
+        "timeAdded" : "20220815T124555.915688"
       }
     },
     {
       "id" : 3,
-      "src" : "Slide 03.png",
+      "src" : "Slide 01(1).png",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230258",
+      "lastMod" : "20220815T123417",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
@@ -85,86 +85,86 @@
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.160671"
+        "timeAdded" : "20220815T124555.916688"
       }
     },
     {
       "id" : 4,
-      "src" : "Slide 04.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230322",
+      "src" : "Slide 02.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T002713",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 87036250],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -22.3056654388224,
+          "peakLevel" : 0.360920757055283,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.161670"
+        "timeAdded" : "20220815T124555.918687"
       }
     },
     {
       "id" : 5,
-      "src" : "Slide 05.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230340",
+      "src" : "Slide 02.02.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T003113",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 191152291],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.7198024253173,
+          "peakLevel" : 0.478192448616028,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.162670"
+        "timeAdded" : "20220815T124555.920689"
       }
     },
     {
       "id" : 6,
-      "src" : "Slide 06.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230405",
+      "src" : "Slide 02.03.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T003252",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 103676041],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -22.7553758909452,
+          "peakLevel" : 0.465974271297455,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.163671"
+        "timeAdded" : "20220815T124555.922689"
       }
     },
     {
       "id" : 7,
-      "src" : "Slide 07.png",
+      "src" : "Slide 02(1).png",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230424",
+      "lastMod" : "20220815T123437",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
@@ -181,38 +181,38 @@
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.165671"
+        "timeAdded" : "20220815T124555.924688"
       }
     },
     {
       "id" : 8,
-      "src" : "Slide 08.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230445",
+      "src" : "Slide 03.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T003832",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 283956041],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -19.4168996127899,
+          "peakLevel" : 0.652052819728851,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.166671"
+        "timeAdded" : "20220815T124555.926689"
       }
     },
     {
       "id" : 9,
-      "src" : "Slide 09.png",
+      "src" : "Slide 03(1).png",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230503",
+      "lastMod" : "20220815T123457",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
@@ -229,86 +229,86 @@
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.167671"
+        "timeAdded" : "20220815T124555.928688"
       }
     },
     {
       "id" : 10,
-      "src" : "Slide 10.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230525",
+      "src" : "Slide 04.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T004601",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 143998125],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -18.9037666640982,
+          "peakLevel" : 0.694160044193268,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.169672"
+        "timeAdded" : "20220815T124555.931689"
       }
     },
     {
       "id" : 11,
-      "src" : "Slide 11.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230542",
+      "src" : "Slide 04.02.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T005104",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 171305416],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -18.1671245002446,
+          "peakLevel" : 0.665069699287415,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.171671"
+        "timeAdded" : "20220815T124555.934689"
       }
     },
     {
       "id" : 12,
-      "src" : "Slide 12.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220815T031208",
+      "src" : "Slide 04.03.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T005437",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 111576458],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.1393792540234,
+          "peakLevel" : 0.517066717147827,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.173672"
+        "timeAdded" : "20220815T124555.937717"
       }
     },
     {
       "id" : 13,
-      "src" : "Slide 13.png",
+      "src" : "Slide 04(1).png",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230628",
+      "lastMod" : "20220815T123513",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
@@ -325,62 +325,62 @@
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.175671"
+        "timeAdded" : "20220815T124555.939712"
       }
     },
     {
       "id" : 14,
-      "src" : "Slide 14.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230649",
+      "src" : "Slide 05.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T010710",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 219102291],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.0188475261095,
+          "peakLevel" : 0.813342988491058,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.177671"
+        "timeAdded" : "20220815T124555.943688"
       }
     },
     {
       "id" : 15,
-      "src" : "Slide 15.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230708",
+      "src" : "Slide 05.02.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T010828",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 261761458],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.524468457051,
+          "peakLevel" : 0.55257785320282,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.178671"
+        "timeAdded" : "20220815T124555.946689"
       }
     },
     {
       "id" : 16,
-      "src" : "Slide 16.png",
+      "src" : "Slide 05(1).png",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230732",
+      "lastMod" : "20220815T123531",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
@@ -397,38 +397,38 @@
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.182671"
+        "timeAdded" : "20220815T124555.948719"
       }
     },
     {
       "id" : 17,
-      "src" : "Slide 17.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230759",
+      "src" : "Slide 06.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T011010",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 375691250],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.6094857405002,
+          "peakLevel" : 0.705469846725464,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.184673"
+        "timeAdded" : "20220815T124555.952692"
       }
     },
     {
       "id" : 18,
-      "src" : "Slide 18.png",
+      "src" : "Slide 06(1).png",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230820",
+      "lastMod" : "20220815T123550",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
@@ -445,62 +445,62 @@
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.187672"
+        "timeAdded" : "20220815T124555.956691"
       }
     },
     {
       "id" : 19,
-      "src" : "Slide 19.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230841",
+      "src" : "Slide 07.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T011221",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 404706458],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.9393048602658,
+          "peakLevel" : 0.600775003433228,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.189670"
+        "timeAdded" : "20220815T124555.960688"
       }
     },
     {
       "id" : 20,
-      "src" : "Slide 20.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230909",
+      "src" : "Slide 07.02.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T011336",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 168532083],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -19.7445816691103,
+          "peakLevel" : 0.580585360527039,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.192671"
+        "timeAdded" : "20220815T124555.964688"
       }
     },
     {
       "id" : 21,
-      "src" : "Slide 21.png",
+      "src" : "Slide 07(1).png",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230934",
+      "lastMod" : "20220815T123607",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
@@ -517,62 +517,182 @@
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.194670"
+        "timeAdded" : "20220815T124555.967687"
       }
     },
     {
       "id" : 22,
-      "src" : "Slide 22.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T230954",
+      "src" : "Slide 08.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T011615",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 722789791],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.1221833578327,
+          "peakLevel" : 0.80772340297699,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.198671"
+        "timeAdded" : "20220815T124555.971690"
       }
     },
     {
       "id" : 23,
-      "src" : "Slide 23.png",
-      "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T231013",
+      "src" : "Slide 09.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T020353",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1],
-          "type" : 1,
+          "range" : [0, 256648958],
+          "type" : 2,
           "editRate" : 10000000,
-          "trackRect" : [0, 0, 1920, 1080],
-          "sampleRate" : 0,
-          "bitDepth" : 24,
-          "numChannels" : 0,
-          "integratedLUFS" : 100.0,
-          "peakLevel" : -1.0,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.2682706658726,
+          "peakLevel" : 0.539218544960022,
           "metaData" : ""
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.201676"
+        "timeAdded" : "20220815T124555.978688"
       }
     },
     {
       "id" : 24,
-      "src" : "Slide 24.png",
+      "src" : "Slide 09.02.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T020546",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 159791666],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -18.7248567655446,
+          "peakLevel" : 0.685312628746033,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124555.983688"
+      }
+    },
+    {
+      "id" : 25,
+      "src" : "Slide 09.03.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T024529",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 121183541],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.3835416019929,
+          "peakLevel" : 0.593606889247894,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124555.987688"
+      }
+    },
+    {
+      "id" : 26,
+      "src" : "Slide 09.04.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T024646",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 129496458],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.8737286215002,
+          "peakLevel" : 0.494680970907211,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124555.991690"
+      }
+    },
+    {
+      "id" : 27,
+      "src" : "Slide 10.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T024815",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 377398125],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -19.5225261766917,
+          "peakLevel" : 0.708908200263977,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124555.999688"
+      }
+    },
+    {
+      "id" : 28,
+      "src" : "Slide 10.02.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T025017",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 275421458],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.119645139893,
+          "peakLevel" : 0.601963520050049,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.006688"
+      }
+    },
+    {
+      "id" : 29,
+      "src" : "Slide 10(1).png",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220814T231046",
+      "lastMod" : "20220815T123701",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
@@ -589,12 +709,1020 @@
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220814T231115.204700"
+        "timeAdded" : "20220815T124556.010689"
+      }
+    },
+    {
+      "id" : 30,
+      "src" : "Slide 11.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T025311",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 545723750],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.4861001685523,
+          "peakLevel" : 0.728581428527832,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.014689"
+      }
+    },
+    {
+      "id" : 31,
+      "src" : "Slide 11(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T123718",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.018687"
+      }
+    },
+    {
+      "id" : 32,
+      "src" : "Slide 12.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T025528",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 375478333],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.7165636851965,
+          "peakLevel" : 0.826965689659119,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.024688"
+      }
+    },
+    {
+      "id" : 33,
+      "src" : "Slide 12(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T123745",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.028687"
+      }
+    },
+    {
+      "id" : 34,
+      "src" : "Slide 13.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T030335",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 225500625],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.4535820973359,
+          "peakLevel" : 0.836903750896454,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.033689"
+      }
+    },
+    {
+      "id" : 35,
+      "src" : "Slide 13(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T123821",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.038687"
+      }
+    },
+    {
+      "id" : 36,
+      "src" : "Slide 14(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T123840",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.062687"
+      }
+    },
+    {
+      "id" : 37,
+      "src" : "Slide 15.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T032324",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 99409375],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.2660224009475,
+          "peakLevel" : 0.412376582622528,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.068689"
+      }
+    },
+    {
+      "id" : 38,
+      "src" : "Slide 16.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T032456",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 200966458],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -22.1874558551555,
+          "peakLevel" : 0.533081889152527,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.080717"
+      }
+    },
+    {
+      "id" : 39,
+      "src" : "Slide 16.02.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T032624",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 298882083],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.6536479911189,
+          "peakLevel" : 0.492529273033142,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.086689"
+      }
+    },
+    {
+      "id" : 40,
+      "src" : "Slide 16.03.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T032948",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 215040208],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -23.2083885595952,
+          "peakLevel" : 0.42609566450119,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.093688"
+      }
+    },
+    {
+      "id" : 41,
+      "src" : "Slide 16(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T123916",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.100717"
+      }
+    },
+    {
+      "id" : 42,
+      "src" : "Slide 17.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T033126",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 183252291],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -24.3007740774544,
+          "peakLevel" : 0.517340123653412,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.107688"
+      }
+    },
+    {
+      "id" : 43,
+      "src" : "Slide 18.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T115225",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 185826041],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.4641521124195,
+          "peakLevel" : 0.685700714588165,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.119688"
+      }
+    },
+    {
+      "id" : 44,
+      "src" : "Slide 18.02.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T115500",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 252168333],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -19.0768454105367,
+          "peakLevel" : 0.742514610290527,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.126688"
+      }
+    },
+    {
+      "id" : 45,
+      "src" : "Slide 18.03.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T120810",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 194346458],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.4335076801931,
+          "peakLevel" : 0.475353449583054,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.134688"
+      }
+    },
+    {
+      "id" : 46,
+      "src" : "Slide 18.04.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T121024",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 128423958],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -19.7852537512985,
+          "peakLevel" : 0.543671846389771,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.141690"
+      }
+    },
+    {
+      "id" : 47,
+      "src" : "Slide 18.05.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T121116",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 97490416],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.2753014245604,
+          "peakLevel" : 0.660184860229492,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.149688"
+      }
+    },
+    {
+      "id" : 48,
+      "src" : "Slide 18.06.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T121355",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 122670416],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.570151106361,
+          "peakLevel" : 0.506324768066406,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.156687"
+      }
+    },
+    {
+      "id" : 49,
+      "src" : "Slide 18(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T123956",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.164716"
+      }
+    },
+    {
+      "id" : 50,
+      "src" : "Slide 19.01.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T121628",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 178138541],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.5571193492302,
+          "peakLevel" : 0.554072439670563,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.171688"
+      }
+    },
+    {
+      "id" : 51,
+      "src" : "Slide 19.02.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T121740",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 149552291],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.2028750513822,
+          "peakLevel" : 0.568863570690155,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.179692"
+      }
+    },
+    {
+      "id" : 52,
+      "src" : "Slide 19.03.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T122013",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 162565833],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.8444750969194,
+          "peakLevel" : 0.712035477161407,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.187688"
+      }
+    },
+    {
+      "id" : 53,
+      "src" : "Slide 20(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T124045",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.201717"
+      }
+    },
+    {
+      "id" : 54,
+      "src" : "Slide 21(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T124120",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.210829"
+      }
+    },
+    {
+      "id" : 55,
+      "src" : "Slide 22(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T124143",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.218687"
+      }
+    },
+    {
+      "id" : 56,
+      "src" : "Slide 23(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T124326",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.226688"
+      }
+    },
+    {
+      "id" : 57,
+      "src" : "Slide 24(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T124218",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.235719"
+      }
+    },
+    {
+      "id" : 58,
+      "src" : "Slide 25.02.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T023600",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 248327708],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -3.83458975296202,
+          "peakLevel" : 1.21454393863678,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.246688"
+      }
+    },
+    {
+      "id" : 59,
+      "src" : "Slide 25.03.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T022827",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 58242708],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -11.6392659183985,
+          "peakLevel" : 1.05310118198395,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.255717"
+      }
+    },
+    {
+      "id" : 60,
+      "src" : "Slide 25.png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T124357",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T124556.264717"
+      }
+    },
+    {
+      "id" : 61,
+      "src" : "Slide 08(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T125942",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T130051.444077"
+      }
+    },
+    {
+      "id" : 62,
+      "src" : "Slide 09(1).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T130011",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T130051.452100"
+      }
+    },
+    {
+      "id" : 63,
+      "src" : "Slide 14.01(1).m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T152007",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 120963541],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.0516120206155,
+          "peakLevel" : 0.519003748893738,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T153334.622051"
+      }
+    },
+    {
+      "id" : 64,
+      "src" : "Slide 14.02(1).m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T152234",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 59735833],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -22.2646123505559,
+          "peakLevel" : 0.397723227739334,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T153334.631082"
+      }
+    },
+    {
+      "id" : 65,
+      "src" : "Slide 14.03(1).m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T152431",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 111363958],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -20.0954917963603,
+          "peakLevel" : 0.548979103565216,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T153334.640053"
+      }
+    },
+    {
+      "id" : 66,
+      "src" : "Slide 14.04.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T152905",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 58242083],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -22.7809752270739,
+          "peakLevel" : 0.369799852371216,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T153334.649051"
+      }
+    },
+    {
+      "id" : 67,
+      "src" : "Slide 14.05.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T153123",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 87475833],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.165592214598,
+          "peakLevel" : 0.507907807826996,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T153334.658051"
+      }
+    },
+    {
+      "id" : 68,
+      "src" : "Slide 14.06.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220815T153208",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 88110208],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -21.0201659934862,
+          "peakLevel" : 0.606387853622437,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T153334.667050"
+      }
+    },
+    {
+      "id" : 69,
+      "src" : "Slide 15(2).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T153714",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T153729.391130"
+      }
+    },
+    {
+      "id" : 70,
+      "src" : "Slide 17(2).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T154349",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T154359.704199"
+      }
+    },
+    {
+      "id" : 71,
+      "src" : "Slide 19(2).png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20220815T160542",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220815T160552.144090"
       }
     }
   ],
   "timeline" : {
-    "id" : 25,
+    "id" : 72,
     "sceneTrack" : {
       "scenes" : [
         {
@@ -604,71 +1732,53 @@
                 "trackIndex" : 0,
                 "medias" : [
                   {
-                    "id" : 26,
-                    "_type" : "IMFile",
+                    "id" : 73,
+                    "_type" : "AMFile",
                     "src" : 1,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 01"
+                      "ident" : "Slide 01.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "translation1" : -1.13686837721616e-13,
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
                     "start" : 0,
-                    "duration" : 256,
+                    "duration" : 318,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 318,
                     "scalar" : 1,
                     "metadata" : {
-                      "clipSpeedAttribute" : false,
-                      "default-height" : 1080.0,
-                      "default-rotation2" : 0.0,
-                      "default-translation0" : 0.0,
-                      "default-translation1" : 0.0,
-                      "default-width" : 1920.0
+                      "clipSpeedAttribute" : false
                     },
                     "animationTracks" : {
 
                     }
                   },
                   {
-                    "id" : 27,
-                    "_type" : "IMFile",
+                    "id" : 74,
+                    "_type" : "AMFile",
                     "src" : 2,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 02"
+                      "ident" : "Slide 01.02",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 256,
-                    "duration" : 764,
+                    "start" : 318,
+                    "duration" : 240,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 240,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -678,65 +1788,25 @@
                     }
                   },
                   {
-                    "id" : 28,
-                    "_type" : "IMFile",
-                    "src" : 3,
-                    "trackNumber" : 0,
-                    "trimStartSum" : 0,
-                    "attributes" : {
-                      "ident" : "Slide 03"
-                    },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
-                    "effects" : [
-
-                    ],
-                    "start" : 1020,
-                    "duration" : 150,
-                    "mediaStart" : 0,
-                    "mediaDuration" : 1,
-                    "scalar" : 1,
-                    "metadata" : {
-                      "clipSpeedAttribute" : false
-                    },
-                    "animationTracks" : {
-
-                    }
-                  },
-                  {
-                    "id" : 29,
-                    "_type" : "IMFile",
+                    "id" : 75,
+                    "_type" : "AMFile",
                     "src" : 4,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 04"
+                      "ident" : "Slide 02.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 1170,
-                    "duration" : 150,
+                    "start" : 558,
+                    "duration" : 261,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 261,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -746,31 +1816,25 @@
                     }
                   },
                   {
-                    "id" : 30,
-                    "_type" : "IMFile",
+                    "id" : 76,
+                    "_type" : "AMFile",
                     "src" : 5,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 05"
+                      "ident" : "Slide 02.02",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 1320,
-                    "duration" : 150,
+                    "start" : 819,
+                    "duration" : 573,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 573,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -780,31 +1844,28 @@
                     }
                   },
                   {
-                    "id" : 31,
-                    "_type" : "IMFile",
+                    "id" : 77,
+                    "_type" : "AMFile",
                     "src" : 6,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 06"
+                      "ident" : "Slide 02.03",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
+                      "channelNumber" : "0",
                     "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
+                      "volume" : 0.961538461538462
                     },
                     "effects" : [
 
                     ],
-                    "start" : 1470,
-                    "duration" : 150,
+                    "start" : 1392,
+                    "duration" : 311,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 311,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -814,65 +1875,25 @@
                     }
                   },
                   {
-                    "id" : 32,
-                    "_type" : "IMFile",
-                    "src" : 7,
-                    "trackNumber" : 0,
-                    "trimStartSum" : 0,
-                    "attributes" : {
-                      "ident" : "Slide 07"
-                    },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
-                    "effects" : [
-
-                    ],
-                    "start" : 1620,
-                    "duration" : 150,
-                    "mediaStart" : 0,
-                    "mediaDuration" : 1,
-                    "scalar" : 1,
-                    "metadata" : {
-                      "clipSpeedAttribute" : false
-                    },
-                    "animationTracks" : {
-
-                    }
-                  },
-                  {
-                    "id" : 33,
-                    "_type" : "IMFile",
+                    "id" : 78,
+                    "_type" : "AMFile",
                     "src" : 8,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 08"
+                      "ident" : "Slide 03",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 1770,
-                    "duration" : 150,
+                    "start" : 1769,
+                    "duration" : 852,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 852,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -882,65 +1903,25 @@
                     }
                   },
                   {
-                    "id" : 34,
-                    "_type" : "IMFile",
-                    "src" : 9,
-                    "trackNumber" : 0,
-                    "trimStartSum" : 0,
-                    "attributes" : {
-                      "ident" : "Slide 09"
-                    },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
-                    "effects" : [
-
-                    ],
-                    "start" : 1920,
-                    "duration" : 150,
-                    "mediaStart" : 0,
-                    "mediaDuration" : 1,
-                    "scalar" : 1,
-                    "metadata" : {
-                      "clipSpeedAttribute" : false
-                    },
-                    "animationTracks" : {
-
-                    }
-                  },
-                  {
-                    "id" : 35,
-                    "_type" : "IMFile",
+                    "id" : 79,
+                    "_type" : "AMFile",
                     "src" : 10,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 10"
+                      "ident" : "Slide 04.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 2070,
-                    "duration" : 150,
+                    "start" : 2640,
+                    "duration" : 432,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 432,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -950,31 +1931,25 @@
                     }
                   },
                   {
-                    "id" : 36,
-                    "_type" : "IMFile",
+                    "id" : 80,
+                    "_type" : "AMFile",
                     "src" : 11,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 11"
+                      "ident" : "Slide 04.02",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 2220,
-                    "duration" : 150,
+                    "start" : 3072,
+                    "duration" : 513,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 513,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -984,31 +1959,25 @@
                     }
                   },
                   {
-                    "id" : 37,
-                    "_type" : "IMFile",
+                    "id" : 81,
+                    "_type" : "AMFile",
                     "src" : 12,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 12"
+                      "ident" : "Slide 04.03",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 2370,
-                    "duration" : 150,
+                    "start" : 3585,
+                    "duration" : 335,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 335,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -1018,65 +1987,25 @@
                     }
                   },
                   {
-                    "id" : 38,
-                    "_type" : "IMFile",
-                    "src" : 13,
-                    "trackNumber" : 0,
-                    "trimStartSum" : 0,
-                    "attributes" : {
-                      "ident" : "Slide 13"
-                    },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
-                    "effects" : [
-
-                    ],
-                    "start" : 2520,
-                    "duration" : 150,
-                    "mediaStart" : 0,
-                    "mediaDuration" : 1,
-                    "scalar" : 1,
-                    "metadata" : {
-                      "clipSpeedAttribute" : false
-                    },
-                    "animationTracks" : {
-
-                    }
-                  },
-                  {
-                    "id" : 39,
-                    "_type" : "IMFile",
+                    "id" : 82,
+                    "_type" : "AMFile",
                     "src" : 14,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 14"
+                      "ident" : "Slide 05.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 2670,
-                    "duration" : 150,
+                    "start" : 3944,
+                    "duration" : 657,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 657,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -1086,31 +2015,25 @@
                     }
                   },
                   {
-                    "id" : 40,
-                    "_type" : "IMFile",
+                    "id" : 83,
+                    "_type" : "AMFile",
                     "src" : 15,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 15"
+                      "ident" : "Slide 05.02",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 2820,
-                    "duration" : 150,
+                    "start" : 4601,
+                    "duration" : 785,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 785,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -1120,65 +2043,25 @@
                     }
                   },
                   {
-                    "id" : 41,
-                    "_type" : "IMFile",
-                    "src" : 16,
-                    "trackNumber" : 0,
-                    "trimStartSum" : 0,
-                    "attributes" : {
-                      "ident" : "Slide 16"
-                    },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
-                    "effects" : [
-
-                    ],
-                    "start" : 2970,
-                    "duration" : 150,
-                    "mediaStart" : 0,
-                    "mediaDuration" : 1,
-                    "scalar" : 1,
-                    "metadata" : {
-                      "clipSpeedAttribute" : false
-                    },
-                    "animationTracks" : {
-
-                    }
-                  },
-                  {
-                    "id" : 42,
-                    "_type" : "IMFile",
+                    "id" : 84,
+                    "_type" : "AMFile",
                     "src" : 17,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 17"
+                      "ident" : "Slide 06.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 3120,
-                    "duration" : 150,
+                    "start" : 5406,
+                    "duration" : 1127,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 1127,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -1188,65 +2071,25 @@
                     }
                   },
                   {
-                    "id" : 43,
-                    "_type" : "IMFile",
-                    "src" : 18,
-                    "trackNumber" : 0,
-                    "trimStartSum" : 0,
-                    "attributes" : {
-                      "ident" : "Slide 18"
-                    },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
-                    "effects" : [
-
-                    ],
-                    "start" : 3270,
-                    "duration" : 150,
-                    "mediaStart" : 0,
-                    "mediaDuration" : 1,
-                    "scalar" : 1,
-                    "metadata" : {
-                      "clipSpeedAttribute" : false
-                    },
-                    "animationTracks" : {
-
-                    }
-                  },
-                  {
-                    "id" : 44,
-                    "_type" : "IMFile",
+                    "id" : 85,
+                    "_type" : "AMFile",
                     "src" : 19,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 19"
+                      "ident" : "Slide 07.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 3420,
-                    "duration" : 150,
+                    "start" : 6554,
+                    "duration" : 1214,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 1214,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -1256,31 +2099,25 @@
                     }
                   },
                   {
-                    "id" : 45,
-                    "_type" : "IMFile",
+                    "id" : 86,
+                    "_type" : "AMFile",
                     "src" : 20,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 20"
+                      "ident" : "Slide 07.02",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 3570,
-                    "duration" : 150,
+                    "start" : 7768,
+                    "duration" : 506,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 506,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -1290,65 +2127,25 @@
                     }
                   },
                   {
-                    "id" : 46,
-                    "_type" : "IMFile",
-                    "src" : 21,
-                    "trackNumber" : 0,
-                    "trimStartSum" : 0,
-                    "attributes" : {
-                      "ident" : "Slide 21"
-                    },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
-                    "effects" : [
-
-                    ],
-                    "start" : 3720,
-                    "duration" : 150,
-                    "mediaStart" : 0,
-                    "mediaDuration" : 1,
-                    "scalar" : 1,
-                    "metadata" : {
-                      "clipSpeedAttribute" : false
-                    },
-                    "animationTracks" : {
-
-                    }
-                  },
-                  {
-                    "id" : 47,
-                    "_type" : "IMFile",
+                    "id" : 87,
+                    "_type" : "AMFile",
                     "src" : 22,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 22"
+                      "ident" : "Slide 08.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 3870,
-                    "duration" : 150,
+                    "start" : 8298,
+                    "duration" : 2168,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 2168,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -1358,31 +2155,25 @@
                     }
                   },
                   {
-                    "id" : 48,
-                    "_type" : "IMFile",
+                    "id" : 88,
+                    "_type" : "AMFile",
                     "src" : 23,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 23"
+                      "ident" : "Slide 09.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
-                    "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
-                    },
+                      "channelNumber" : "0",
                     "effects" : [
 
                     ],
-                    "start" : 4020,
-                    "duration" : 150,
+                    "start" : 10486,
+                    "duration" : 770,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 770,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -1392,31 +2183,784 @@
                     }
                   },
                   {
-                    "id" : 49,
-                    "_type" : "IMFile",
+                    "id" : 89,
+                    "_type" : "AMFile",
                     "src" : 24,
                     "trackNumber" : 0,
-                    "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "Slide 24"
+                      "ident" : "Slide 09.02",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
                     },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 11256,
+                    "duration" : 479,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 479,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 90,
+                    "_type" : "AMFile",
+                    "src" : 25,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 09.03",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 11735,
+                    "duration" : 363,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 363,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 91,
+                    "_type" : "AMFile",
+                    "src" : 26,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 09.04",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 12098,
+                    "duration" : 387,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 387,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 92,
+                    "_type" : "AMFile",
+                    "src" : 27,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 10.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 12505,
+                    "duration" : 1131,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1131,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 93,
+                    "_type" : "AMFile",
+                    "src" : 28,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 10.02",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 13636,
+                    "duration" : 825,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 825,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 94,
+                    "_type" : "AMFile",
+                    "src" : 30,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 11.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 14622,
+                    "duration" : 1637,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1637,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 95,
+                    "_type" : "AMFile",
+                    "src" : 32,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 12.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 16321,
+                    "duration" : 1125,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1125,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 96,
+                    "_type" : "AMFile",
+                    "src" : 34,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 13.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 17504,
+                    "duration" : 677,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 677,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 97,
+                    "_type" : "AMFile",
+                    "src" : 63,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 14.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
                     "parameters" : {
-                      "sourceCrop0" : 0.0,
-                      "sourceCrop1" : 0.0,
-                      "sourceCrop2" : 0.0,
-                      "sourceCrop3" : 0.0,
-                      "geometryCrop0" : 0.0,
-                      "geometryCrop1" : 0.0,
-                      "geometryCrop2" : 0.0,
-                      "geometryCrop3" : 0.0
+                      "volume" : 0.934065934065934
                     },
                     "effects" : [
 
                     ],
-                    "start" : 4170,
-                    "duration" : 150,
+                    "start" : 18253,
+                    "duration" : 363,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1,
+                    "mediaDuration" : 363,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 98,
+                    "_type" : "AMFile",
+                    "src" : 64,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 14.02",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 18616,
+                    "duration" : 179,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 179,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 99,
+                    "_type" : "AMFile",
+                    "src" : 65,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 14.03",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 18795,
+                    "duration" : 333,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 333,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 100,
+                    "_type" : "AMFile",
+                    "src" : 66,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 14.04",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 19128,
+                    "duration" : 174,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 174,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 101,
+                    "_type" : "AMFile",
+                    "src" : 67,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 14.05",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 19302,
+                    "duration" : 261,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 261,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 102,
+                    "_type" : "AMFile",
+                    "src" : 68,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 14.06",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 19563,
+                    "duration" : 264,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 264,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 103,
+                    "_type" : "AMFile",
+                    "src" : 37,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 15.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 19942,
+                    "duration" : 297,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 297,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 104,
+                    "_type" : "AMFile",
+                    "src" : 38,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 16.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 20294,
+                    "duration" : 603,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 603,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 105,
+                    "_type" : "AMFile",
+                    "src" : 39,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 16.02",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 20897,
+                    "duration" : 897,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 897,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 106,
+                    "_type" : "AMFile",
+                    "src" : 40,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 16.03",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 21794,
+                    "duration" : 645,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 645,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 107,
+                    "_type" : "AMFile",
+                    "src" : 42,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 17.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 22538,
+                    "duration" : 549,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 549,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 108,
+                    "_type" : "AMFile",
+                    "src" : 43,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 18.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 23128,
+                    "duration" : 557,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 557,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 109,
+                    "_type" : "AMFile",
+                    "src" : 44,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 18.02",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 23685,
+                    "duration" : 756,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 756,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 110,
+                    "_type" : "AMFile",
+                    "src" : 45,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 18.03",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 24441,
+                    "duration" : 582,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 582,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 111,
+                    "_type" : "AMFile",
+                    "src" : 46,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 18.04",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 25023,
+                    "duration" : 384,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 384,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 112,
+                    "_type" : "AMFile",
+                    "src" : 47,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 18.05",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 25407,
+                    "duration" : 291,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 291,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 113,
+                    "_type" : "AMFile",
+                    "src" : 48,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 18.06",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 25698,
+                    "duration" : 368,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 368,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 114,
+                    "_type" : "AMFile",
+                    "src" : 50,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 19.01",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 26100,
+                    "duration" : 534,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 534,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 115,
+                    "_type" : "AMFile",
+                    "src" : 51,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 19.02",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 26634,
+                    "duration" : 449,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 449,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 116,
+                    "_type" : "AMFile",
+                    "src" : 52,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 19.03",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "effects" : [
+
+                    ],
+                    "start" : 27083,
+                    "duration" : 488,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 488,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -1430,6 +2974,1260 @@
               {
                 "trackIndex" : 1,
                 "medias" : [
+                  {
+                    "id" : 117,
+                    "_type" : "IMFile",
+                    "src" : 3,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 01"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 0,
+                    "duration" : 558,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 118,
+                    "_type" : "IMFile",
+                    "src" : 7,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 02"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 558,
+                    "duration" : 1145,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 119,
+                    "_type" : "IMFile",
+                    "src" : 9,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 03"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1703,
+                    "duration" : 918,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 120,
+                    "_type" : "IMFile",
+                    "src" : 13,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 04"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2621,
+                    "duration" : 1299,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 121,
+                    "_type" : "IMFile",
+                    "src" : 16,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 05"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 3920,
+                    "duration" : 1466,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 122,
+                    "_type" : "IMFile",
+                    "src" : 18,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 06"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5386,
+                    "duration" : 1147,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 123,
+                    "_type" : "IMFile",
+                    "src" : 21,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 07"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 6533,
+                    "duration" : 1741,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 124,
+                    "_type" : "IMFile",
+                    "src" : 61,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 08"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 8274,
+                    "duration" : 2192,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 125,
+                    "_type" : "IMFile",
+                    "src" : 62,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 09"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 10466,
+                    "duration" : 2019,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 126,
+                    "_type" : "IMFile",
+                    "src" : 29,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 10(1)"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 12485,
+                    "duration" : 2115,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 127,
+                    "_type" : "IMFile",
+                    "src" : 31,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 139,
+                    "attributes" : {
+                      "ident" : "Slide 11(1)"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 14600,
+                    "duration" : 1659,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 128,
+                    "_type" : "IMFile",
+                    "src" : 33,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 12(1)"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 16259,
+                    "duration" : 1187,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 129,
+                    "_type" : "IMFile",
+                    "src" : 35,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 13(1)"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 17446,
+                    "duration" : 735,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 130,
+                    "_type" : "IMFile",
+                    "src" : 36,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 14(1)"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 18181,
+                    "duration" : 1646,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 131,
+                    "_type" : "IMFile",
+                    "src" : 69,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 15"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 19827,
+                    "duration" : 412,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 132,
+                    "_type" : "IMFile",
+                    "src" : 41,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 16(1)"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 20239,
+                    "duration" : 2200,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 133,
+                    "_type" : "IMFile",
+                    "src" : 70,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 17"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 22439,
+                    "duration" : 648,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 134,
+                    "_type" : "IMFile",
+                    "src" : 49,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 18(1)"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 23087,
+                    "duration" : 2979,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 135,
+                    "_type" : "IMFile",
+                    "src" : 71,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "Slide 19"
+                    },
+                    "parameters" : {
+                      "sourceCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "sourceCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop0" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop1" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop2" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      },
+                      "geometryCrop3" : {
+                        "type" : "double",
+                        "defaultValue" : 0.0,
+                        "interp" : "eioe"
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 26066,
+                    "duration" : 1505,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
                 ]
               }            ]
           }
@@ -1480,7 +4278,7 @@
     "backgroundColor" : [ 0, 0, 0, 255]
   },
   "metadata" : {
-    "AutoSaveFile" : "C:\\Users\\Papa\\AppData\\Local\\TechSmith\\Camtasia Studio\\21.0\\Auto-Saves\\Untitled Projectc294502.autosave.tscproj",
+    "AutoSaveFile" : "C:\\Users\\Papa\\AppData\\Local\\TechSmith\\Camtasia Studio\\21.0\\Auto-Saves\\Beyond Decentralized Tech Overviewf20602f.autosave.tscproj",
     "CanvasZoom" : 55,
     "Date" : "2022-08-14 04:58:51 PM",
     "IsAutoSave" : false,
