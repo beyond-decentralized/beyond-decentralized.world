@@ -1,0 +1,351 @@
+Slide 1.
+
+Hello, I'm Artem Shamsutdinov and here is a brief introduction of 
+Beyond Decentralized technology stack.
+
+Beyond Decentralized is a new non-profit company meant to facilitate 
+creation of open source software.
+
+
+Slide 2.
+The mission of Beyond Decentralized is to enable Fair Data Ownership and Independent Software Development.
+
+By Fair Data Ownership I mean everyone should be in custody of their 
+data.  A person should be in control of his or her individual data. 
+A family should have joint control of its data. Data that belongs to 
+a community should be in the custody of that community.
+
+Independent Software Developers should be able write applications of 
+any size that would add value to existing software ecosystems.
+
+
+Slide 3.
+
+Back in 2015 I wrote a family organizer called "Hans the Organizator".  And as soon as I finished it I realized that other families would have to store their data on my server.  That didn't seem right so the following year I started writing software that overtime grew into AIRport.  Now, in 2022 I realize that this software can help to create an Internet of independently operated databases.
+
+
+Slide 4.
+
+At the core of Beyond Decentralized stack is the idea of how to take a database and split it into pieces.  What I came up with to do that is called Autonomous Interdependent Repositories.
+
+AIR is away of storing virtual Repositories in a Relational database.
+It keeps track of recods with a multi-key id scheme.
+This allows each Repository to be recorded in its own Transaction 
+Logs and shared separately.
+
+So, a Repository is fully Autonomous and can be used on its own.
+Yet, at the same time Repositories can be Interdependent and can be 
+used together.
+
+
+Slide 5.
+
+Repository data is stored in standard relational tables.
+For example a repository for Event A contains a record in the Events 
+table that keeps track of event.  It also contains records in the 
+Posts table, that keep track of the conversation associated with 
+that event.
+
+Thus the "Event A" Repository spans both of those tables and 
+contains all of the information associated with "Event A".
+
+In other words, the record of the event and the records for 
+conversation associated with that event are stored in one virtual
+unit.  From the point of view of the database this unit is just
+a collection of rows across two tables.
+
+
+Slide 6.
+
+Repositories keep track of their records separately from other Repositories located in the same physical database.  To do that, the  primary and foreign keys in all relational tables for AIR are 
+composed of 3  identifiers:
+
+First is the Repository Id. It is just a globally unique 
+identifier for the Repository itself.
+
+Second is the Repository Actor Id.  It represents a particular User
+on a given Device, using a given Application.
+
+Third is the Actor Record Id.  It uniquely identifies a record in a given table, for a given Repository Actor.  In practice it is a 
+database sequence number for a given table in the database where the 
+record was created.
+
+
+Slide 7.
+
+Traditional Relational Databases maintain a common Transaction Log
+of every modification made in a given database.  In AIR every single
+virtual Repository maintains its own log of Transactions.
+
+Copying a given Repository to another database is done by re-running 
+(in the Receiving Database) all of Repository transactions in its Transaction Log.
+
+Thus, sharing a given Repository is possible without
+having to share all of the data in a given physical database.
+
+
+Slide 8.
+
+What Relational Databases are really good at is keeping track of
+relationships between different pieces of data.  Traditionally, it 
+has been hard to decentralize or even distribute Relational Databases 
+because the data in them is so inter-connected.
+
+In AIR if a given Repository references records from other 
+Repositories (via foreign keys), those records are copied into 
+the given Repository. This makes duplicate copies of records, for 
+the purpose of making Repositories fully Autonomous.
+
+Thus a given Repository contains all of the records from other 
+Repositories that are referenced from it's own records.  If the 
+records copied from other Repositories reference additional records, 
+those additional records are also copied into the given Repository.  
+
+This allows a Repository with references to records in other 
+Repositories to be usable in other physical databases.  In other words, this allows UIs to build complete data views of a Repository, 
+even if it references Repositories are not present in the local 
+database.
+
+
+Slide 9
+
+At the same time Repositories are Interdependent.  Every foreign
+key relation in AIR has two sets of keys.  The first one points the 
+a record inside the same repostory.  If that record originally
+came from a different repository that's the COPIED record.  The
+second set of keys points to the true source record.  That SOURCE
+record may be in a different repository.
+
+When querying AIR data the Applications can either ask for the 
+Repository copy of the data or the original source data.
+AIRport then chooses the appropriate set of keys to use for the joins
+in Application query.
+
+Applications can also make Observable queries that first return the
+Repository copy of the data and then (in the background) 
+progressively load the original data.
+
+This is possible because a Repository keeps track of all of the
+repositories it references AND of the locations where those
+repositories can be found.
+
+
+Slide 10.
+
+The founding and core project of Beyond Decentralized is AIRport.
+It implements AIR and provides a framework for using Repositories.
+It takes a Relational Database, wraps it in the necessary code to
+make AIR work, and makes it deployable on user devices.
+
+AIRport works in internet Browsers as a dedicated browser Tab. It can
+also work as a Native Application that runs on a Phone or any
+other Personal Device.
+
+When AIRport runs in a browser tab it can be used only by the Web Applications running in the same browser.  When AIRport runs as a
+native Application, it can be used by all Web, Progressive and
+Native applications found on that device.
+
+All Applications that use the same AIRport installation can
+interoperate and acccess the same data.  The data itself is not
+stored by the Applications and stays on user devices, in the AIRport
+database. AIRport is in charge of sharing that data with AIRports that run on other devices.  It can share data via
+decentralized file systems like Filecoin, or other means of sharing
+are possible as well.  For example, sharing via peer-to-peer 
+connections.
+
+
+Slide 11
+
+AIRport provides a number of features for Application developers.
+A core feature is an Object Relational Mapping framework (also known 
+as an ORM). AIRport's default ORM is Tarmaq.  It is possible to write 
+other ORMs that would use different styles of accessing data.
+
+Tarmaq draws inspiration from Java's Hibernate and QueryDSL 
+frameworks.  Unlike Hibernate, Tarmaq does not maintain a database
+session.  This means that Tarmaq entities are always in one state
+and there is no need to attach objects to or detach objects from
+a database session.
+
+Tarmaq Entity Objects have an "Original State" property. This is 
+where Tarmaq keeps track of the modification state of entity objects. That makes it possible make entity object modifications
+in invoking Applications or Single Page Application user interfaces.
+
+No matter where or when the modifications to entity objects are made 
+AIRport will figure out what fields need to be updated, based on 
+the "Original State" property attached to every entity object.
+
+
+Slide 12.
+
+Tarmaq maps entities to Relational Tables with TypeScript
+decorators on class definitions.  This is a tried a true way of 
+mapping entities, very close to what's found in Jakarta Persistence 
+API (or JPA).  Tarmaq aims to make it easy for developers to 
+transition to AIRport.
+
+
+Slide 13.
+
+Tarmaq integrates SQL into Typescript.  It takes advantage of
+JavaScripts ability to declaratively specify objects.  A SQL
+statement is represented as JavaScript object.  Special Query
+objects are generated from entity declarations (that you saw
+in the slide before) and are used to construct query logic.
+
+
+Slide 14.
+
+Tarmaq Select statements declare the SELECT clause as
+as a JSON tree, with entities nested according to the
+ManyToOne and OneToMany definitions in the entity objects.
+
+The flat SQL result set is converted to an interlinked object
+graph.  Here, the open and closed curly braces after the "children" property mean that Tarmaq will return Child entities with all of their own properties included.
+
+This will include the Child entity's "ManyToOne" link to the Parent 
+entity.
+
+That Parent Entity object  will be the same object as the root object of the query result.
+
+Tarmaq also supports the traditional way of defining the SELECT
+clause and flat result sets.
+
+
+Slide 15.
+
+Query type safety and autocompletion is provided by Tarmaq's Data
+Access Object (or DAO) layer.
+
+
+Slide 16.
+
+A key technical feature of AIRport is that Applications can
+interoperate.  And in order to interoperate they have to be
+able to talk to each other.  This is where AIRport provies an API
+layer that Applications can invoke on each other and User Interfaces
+can invoke on Applications.
+
+Applications run in fully isolated VMs.  VMs are fully isolated when
+AIRport is run as a native Application.  There, Apps only have 
+access to the APIs provided by AIRport.  When AIRport is run
+in a browser tab, Applications are isolated from AIRport and its
+database as well as from other Applications.  In the browser, this is 
+accomplished by running Applications in IFrames, from their original
+domains.
+
+Applications can query data that belongs to schemas of other
+Applications.  Applications cannot make persistence calls for the
+data that belongs in tables of other Applications. To save data that
+belongs to other Applications they must call the APIS of those other
+Applications.
+
+
+Slide 17.
+
+Here is an example of an Application API layer.  The methods that
+are allowed to be invoked by other Applications and by the UIs are
+decorated with the @Api() decorator.
+
+
+Slide 18.
+
+Database transactions in AIRport cross API calls.  So the outher most
+API call will start a transaction and all of the inner API calls will
+be included in that transaction.
+
+Each API call gets its own SQL SAVEPOINT.  So that means that when a
+rollback happens due to an API call failure, it can be captured and
+the error that was thrown by the API call can be handled while the
+outer transaction can still continue and be persisted.
+
+AIRport client library passes in Ids for the UI and the User that are making an API call.  AIRport keeps track of this and other information in a Request Object.  This Request Object can be Accessed by the Application APIs.
+
+In other words Applications can be made aware of UIs that are invoking their APIs and can also be made aware of what Users are using those UIs.
+
+It is also possible to track the API chain of invocation and see what combination of UI + Apps is making a given API call.
+
+This mechanism that is used to track Request state can also be used
+to keep track of Session state.  So, its possible for Applications
+to maintain a Session with their Users.
+
+
+Slide 19.
+
+AIRport is meant to run on the End User devices, such as their phones
+or their tables or their personal computers, and each one of these
+devices has its own AIRport database.  So the same repository will
+exist in multiple devices.
+
+Repositories are synchronized between devices via Transaction Logs.
+So every single transaction is shared between the devices that have
+this Repository.
+
+Since multiple devices can modify a particular Repository at the same
+time, there may be conflicts in the data of that Repository.  AIRport
+automatically resolves those conflicts based on the timestamps of the
+modifications.
+
+
+Slide 20.
+
+AIRbirdge is a supplementary effort that provides AIRport integration solutions.  The initial AIRbridge projects are a private blockchain, Single Sign On solutions, data transfer and storage platform adapters, and a unified validation solution.
+
+
+Slide 21.
+
+AIRbridge validation is a declarative, entity based way of validating inputs that come from the client.  It is more consise and readable than procedural code.
+
+Using AIRport's "Original State" property, it will fail validation 
+if there property changes not specified in the validation definion.  
+It will also limit the graph of changes to be persisted only to the 
+validated entities.
+
+Same exact AIRbirdge validation definitions are usable on both 
+server and  client.  The validator objects can be adapted into all 
+modern UI frameworks, and (where necessary) wrapped in input 
+components.
+
+
+Slide 22.
+
+AIRway is set of peer-to-peer adapters for AIRport.  People using
+the same repository should be able to connect to each other directly
+and recieve real time updates.
+
+
+Slide 23.
+
+Highway is an AIRport extension for globally shared data. With 
+Highway, popular AIRport Apps will be able to have a centralized 
+component without having to write custom server-side logic.
+
+Highway takes AIR concepts and applies them to traditional server
+environments.  It provides more efficient data processing, while 
+keeping the data in Repositories.
+
+Highway optimizes Read data flows by retrieving transaction 
+logs from noSQL databases and executing queries on user devices.  The Write transactions are executed in a controlled environment on 
+the server.  Entity adapters will handle Full Text search and
+maintenance.
+
+
+Slide 24.
+
+Highway is a transitional step between the world of decentralized
+databases and the Internet of Databases. Maglev builds on top of
+Highway.  It takes processing of Repositories to a trusted network
+of execution nodes.  This allows to combine repositories from
+multiple data providers and provide trully global, 
+cross-organizational data views.  Data can also be modified 
+transactionally, across multiple organizations and jurisdictions.
+
+
+Slide 25.
+
+Thank you
+
+Pray emoji
+
+https://beyond-decentralized.world
+
