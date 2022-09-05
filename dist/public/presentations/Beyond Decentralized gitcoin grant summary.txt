@@ -1,0 +1,27 @@
+Beyond Decentralized stack enables decentralized application
+interoperability on top of relational databases. It brings
+standard Client-Server-Database development model
+to decentralized application development.
+
+Relational databases are split into autonomous Repositories.
+Each Repository maintains its own blockchain.  Repositories
+are loaded into databases on user devices and are stored
+on decentralized storage platforms like IPFS and Arweave (as
+transaction logs).
+
+Apps run in isolated VMs and can interoperate.  Apps
+can directly query data in other apps (by writing joins to
+tables of other apps) but must call APIs of other Apps to
+make persistence operations on tables of those Apps.
+
+Beyond Decentralized stack brings standard ORM & API tooling
+and bridges the client server gap with a modern entity
+management scheme. It supports entity based, declarative data
+validation.
+
+The framework and apps can run entirely in the browser or as a
+native application.  Beyond Decentralized is working toward
+a goal of an Internet of Databases. To find out more please see
+the documentation:
+
+https://beyond-decentralized.world/documentation.html#technologies
