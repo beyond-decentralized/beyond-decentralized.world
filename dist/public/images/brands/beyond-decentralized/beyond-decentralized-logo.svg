@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
-  <rect width="500" height="500" style="fill: rgb(135, 206, 235); paint-order: stroke markers;"/>
-  <path d="M 196.732 -73.393 L 389.6 126.399 L 3.864 126.399 L 196.732 -73.393 Z" style="fill: rgb(255, 255, 255); paint-order: fill;" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 226.394653, 54.022079)" bx:shape="triangle 3.864 -73.393 385.736 199.792 0.5 0 1@b5fcc840"/>
-  <path d="M 301.132 -3.296 L 412.381 350.768 L 189.882 350.768 L 301.132 -3.296 Z" style="fill: rgb(255, 255, 255);" transform="matrix(0.000252, 1, -1, 0.000252, 486.581299, -51.404129)" bx:shape="triangle 189.882 -3.296 222.499 354.064 0.5 0 1@0c09fc2f"/>
+  <rect width="500" height="500" style="fill: rgb(135, 206, 235); paint-order: stroke markers;" x="-0.054"/>
+  <path d="M 155.02 -98.37 L 306.994 169.416 L 3.045 169.416 L 155.02 -98.37 Z" style="fill: rgb(255, 255, 255); paint-order: fill;" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 261.81546, 94.027657)" bx:shape="triangle 3.045 -98.37 303.949 267.786 0.5 0 1@44e7a7ae"/>
+  <path d="M 52.422 -0.762 L 71.789 81.048 L 33.055 81.048 L 52.422 -0.762 Z" style="fill: rgb(255, 255, 255);" transform="matrix(0.000252, 1, -1, 0.000252, 496.214478, 196.190521)" bx:shape="triangle 33.055 -0.762 38.734 81.81 0.5 0 1@8739da0c"/>
+  <rect x="216.213" y="229.523" width="198.396" height="37.8" style="fill: rgb(255, 255, 255); paint-order: stroke; stroke: rgb(255, 255, 255);"/>
 </svg>
