@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <ellipse style="fill: rgb(0, 0, 255); stroke: rgb(0, 0, 255);" cx="50" cy="50" rx="50" ry="50"/>
-  <ellipse style="fill: rgb(255, 255, 255); stroke: rgb(255, 255, 255);" cx="25" cy="50" rx="25" ry="25"/>
-  <ellipse style="fill: rgb(255, 165, 0); stroke: rgb(255, 165, 0);" cx="37.5" cy="50" rx="12.5" ry="12.5"/>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <rect width="500" height="500" style="fill: rgb(135, 206, 235); paint-order: stroke markers;"/>
+  <path d="M 196.732 -73.393 L 389.6 126.399 L 3.864 126.399 L 196.732 -73.393 Z" style="fill: rgb(255, 255, 255); paint-order: fill;" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 226.394653, 54.022079)" bx:shape="triangle 3.864 -73.393 385.736 199.792 0.5 0 1@b5fcc840"/>
+  <path d="M 301.132 -3.296 L 412.381 350.768 L 189.882 350.768 L 301.132 -3.296 Z" style="fill: rgb(255, 255, 255);" transform="matrix(0.000252, 1, -1, 0.000252, 486.581299, -51.404129)" bx:shape="triangle 189.882 -3.296 222.499 354.064 0.5 0 1@0c09fc2f"/>
 </svg>
