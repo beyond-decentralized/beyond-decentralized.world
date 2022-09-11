@@ -31,8 +31,8 @@
     }
 
     header .header__logo img {
-      width: 85px;
-      height: 44px;
+      height: 60px;
+      border-radius: 30px;
     }
 
     header a.logo-text {
@@ -40,6 +40,7 @@
       font-size: 19px;
       line-height: 19px;
       margin-bottom: 15px;
+      margin-left: 15px;
       margin-top: 7px;
     }
 
@@ -59,6 +60,11 @@
 
     .idocs-navigation>.external.nav {
       padding: 0px;
+    }
+
+    .story-video {
+      text-align: center;
+      width: 100%;
     }
   </style>
 </head>
@@ -91,7 +97,7 @@
           <div class="header__logo">
             <table>
               <tr>
-                <td>
+                <td style="width: 60px;">
                   <img src="./images/brands/beyond-decentralized/beyond-decentralized-logo.svg"
                     alt="Beyond Decentralized logo" />
                 </td>
@@ -114,6 +120,7 @@
               <li class="nav-item"><a class="nav-link" href="#independent-software-development">
                   Independent Software Development
                 </a></li>
+              <li class="nav-item"><a class="nav-link" href="#the-story">The Story</a></li>
               <li class="nav-item"><a class="nav-link" href="#non-profit">Non-Profit</a></li>
             </ul>
           </li>
@@ -199,6 +206,39 @@
               Beyond Decentralized projects are building frameworks for synergetic Apps. Apps that
               run on user devices and on dedicated or shared servers.
             </p>
+
+
+            <hr class="divider">
+
+            <!-- The Story
+		============================ -->
+            <section id="the-story">
+              <h3>The Story of Beyond Decentralized</h3>
+              <div class="story-video">
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QGMExtM-_nQ"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+
+              </div>
+              <p>
+                In 2015 I wrote "Hans the Organizator" (a family organizer)
+                and realized that families would have to store data on someone else's
+                servers. So I set off to first write an adapter for cloud storage
+                where people could store data under their own accounts. Over time
+                that adapter grew to become AIRport.
+              </p>
+              <p>
+                Eventually I made a conceptual breakthrough and I realized that Applications
+                can inter-operate on user data. Applications can access user owned data and
+                share it solely on the user's devices. For me, that
+                changed how applications can be written.
+              </p>
+              <p>
+                Artem V. Shamsutdinov
+              </p>
+            </section>
 
             <hr class="divider">
             <h3 id="non-profit">Non-Profit</h3>

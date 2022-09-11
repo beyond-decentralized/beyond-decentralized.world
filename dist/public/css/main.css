@@ -2298,7 +2298,6 @@ input::-moz-focus-inner {
 }
 
 .header__logo img {
-  width: 125px;
   height: 30px;
   margin: 0;
 }
