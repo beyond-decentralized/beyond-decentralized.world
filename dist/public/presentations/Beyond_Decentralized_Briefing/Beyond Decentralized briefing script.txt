@@ -10,9 +10,9 @@ Apps run in isolation from the database.  They are also isolated from each other
 
 Apps can read from tables of related Apps.  Apps cannot write to tables of other Apps.  They must call the business logic of Apps that own the tables to write to those tables.  This makes business logic work cooperatively across Applications.
 
-Beyond Decentralized data stays on user devices.  Data is not sent to third party Application servers.  Beyond Decentralized controls data sharing and lets the user decide how and with whom they share.  Sharing is done via independently operated file sharing systems like IPFS.
+With Beyond Decentralized data stays on user devices.  Data is not sent to third party Application servers.  Beyond Decentralized controls data sharing and lets the user decide how and with whom they share.  Sharing is done via independently operated file sharing systems like IPFS.
 
-To be shared data is split into virtual Repositories.  This allows users to participate in different groups without having to share the data between all of the groups.  Users access only the data that belongs to them.
+To be shared data is split into virtual Repositories.  Repositories are completely independent or each other.  Each repository is shared separately.  Repositories allow users to participate in different groups without having to share all of the data between all of the groups.
 
 Most programmers use relational databases with well known patterns. Beyond Decentralized is designed to be familiar to all programmers.
 
