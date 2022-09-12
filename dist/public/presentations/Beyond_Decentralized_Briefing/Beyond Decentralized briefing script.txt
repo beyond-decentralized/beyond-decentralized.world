@@ -1,16 +1,18 @@
 Traditional applications have two components: Client and Server. The Client runs User Interfaces. The server runs business logic and hosts a central database.  Client cannot run business logic because it is not trusted by businesses.
 
-Beyond Decentralized provides a secure environment right on user devices.  Databases reside on user devices because the data really belongs to users, not businesses. Apps run in isolation and do not access user data directly. They cooperate right on user devices, without sending data to servers.
+Beyond Decentralized provides a secure Server environment for business logic to run on user devices.  This is possile because databases reside locally, on user devices.  Beyond Decentralized Apps run their business logic against local databases.  Because there is one database per device, all Apps on that device use it.  This enables apps to work together.
 
-Most businesses use Relational Databases.  In such databases data is organized into tables.  Tables are data groups that relate to each other.  Relational Databases organize data and give it high quality.
+As do most businesses, Beyond Decentralized uses Relational Databases.  In these databases data is organized into tables.  Tables are data groups that relate to each other.  This automatically makes data stored in Relational Databases easier to understand and use.
 
-Beyond Decentralized is based on personal Relational Databases that are local to user devices.  All Apps store data in relational tables.  Newer Apps cooperate with existing apps by providing new tables that relate to existing ones.
+Beyond Decentralized is based on personal Relational Databases that run locally to user devices.  Each application has its own tables.  Those tables are then referenced in tables of other apps, which in turn are referenced by tables of more apps.  Thus data is stored cooperatively across tables of many applications.
 
-Apps run in isolation from the database.  They are also isolated from each other.
+To keep user data safe Apps are isolated from the database.  Apps run in sandboxes and access the database Server via a security filter.  Are are also isolated from each other.
 
-Apps can read from tables of related Apps.  Apps cannot write to tables of other Apps.  They must call the business logic of Apps that own the tables to write to those tables.  This makes business logic work cooperatively across Applications.
+Apps can read from tables of other Apps.  Apps cannot write to tables of other Apps.  They must call the business logic of Apps that own the tables to write to those tables.  This makes business logic work cooperatively across Applications.
 
-With Beyond Decentralized data stays on user devices.  Data is not sent to third party Application servers.  Beyond Decentralized controls data sharing and lets the user decide how and with whom they share.  Sharing is done via independently operated file sharing systems like IPFS.
+With Beyond Decentralized data resides on user devices.  Data is not sent to third party Application Servers.  Data is shared between user devices via shared filesystems, preferably via independenty operated IPFS.
+
+Beyond Decentralized provides a  layer on top of IPFS to securely share share data between devices.  
 
 To be shared data is split into virtual Repositories.  Repositories are completely independent or each other.  Each repository is shared separately.  Repositories allow users to participate in different groups without having to share all of the data between all of the groups.
 
