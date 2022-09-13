@@ -1,4 +1,4 @@
-In 2015 I wrote a family organizer.  I wanted everyone to use it but soon realized that I would have to host all of the data on my servers.
+In 2015 I wrote a family organizer.  I wanted everyone to use it but soon realized that I would have to host the data on a central server.
 
 That meant that other families would have to trust me with that data.  It also meant that I would be tempted to sell that data to make a profit.
 
@@ -8,4 +8,4 @@ After some thinking I finally realized that data could be stored on existing onl
 
 Energized by this idea I started writing a framework.  After several years of development and many conceptual breakthroughs I'm ready to share it with the world.
 
-I think that this new way of sharing data is the future of decentralized Application development.  You can click on the link below to learn the technical details.
+I think this new way of sharing data is the future of decentralized Application development.  You can click on the link below to learn the technical details.
