@@ -1,11 +1,27 @@
-In 2015 I wrote a family organizer.  I wanted everyone to use it but soon realized that I would have to host the data on a central server.
+Hello, I am Artem Shamsutdinov and this is a story of Beyond Decentralized.
 
-That meant that other families would have to trust me with that data.  It also meant that I would be tempted to sell that data to make a profit.
+In 2015 I decided to use my programming skills and I write an App I could sell.  I saw a need for better personal organization tools and wrote an organizer that I humorously called Hans the Organizator.
 
-That completely blocked me from proceeding with my goal and for several months I did not see a way around this problem.
+I wanted everyone to use it but soon realized that I would have to host the data on a central server.
 
-After some thinking I finally realized that data could be stored on existing online platforms in individual user accounts.  It wasn't perfect but it worked.
+That meant that other families would have to trust me with that data.
 
-Energized by this idea I started writing a framework.  After several years of development and many conceptual breakthroughs I'm ready to share it with the world.
+It also meant that I would be tempted to sell that data to make a profit.
 
-I think this new way of sharing data is the future of decentralized Application development.  You can click on the link below to learn the technical details.
+That completely blocked me from proceeding with my goal.
+
+For several months I did not see a way around this problem.
+
+I kept on thinking about the problem and finally found a possible solution.
+
+I realized that user data could be stored on existing online platforms in individual user accounts.  It wasn't perfect but it was worth a shot.
+
+Energized by this idea I started writing a framework.  At first it was just a simple data storage adapter.
+
+But as I kept on working on it the idea kept on growing.  It took me several years to build all of the features required for it to work.
+
+For a while I've known that this technology can be the future of decentralized Application development.
+
+Now in 2022 I realize this it can be a begining of a decentralized Internet of Databases.
+
+Please watch the Beyond Decnetralized briefing to learn more.

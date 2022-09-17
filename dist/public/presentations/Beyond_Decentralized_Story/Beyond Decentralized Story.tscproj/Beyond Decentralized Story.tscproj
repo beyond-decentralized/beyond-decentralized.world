@@ -18,37 +18,13 @@
   "sourceBin" : [
     {
       "id" : 1,
-      "src" : "Beyond Decentralized Story.m4a",
-      "rect" : [0, 0, 0, 0],
-      "lastMod" : "20220906T182518",
-      "loudnessNormalization" : true,
-      "sourceTracks" : [
-        {
-          "range" : [0, 662413333],
-          "type" : 2,
-          "editRate" : 10000000,
-          "trackRect" : [0, 0, 0, 0],
-          "sampleRate" : 48000,
-          "bitDepth" : 16,
-          "numChannels" : 1,
-          "integratedLUFS" : -26.6814297003606,
-          "peakLevel" : 0.415243774652481,
-          "metaData" : ""
-        }
-      ],
-      "metadata" : {
-        "timeAdded" : "20220906T183635.221897"
-      }
-    },
-    {
-      "id" : 2,
-      "src" : "Beyond Decentralized story.mov",
+      "src" : "Beyond Decentralized gitcoin grant summary.txt.mov",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20220906T183449",
+      "lastMod" : "20220917T064641",
       "loudnessNormalization" : true,
       "sourceTracks" : [
         {
-          "range" : [0, 1675],
+          "range" : [0, 3750],
           "type" : 0,
           "editRate" : 25,
           "trackRect" : [0, 0, 1920, 1080],
@@ -61,7 +37,31 @@
         }
       ],
       "metadata" : {
-        "timeAdded" : "20220906T183654.169092"
+        "timeAdded" : "20220917T064824.677771"
+      }
+    },
+    {
+      "id" : 2,
+      "src" : "Expanded Beyond Decentralized Story.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220917T062439",
+      "loudnessNormalization" : true,
+      "sourceTracks" : [
+        {
+          "range" : [0, 1494439375],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 1,
+          "integratedLUFS" : -43.7230832119003,
+          "peakLevel" : 0.0538538731634617,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220917T064850.670168"
       }
     }
   ],
@@ -77,11 +77,47 @@
                 "medias" : [
                   {
                     "id" : 4,
-                    "_type" : "VMFile",
+                    "_type" : "AMFile",
                     "src" : 2,
                     "trackNumber" : 0,
                     "attributes" : {
-                      "ident" : "Beyond Decentralized story"
+                      "ident" : "Expanded Beyond Decentralized Story",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "loudnessNormalization" : true,
+                      "sourceFileOffset" : 0
+                    },
+                      "channelNumber" : "0",
+                    "parameters" : {
+                      "volume" : 0.961538461538462
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 18,
+                    "duration" : 4482,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 4482,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 1,
+                "medias" : [
+                  {
+                    "id" : 5,
+                    "_type" : "VMFile",
+                    "src" : 1,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Beyond Decentralized gitcoin grant summary.txt"
                     },
                     "parameters" : {
                       "sourceCrop0" : {
@@ -129,42 +165,9 @@
 
                     ],
                     "start" : 0,
-                    "duration" : 2010,
+                    "duration" : 4500,
                     "mediaStart" : 0,
-                    "mediaDuration" : 2010,
-                    "scalar" : 1,
-                    "metadata" : {
-                      "clipSpeedAttribute" : false
-                    },
-                    "animationTracks" : {
-
-                    }
-                  }
-                ]
-              },
-              {
-                "trackIndex" : 1,
-                "medias" : [
-                  {
-                    "id" : 5,
-                    "_type" : "AMFile",
-                    "src" : 1,
-                    "trackNumber" : 0,
-                    "attributes" : {
-                      "ident" : "Beyond Decentralized Story",
-                      "gain" : 1.0,
-                      "mixToMono" : false,
-                      "loudnessNormalization" : true,
-                      "sourceFileOffset" : 0
-                    },
-                      "channelNumber" : "0",
-                    "effects" : [
-
-                    ],
-                    "start" : 24,
-                    "duration" : 1986,
-                    "mediaStart" : 0,
-                    "mediaDuration" : 1986,
+                    "mediaDuration" : 4500,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
