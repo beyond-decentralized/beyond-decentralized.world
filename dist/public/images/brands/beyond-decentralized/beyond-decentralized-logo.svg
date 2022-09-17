@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
-  <rect width="500" height="500" style="fill: rgb(135, 206, 235); paint-order: stroke markers;" x="-0.054"/>
-  <path d="M 153.006 -69.334 L 303.005 119.409 L 3.006 119.409 L 153.006 -69.334 Z" style="fill: rgb(255, 255, 255); paint-order: fill;" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 185.017578, 96.967186)" bx:shape="triangle 3.006 -69.334 299.999 188.743 0.5 0 1@738ea9a6"/>
-  <path d="M 52.422 -0.762 L 71.789 81.048 L 33.055 81.048 L 52.422 -0.762 Z" style="fill: rgb(255, 255, 255);" transform="matrix(0.000252, 1, -1, 0.000252, 496.214478, 197.190521)" bx:shape="triangle 33.055 -0.762 38.734 81.81 0.5 0 1@8739da0c"/>
-  <rect x="127.439" y="230.523" width="287.17" height="37.8" style="fill: rgb(255, 255, 255); paint-order: stroke; stroke: rgb(255, 255, 255);"/>
-  <path d="M 64.308 -79.854 L 127.353 137.527 L 1.263 137.527 L 64.308 -79.854 Z" style="fill: rgb(255, 255, 255); paint-order: fill;" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 297.072815, 185.646454)" bx:shape="triangle 1.263 -79.854 126.09 217.381 0.5 0 1@f466d004"/>
-  <path d="M 52.422 -0.847 L 71.789 90.084 L 33.055 90.084 L 52.422 -0.847 Z" style="fill: rgb(255, 255, 255);" transform="matrix(-0.005048, -0.999987, 0.999971, -0.008202, -23.172766, 303.033478)" bx:shape="triangle 33.055 -0.847 38.734 90.931 0.5 0 1@2bea97e0"/>
+  <rect width="500" height="500" style="fill: rgb(135, 206, 235); paint-order: stroke markers;"/>
+  <path d="M 101.178 -43.37 L 200.368 74.69 L 1.988 74.69 L 101.178 -43.37 Z" style="fill: rgb(255, 255, 255); paint-order: fill;" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 242.969818, 150.217804)" bx:shape="triangle 1.988 -43.37 198.38 118.06 0.5 0 1@4702c535"/>
+  <path d="M 29.125 -0.382 L 39.885 40.573 L 18.365 40.573 L 29.125 -0.382 Z" style="fill: rgb(255, 255, 255);" transform="matrix(0.000252, 1, -1, 0.000252, 426.051788, 221.569229)" bx:shape="triangle 18.365 -0.382 21.52 40.955 0.5 0 1@8f33aefd"/>
+  <rect x="187.117" y="240.201" width="197.83" height="20.551" style="fill: rgb(255, 255, 255); paint-order: stroke; stroke: rgb(255, 255, 255);"/>
+  <path d="M 64.308 -69.386 L 127.353 119.499 L 1.263 119.499 L 64.308 -69.386 Z" style="fill: rgb(255, 255, 255); paint-order: fill;" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 273.130798, 186.203751)" bx:shape="triangle 1.263 -69.386 126.09 188.885 0.5 0 1@70c6fab3"/>
+  <path d="M 25.565 -0.406 L 35.01 43.257 L 16.12 43.257 L 25.565 -0.406 Z" style="fill: rgb(255, 255, 255);" transform="matrix(-0.005048, -0.999987, 0.999971, -0.008202, 75.658104, 278.69458)" bx:shape="triangle 16.12 -0.406 18.89 43.663 0.5 0 1@feb2cd65"/>
+  <rect x="117.762" y="244.026" width="82.238" height="17.326" style="fill: rgb(255, 255, 255); paint-order: stroke; stroke: rgb(255, 255, 255);"/>
+  <rect x="138.183" y="153.106" width="31.164" height="196.358" style="fill: rgb(255, 255, 255); paint-order: stroke; stroke: rgb(255, 255, 255);"/>
 </svg>
