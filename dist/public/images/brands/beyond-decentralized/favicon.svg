@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
-  <rect width="500" height="500" style="fill: rgb(135, 206, 235); paint-order: stroke markers;" transform="matrix(1, 0.000055, 0, 1, 0, 0)"/>
-  <g transform="matrix(-0.707107, -0.707107, 0.707107, -0.707107, 243.262009, 600.444336)">
+  <rect width="500" height="500" style="paint-order: stroke markers; fill: rgb(51, 85, 255);" transform="matrix(1, 0, 0, 1, 0, 0)"/>
+  <g transform="matrix(-0.707107, -0.707107, 0.707107, -0.707107, 243.484543, 600.444397)">
     <path d="M 132.001 -69.871 L 261.408 120.326 L 2.594 120.326 L 132.001 -69.871 Z" style="fill: rgb(255, 255, 255); paint-order: fill;" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 229.985153, 118.102524)" bx:shape="triangle 2.594 -69.871 258.814 190.197 0.5 0 1@c476ed7b" bx:origin="0.49992 0.499891"/>
     <path d="M 28.589 -0.585 L 39.15 62.146 L 18.027 62.146 L 28.589 -0.585 Z" style="fill: rgb(255, 255, 255);" transform="matrix(0.000252, 1, -1, 0.000252, 499.405121, 221.192856)" bx:shape="triangle 18.027 -0.585 21.123 62.731 0.5 0 1@a5ea8e10"/>
     <rect x="237.062" y="239.991" width="199.035" height="20.363" style="fill: rgb(255, 255, 255); paint-order: stroke; stroke: rgb(255, 255, 255);"/>
