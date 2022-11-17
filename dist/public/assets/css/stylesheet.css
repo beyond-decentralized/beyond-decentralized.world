@@ -639,7 +639,7 @@ blockquote,
 
 /* Background Dark */
 .bg-dark {
-  background-color: #111418 !important;
+  background-color: #4F2683 !important;
 }
 
 .bg-dark-1 {
@@ -3057,7 +3057,7 @@ select.form-control:not([size]):not([multiple]):not(.form-control-sm) {
   border-bottom: 2px solid rgba(0, 0, 0, 0.12);
   border-radius: 0px;
   padding-left: 0px !important;
-  color: black;
+  color: #4F2683;
 }
 
 .form-border .form-control::-webkit-input-placeholder {
