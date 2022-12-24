@@ -72,7 +72,7 @@
                             <p style="text-align: center; width: 100%">
                                 <a href="https://www.helionenergy.com/">
                                     Helion Energy</a> has
-                                <a href="https://en.wikipedia.org/wiki/Aneutronic_fusion#Boron">
+                                <a href="https://www.helionenergy.com/articles/ending-trenta-operations/">
                                     opened up its 6th generation reactor to the world
                                 </a>.
                             </p>
@@ -94,7 +94,8 @@
                             As it stands right now, repositories are linked via @ManyToOne relationships. This is easy
                             to do since the Many side of the relationship contains the foreign key into the parent
                             table. However, as I've been writing the first internally provided DApps I realized that
-                            there is a need for linking from the @OneToMany side as well.
+                            there is a need for linking from the @OneToMany side as well. And the proposed solution
+                            opens up a possibility of a Graph database implementation on top of AIRport.
                         </p>
                         <p>
                             This can be demonstrated with linking from a Goal to Tasks. Naturally it makes sense to move
@@ -134,16 +135,14 @@
                         <p>
                             So, when you make a Repository split between a Goal and its Tasks, by default the Goal
                             Repository won't have any way to know about Tasks that are not physically present on the
-                            same
-                            user database.
+                            same user database.
                         </p>
                         <h2>
                             Default solution - new Table
                         </h2>
                         <p>
                             My default solution to this was to create a new @ManyToMany table that contains links to
-                            both
-                            the Goal and the Task:
+                            both the Goal and the Task:
                         </p>
                         <pre><code>@Entity()
                             <b>export class</b> GoalTask <b>extends</b> AirEntity {
@@ -171,32 +170,54 @@
                         </code></pre>
                         <p>
                             While leaving the direct link from Task to Goal in place. This solved the problem of the
-                            Goal
-                            Repository being able to look up Task repositories, without having Task repositories loaded
-                            in
-                            the local database. But this moved the burden of maintaining this relationship onto the App
-                            developers, which is cumbersome, error prone (developers can forget to do this) and is
-                            definitely annoying. With AIRport priding itself on being developer friendly this is not an
-                            acceptable solution in the final version of AIRport must be mitigated in a better way before
-                            AIRport is open to third party Apps.
+                            Goal epository being able to look up Task repositories, without having Task repositories
+                            loaded in the local database. But this moved the burden of maintaining this relationship
+                            onto the App developers, which is cumbersome, error prone (developers can forget to do this)
+                            and is definitely annoying. With AIRport priding itself on being developer friendly this is
+                            not an acceptable solution in the final version of AIRport must be mitigated in a better way
+                            before AIRport is open to third party Apps.
                         </p>
                         <h2>
                             Copying records breaks data encapsulation.
                         </h2>
                         <p>
                             One way to approach this issue is to copy records from the @ManyToOne side of the
-                            relationship
-                            into the repository in the OneToMany side. However this just doesn't work with the idea of
-                            data
-                            encapsulation. While it is OK (and probably a good idea) for a Task to know about its parent
-                            Goal, not all Tasks should be visible from the Goal side view, at least not in some
-                            settings.
-                            The end user should have the ability to specify Tasks that are private and are not visible
-                            to
-                            all Goal participants. For example, the goal of "Have a Merry Christmas" should have the
-                            task of
-                            "Put presents under the tree" be shared between the parents and Santa Claus. Children should
-                            have no knowledge of what it took to get those presents there.
+                            relationship into the repository in the OneToMany side. This is exactly what is being done
+                            <a href="../2021/Follow_the_Many_to_Ones.html">to maintain query integrity and ensure that
+                                data is returned in the same way for @ManyToOne links in queries</a>. However this just
+                            doesn't work with the idea of data encapsulation. While it is OK (and probably a good idea)
+                            for a Task to know about its parent Goal, not all Tasks should be visible from the Goal side
+                            view, at least not in some settings. The end user should have the ability to specify Tasks
+                            that are private and are not visible to all Goal participants. For example, the goal of
+                            "Have a Merry Christmas" should have the task of "Put presents under the tree" be shared
+                            between the parents and Santa Claus. Children should have no knowledge of what it took to
+                            get those presents there.
+                        </p>
+                        <p>
+                            Note that I'm yet to find a case where a child repository needs to be insulated from a
+                            parent Repository. For example user of a Task repository should able to see what Goal
+                            it belongs to, without having to load the entire Goal Repository. Same is true to
+                            a conversation that belongs to a Goal and for an Event setup for a given Task. And,
+                            in case such separation is required such changes can be managed with the same many-to
+                            many construct. This can be encapsulated with a property on the
+                            @ManyToOne relationship:
+                        </p>
+
+                        <pre><code>@Entity()
+                        <b>export class</b> Task <b>extends</b> AirEntity {
+
+                        @ManyToOne({ copyAcrossRepositories: false })
+                        goal: Goal
+
+                        }
+                        </code></pre>
+                        <p>The copy across repositories flag will be 'true' by default and can be set to 'false'
+                            if needed. If it's set to false then in the absense of parent repository the queries
+                            won't return any thing, while not compromising the need to maintain non-null constraints.
+                            This is true since the query will always be done via the internal many-to-many record,
+                            which just won't be there since the parent repository won't yet be loaded. This also means
+                            that it's link to the One side of the relationship will not enforce referential integrity
+                            to the parent table (which should work in SqLite by default).
                         </p>
                         <h2>
                             Internalize the ManyToMany
@@ -242,13 +263,23 @@
                             This opens up the way to implement @OneToOne relationships, which can also span multiple
                             Repositories. For '@OneToOne's there will have to be a foreign key on both sides of the
                             relationship, this truly making it a 'one-to-one' relationship with the JOINs being
-                            specified on
-                            both keys (vs synthetic relationships that are commonly present in modern ORMs).
+                            specified on both keys (vs synthetic relationships that are commonly present in modern
+                            ORMs). Though it makes most sense to maintain the one-to-one relationship via the same
+                            internal many-to-many table table. With an internal check that enforces the one-to-one
+                            relationship.
                         </p>
                         <p>
                             However the @OneToOne relationship isn't strictly necessary and won't be in the initial
-                            release
-                            of AIRport (and thus won't be in the first public version of Turbase.app).
+                            release of AIRport (and thus won't be in the first public version of Turbase.app).
+                        </p>
+                        <h2>
+                            Graph database implementation possible
+                        </h2>
+                        <p>Another thing that moving all relationships to an internal Many-to-Many relationship
+                            does is enabling the core feature of Graph databases - identifying data with the links
+                            between tables. This can now be done by adding any number of additional columns to
+                            the internal many-to-many relationship which will act as the Graph database like
+                            link.
                         </p>
                     </div> <!-- end entry content -->
 

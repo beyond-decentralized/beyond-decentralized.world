@@ -145,10 +145,12 @@
                             </div>
                             <div class="entry__excerpt">
                                 <p>
-                                    I've recently learned that some organizations value
-                                    working with raw SQL. Keeping your queries in
-                                    raw SQL makes sense and I am starting to design an
-                                    additional, SQL-first ORM for AIRport.
+                                    As it stands right now, repositories are linked via @ManyToOne relationships. This
+                                    is easy to do since the Many side of the relationship contains the foreign key into
+                                    the parent table. However, as I've been writing the first internally provided DApps
+                                    I realized that there is a need for linking from the @OneToMany side as well. And
+                                    the proposed solution opens up a possibility of a Graph database implementation on
+                                    top of AIRport.
                                     <br>
                                     ...
                                 </p>
