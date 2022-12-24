@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <meta name="author" content="Artem V Shamsutdinov">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="icon" type="image/svg+xml" href="../images/brands/beyond-decentralized/favicon.svg">
+    <link rel="icon" type="image/png" href="../images/brands/beyond-decentralized/favicon.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+</head>
+
+<body onload="updateMenu('Cross_Repository_OneToManys', 2022)" onload="" class="ss-bg-white">
+
+    <!-- preloader
+================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+    ================================================== -->
+        <header class="s-header header">
+        </header> <!-- end s-header -->
+
+        <!-- site content
+    ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+
+                <article class="column large-full entry format-standard">
+
+                    <!-- site summary
+                ================================================== -->
+                    <summary></summary>
+                    <!-- end site summary -->
+
+                    <div class="media-wrap entry__media">
+                        <div class="entry__post-thumb" style="text-align: center;">
+                            <iframe width="560" height="350" style="height: 350px;"
+                                src="https://www.youtube.com/embed/_bDXXWQxK38" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <p style="text-align: center; width: 100%">
+                                <a href="https://www.helionenergy.com/">
+                                    Helion Energy</a> has
+                                <a href="https://en.wikipedia.org/wiki/Aneutronic_fusion#Boron">
+                                    opened up its 6th generation reactor to the world
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="content__page-header entry__header">
+                        <h1 class="display-1 entry__title">
+                            Cross-repository '@OneToMany's
+                        </h1>
+                        <ul class="entry__header-meta">
+                            <li class="author">By Artem V. Shamsutdinov</li>
+                            <li class="date">Dec 24th, 2022</li>
+                        </ul>
+                    </div> <!-- end entry__header -->
+
+                    <div class="entry__content">
+                        <p>
+                            As it stands right now, repositories are linked via @ManyToOne relationships. This is easy
+                            to do since the Many side of the relationship contains the foreign key into the parent
+                            table. However, as I've been writing the first internally provided DApps I realized that
+                            there is a need for linking from the @OneToMany side as well.
+                        </p>
+                        <p>
+                            This can be demonstrated with linking from a Goal to Tasks. Naturally it makes sense to move
+                            the Goal and its underlying Tasks into separate repositories. This is true because a Task is
+                            more focused and only needs to be shared with stakeholders that care about that particular
+                            task. Versus a Goal can be shared by many more people and needs to be shared across all of
+                            them. But when performing a UI navigation between a Goal and its tasks (from the Goal side
+                            of the relationship) by default there would be no way to discover the Repositories of the
+                            related tasks. This is because there is no way to store state of the @OneToMany relationship
+                            without the child records on the Many side of the relationship:
+                        </p>
+                        <pre><code>@Entity()
+                            <b>export class</b> Goal <b>extends</b> AirEntity {
+
+                        name: string
+
+                        @OneToMany({ mappedBy: 'goal' })
+                        tasks: Task[]
+
+                        }
+
+                        @Entity()
+                        <b>export class</b> Task <b>extends</b> AirEntity {
+
+                        @ManyToOne()
+                        goal: Goal
+
+                        }
+                        </code></pre>
+                        <p>
+                            As you can see the @OneToMany relationship has to specify the "mappedBy" property to link to
+                            the
+                            field that it's being mapped to. This is because in the underlying table the linking
+                            identifier
+                            lives in the table with the @ManyToOne (the Tasks table in the example above).
+                        </p>
+                        <p>
+                            So, when you make a Repository split between a Goal and its Tasks, by default the Goal
+                            Repository won't have any way to know about Tasks that are not physically present on the
+                            same
+                            user database.
+                        </p>
+                        <h2>
+                            Default solution - new Table
+                        </h2>
+                        <p>
+                            My default solution to this was to create a new @ManyToMany table that contains links to
+                            both
+                            the Goal and the Task:
+                        </p>
+                        <pre><code>@Entity()
+                            <b>export class</b> GoalTask <b>extends</b> AirEntity {
+
+                        @ManyToOne()
+                        goal: Goal
+
+                        @ManyToOne()
+                        task: Task
+
+                        }
+                        </code></pre>
+                        <p>
+                            And (subsequently) to change the @OneToMany relationship in the Goal to this new table:
+                        </p>
+                        <pre><code>@Entity()
+                            <b>export class</b> Goal <b>extends</b> AirEntity {
+
+                        name: string
+
+                        @OneToMany({ mappedBy: 'goal' })
+                        goalTasks: GoalTask[]
+
+                        }
+                        </code></pre>
+                        <p>
+                            While leaving the direct link from Task to Goal in place. This solved the problem of the
+                            Goal
+                            Repository being able to look up Task repositories, without having Task repositories loaded
+                            in
+                            the local database. But this moved the burden of maintaining this relationship onto the App
+                            developers, which is cumbersome, error prone (developers can forget to do this) and is
+                            definitely annoying. With AIRport priding itself on being developer friendly this is not an
+                            acceptable solution in the final version of AIRport must be mitigated in a better way before
+                            AIRport is open to third party Apps.
+                        </p>
+                        <h2>
+                            Copying records breaks data encapsulation.
+                        </h2>
+                        <p>
+                            One way to approach this issue is to copy records from the @ManyToOne side of the
+                            relationship
+                            into the repository in the OneToMany side. However this just doesn't work with the idea of
+                            data
+                            encapsulation. While it is OK (and probably a good idea) for a Task to know about its parent
+                            Goal, not all Tasks should be visible from the Goal side view, at least not in some
+                            settings.
+                            The end user should have the ability to specify Tasks that are private and are not visible
+                            to
+                            all Goal participants. For example, the goal of "Have a Merry Christmas" should have the
+                            task of
+                            "Put presents under the tree" be shared between the parents and Santa Claus. Children should
+                            have no knowledge of what it took to get those presents there.
+                        </p>
+                        <h2>
+                            Internalize the ManyToMany
+                        </h2>
+                        <p>
+                            So, the obvious solution then is to Internalize the @ManyToMany table and relationship. This
+                            means that for every relationship in the schema there will be a hidden @ManyToMany table. It
+                            will always be populated and maintained (on @ManyToOne deletions or manual parent key swaps
+                            or
+                            key removal, I'm still not sure on deletions from @OneToMany arrays causing relationship
+                            changes). All queries from the One side of every relationship will (under the good) join via
+                            the
+                            @ManyToMany table, while the joins from the Many side will still join directly to the One
+                            side
+                            of the table. All of this will be hidden from the developer.
+                        </p>
+                        <p>
+                            This can present unnecessary framework bloat when developers really mean to create an
+                            Application level ManyToMany table but is a necessary step to keep things uniform and to not
+                            expose unneeded complexity to App developers.
+                        </p>
+                        <h2>
+                            Relationship maintenance
+                        </h2>
+                        <p>
+                            The other thing that will have to happen to make this work is (as described above)
+                            maintenance
+                            of these hidden tables when a @ManyToOne relationship is removed (by either deleting the
+                            @ManyToOne record or moving record to another @OneToMany). While deletion is
+                            straightforward,
+                            moving to a different parent record is more complex and actually stands on its own - it has
+                            to
+                            be done even without the new hidden tables in place. The solution is rather trivial though,
+                            since the foreign to the @OneToMany isn't part of the record key itself. This key can just
+                            be
+                            changed (or removed if made null). The only additional task is to maintain the Original key
+                            (which will be renamed to Cross Repository key) and to change it (or null it out) as well.
+                        </p>
+                        <h2>
+                            Future implementation of '@OneToOne's
+                        </h2>
+                        <p>
+                            This opens up the way to implement @OneToOne relationships, which can also span multiple
+                            Repositories. For '@OneToOne's there will have to be a foreign key on both sides of the
+                            relationship, this truly making it a 'one-to-one' relationship with the JOINs being
+                            specified on
+                            both keys (vs synthetic relationships that are commonly present in modern ORMs).
+                        </p>
+                        <p>
+                            However the @OneToOne relationship isn't strictly necessary and won't be in the initial
+                            release
+                            of AIRport (and thus won't be in the first public version of Turbase.app).
+                        </p>
+                    </div> <!-- end entry content -->
+
+                </article> <!-- end column large-full entry-->
+
+                <div class="comments-wrap">
+                </div> <!-- end comment-respond -->
+
+            </main>
+
+        </div> <!-- end s-content -->
+
+
+        <!-- footer
+================================================== -->
+        <footer class="s-footer footer">
+        </footer>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+================================================== -->
+    <script src="../js/post-component-loader.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
