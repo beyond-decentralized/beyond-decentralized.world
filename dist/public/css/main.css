@@ -2851,7 +2851,7 @@ body.search-is-visible {
 
   .header__nav-wrap {
     z-index: 99;
-    background: #151515;
+    background: #82B2FF;
     opacity: 0;
     visibility: hidden;
     position: fixed;
