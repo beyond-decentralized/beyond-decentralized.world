@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
-  <rect width="500" height="500" style="paint-order: stroke markers; fill: rgb(79, 33, 133);" transform="matrix(1, 0, 0, 1, 0, 0)"/>
-  <g transform="matrix(-0.707107, -0.707107, 0.707107, -0.707107, 243.484543, 600.444397)">
-    <path d="M 28.589 -0.585 L 39.15 62.146 L 18.027 62.146 L 28.589 -0.585 Z" style="fill-rule: nonzero; paint-order: stroke; stroke: #FFC704; fill: rgb(255, 199, 4);" transform="matrix(0.000252, 1, -1, 0.000252, 499.405121, 221.192856)" bx:shape="triangle 18.027 -0.585 21.123 62.731 0.5 0 1@a5ea8e10"/>
-    <path d="M 132.001 -69.871 L 261.408 120.326 L 2.594 120.326 L 132.001 -69.871 Z" style="fill-rule: nonzero; paint-order: stroke; stroke: #FFC704; fill: rgb(255, 199, 4);" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 229.985153, 118.102524)" bx:shape="triangle 2.594 -69.871 258.814 190.197 0.5 0 1@c476ed7b" bx:origin="0.49992 0.499891"/>
-    <rect x="237.062" y="239.991" width="199.035" height="20.363" style="stroke: #FFC704; fill-rule: nonzero; paint-order: fill; fill: rgb(255, 199, 4);"/>
-    <path d="M 50.958 -55.46 L 100.915 95.513 L 1 95.513 L 50.958 -55.46 Z" style="fill-rule: nonzero; paint-order: fill; stroke: #FFC704; fill: rgb(255, 199, 4);" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 306.693542, 198.980148)" bx:shape="triangle 1 -55.46 99.915 150.973 0.5 0 1@b603829c"/>
-    <path d="M 34.924 -1.015 L 47.826 108.044 L 22.021 108.044 L 34.924 -1.015 Z" style="fill-rule: nonzero; paint-order: fill; stroke: #FFC704; fill: rgb(255, 199, 4);" transform="matrix(-0.005048, -0.999987, 0.999971, -0.008202, -7.799182, 286.346558)" bx:shape="triangle 22.021 -1.015 25.805 109.059 0.5 0 1@3cd593c8"/>
-    <rect x="88.635" y="121.463" width="21.706" height="257.119" style="stroke: #FFC704; fill-rule: nonzero; paint-order: fill; fill: rgb(255, 199, 4);"/>
-    <path d="M 425.649 493.134 L 457.369 526.421 L 393.928 526.421 L 425.649 493.134 Z" style="stroke: #FFC704; fill-rule: nonzero; paint-order: fill; fill: rgb(255, 199, 4);" transform="matrix(0.004777, 0.999989, -0.999989, 0.004777, 948.060181, -177.571243)" bx:shape="triangle 393.928 493.134 63.441 33.287 0.5 0 1@b48b2216"/>
+  <rect width="500" height="500" style="paint-order: stroke markers; fill: rgb(130, 178, 255);" transform="matrix(1, 0, 0, 1, 0, 0)"/>
+  <g transform="matrix(0.965926, -0.258819, 0.258819, 0.965926, -55.067974, 71.924904)">
+    <path d="M 28.589 -0.585 L 39.15 62.146 L 18.027 62.146 L 28.589 -0.585 Z" style="fill-rule: nonzero; paint-order: stroke; stroke: #FFFFFF; fill: #FFFFFF;" transform="matrix(0.000252, 1, -1, 0.000252, 499.405121, 221.192856)" bx:shape="triangle 18.027 -0.585 21.123 62.731 0.5 0 1@a5ea8e10"/>
+    <path d="M 132.001 -69.871 L 261.408 120.326 L 2.594 120.326 L 132.001 -69.871 Z" style="fill-rule: nonzero; paint-order: stroke; stroke: #FFFFFF; fill: #FFFFFF;" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 229.985153, 118.102524)" bx:shape="triangle 2.594 -69.871 258.814 190.197 0.5 0 1@c476ed7b" bx:origin="0.49992 0.499891"/>
+    <rect x="237.062" y="239.991" width="199.035" height="20.363" style="stroke: #FFFFFF; fill-rule: nonzero; paint-order: fill; fill: #FFFFFF;"/>
+    <path d="M 50.958 -55.46 L 100.915 95.513 L 1 95.513 L 50.958 -55.46 Z" style="fill-rule: nonzero; paint-order: fill; stroke: #FFFFFF; fill: #FFFFFF;" transform="matrix(0.00109, 0.999999, -0.999999, 0.00109, 306.693542, 198.980148)" bx:shape="triangle 1 -55.46 99.915 150.973 0.5 0 1@b603829c"/>
+    <path d="M 34.924 -1.015 L 47.826 108.044 L 22.021 108.044 L 34.924 -1.015 Z" style="fill-rule: nonzero; paint-order: fill; stroke: #FFFFFF; fill: #FFFFFF;" transform="matrix(-0.005048, -0.999987, 0.999971, -0.008202, -7.799182, 286.346558)" bx:shape="triangle 22.021 -1.015 25.805 109.059 0.5 0 1@3cd593c8"/>
+    <rect x="88.635" y="121.463" width="21.706" height="257.119" style="stroke: #FFFFFF; fill-rule: nonzero; paint-order: fill; fill: #FFFFFF;"/>
+    <path d="M 425.649 493.134 L 457.369 526.421 L 393.928 526.421 L 425.649 493.134 Z" style="stroke: #FFFFFF; fill-rule: nonzero; paint-order: fill; fill: #FFFFFF;" transform="matrix(0.004777, 0.999989, -0.999989, 0.004777, 948.060181, -177.571243)" bx:shape="triangle 393.928 493.134 63.441 33.287 0.5 0 1@b48b2216"/>
   </g>
 </svg>

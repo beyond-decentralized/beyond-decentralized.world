@@ -82,7 +82,7 @@ body {
   font-style: normal;
   font-weight: normal;
   line-height: 1.789;
-  color: #4F2683;
+  color: #000000;
   margin: 0;
   padding: 0;
 }
@@ -144,7 +144,7 @@ h6,
   font-family: "Heebo", sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #4F2683;
+  color: #82B2FF;
   font-variant-ligatures: common-ligatures;
   text-rendering: optimizeLegibility;
 }
@@ -253,7 +253,7 @@ p.lead {
   font-size: 2.4rem;
   line-height: 1.833;
   margin-bottom: 3.6rem;
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 @media screen and (max-width:1200px) {
@@ -322,7 +322,7 @@ blockquote p {
   padding: 0;
   font-size: 2.4rem;
   line-height: 1.833;
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 @media screen and (max-width:500px) {
@@ -381,7 +381,7 @@ code {
   white-space: nowrap;
   background: #efefef;
   border: 1px solid #d3d3d3;
-  color: #4F2683;
+  color: #82B2FF;
   border-radius: 3px;
 }
 
@@ -410,7 +410,7 @@ dfn[title] {
 
 mark {
   background: #fff099;
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 hr {
@@ -549,7 +549,7 @@ td {
 }
 
 th {
-  color: #4F2683;
+  color: #82B2FF;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 700;
 }
@@ -635,7 +635,7 @@ form,
 
 #loader>div {
   content: "";
-  background: #4F2683;
+  background: #82B2FF;
   width: 6px;
   height: 6px;
   position: absolute;
@@ -817,7 +817,7 @@ select {
   padding: 1.6rem 0 1.5rem;
   border: 0;
   outline: none;
-  color: #4F2683;
+  color: #82B2FF;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1.6rem;
   line-height: 3.2rem;
@@ -853,8 +853,8 @@ select {
 }
 
 .ss-custom-select::after {
-  border-bottom: 2px solid #4F2683;
-  border-right: 2px solid #4F2683;
+  border-bottom: 2px solid #82B2FF;
+  border-right: 2px solid #82B2FF;
   content: "";
   display: block;
   height: 8px;
@@ -884,8 +884,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  color: #4F2683;
-  border-bottom: 1px solid #4F2683;
+  color: #82B2FF;
+  border-bottom: 1px solid #82B2FF;
 }
 
 label,
@@ -895,7 +895,7 @@ legend {
   font-size: 1.4rem;
   margin-bottom: 0.8rem;
   line-height: 1.714;
-  color: #4F2683;
+  color: #82B2FF;
   display: block;
 }
 
@@ -999,7 +999,7 @@ input[type="button"] {
   line-height: 5.6rem;
   padding: 0 3.2rem;
   margin: 0 0.4rem 1.6rem 0;
-  color: #4F2683;
+  color: #82B2FF;
   text-decoration: none;
   text-align: center;
   white-space: nowrap;
@@ -1023,7 +1023,7 @@ input[type="reset"]:focus,
 input[type="button"]:focus {
   background-color: #c3c3c3;
   border-color: #c3c3c3;
-  color: #4F2683;
+  color: #82B2FF;
   outline: 0;
 }
 
@@ -1034,8 +1034,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-  background: #4F2683;
-  border-color: #4F2683;
+  background: #82B2FF;
+  border-color: #82B2FF;
   color: #ffffff;
 }
 
@@ -1076,14 +1076,14 @@ button.btn--large {
 .btn--stroke,
 button.btn--stroke {
   background: transparent !important;
-  border: 0.2rem solid #4F2683;
-  color: #4F2683;
+  border: 0.2rem solid #82B2FF;
+  color: #82B2FF;
 }
 
 .btn--stroke:hover,
 button.btn--stroke:hover {
-  background: #4F2683 !important;
-  border: 0.2rem solid #4F2683;
+  background: #82B2FF !important;
+  border: 0.2rem solid #82B2FF;
   color: #ffffff;
 }
 
@@ -1123,7 +1123,7 @@ input::-moz-focus-inner {
   line-height: 6rem;
   text-indent: 0;
   background: transparent;
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 /* line definition style 
@@ -1249,7 +1249,7 @@ input::-moz-focus-inner {
   font-family: "Heebo", sans-serif;
   font-weight: 700;
   border: none;
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .stats-tabs li a:hover {
@@ -1289,7 +1289,7 @@ input::-moz-focus-inner {
   top: -4rem;
   font-family: "Heebo", sans-serif;
   font-weight: 700;
-  color: #4F2683;
+  color: #82B2FF;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 1.4rem;
@@ -1297,7 +1297,7 @@ input::-moz-focus-inner {
 }
 
 .skill-bars li .progress {
-  background: #4F2683;
+  background: #82B2FF;
   position: relative;
   height: 100%;
 }
@@ -1311,7 +1311,7 @@ input::-moz-focus-inner {
   color: #ffffff;
   font-size: 1.1rem;
   line-height: 1;
-  background: #4F2683;
+  background: #82B2FF;
   padding: 0.8rem 0.8rem;
   border-radius: 3px;
 }
@@ -1324,7 +1324,7 @@ input::-moz-focus-inner {
   width: 0;
   height: 0;
   border: 5px solid transparent;
-  border-top-color: #4F2683;
+  border-top-color: #82B2FF;
   content: "";
 }
 
@@ -1524,18 +1524,18 @@ input::-moz-focus-inner {
   padding: 0.2rem 1.2rem;
   height: 3.6rem;
   margin: 0.2rem 0.2rem;
-  color: #4F2683;
+  color: #82B2FF;
   transition: all, 0.3s, ease-in-out;
 }
 
 .pgn__num:hover {
   background: #d3d3d3;
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .pgn .current,
 .pgn .current:hover {
-  background-color: #4F2683;
+  background-color: #82B2FF;
   color: white;
 }
 
@@ -1875,7 +1875,7 @@ input::-moz-focus-inner {
 }
 
 .masonry .entry__title a {
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .masonry .entry__title a:hover,
@@ -1907,7 +1907,7 @@ input::-moz-focus-inner {
 }
 
 .masonry .entry__meta a {
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .masonry .entry__meta a:hover,
@@ -1986,7 +1986,7 @@ input::-moz-focus-inner {
   font-size: 2.8rem;
   font-weight: 400;
   line-height: 1.429;
-  color: #4F2683;
+  color: #82B2FF;
   padding: 8rem 0 0 0;
   margin-top: 0;
   margin-bottom: 3.2rem;
@@ -2034,7 +2034,7 @@ input::-moz-focus-inner {
 
 .format-link .link-wrap cite a:hover,
 .format-link .link-wrap cite a:focus {
-  color: #4F2683;
+  color: #82B2FF;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -2272,7 +2272,7 @@ input::-moz-focus-inner {
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   width: 300px;
-  background-color: #4F2683;
+  background-color: #82B2FF;
   padding-top: 2.4rem;
   padding-right: 3.2rem;
   padding-left: 4.4rem;
@@ -2322,7 +2322,7 @@ input::-moz-focus-inner {
   -ms-flex-align: stretch;
   align-items: stretch;
   max-width: 100%;
-  background-color: #4F2683;
+  background-color: #82B2FF;
   margin-top: 0rem;
 }
 
@@ -2594,7 +2594,7 @@ input::-moz-focus-inner {
 .header__search-trigger {
   z-index: 1;
   display: block;
-  color: #4F2683;
+  color: #82B2FF;
   height: 16px;
   width: 16px;
   background-repeat: no-repeat;
@@ -2663,7 +2663,7 @@ input::-moz-focus-inner {
 }
 
 .header__search-form label {
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .header__search-form::after {
@@ -2678,7 +2678,7 @@ input::-moz-focus-inner {
 
 .header__search-form input[type="search"] {
   background-color: transparent;
-  color: #4F2683;
+  color: #82B2FF;
   height: auto;
   width: 100%;
   font-family: "IBM Plex Sans", sans-serif;
@@ -2697,43 +2697,43 @@ input::-moz-focus-inner {
 .header__search-form input[type="search"]::-webkit-input-placeholder {
 
   /* WebKit, Blink, Edge */
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .header__search-form input[type="search"]:-moz-placeholder {
 
   /* Mozilla Firefox 4 to 18 */
-  color: #4F2683;
+  color: #82B2FF;
   opacity: 1;
 }
 
 .header__search-form input[type="search"]::-moz-placeholder {
 
   /* Mozilla Firefox 19+ */
-  color: #4F2683;
+  color: #82B2FF;
   opacity: 1;
 }
 
 .header__search-form input[type="search"]:-ms-input-placeholder {
 
   /* Internet Explorer 10-11 */
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .header__search-form input[type="search"]::-ms-input-placeholder {
 
   /* Microsoft Edge */
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .header__search-form input[type="search"]::placeholder {
 
   /* Most modern browsers support this now. */
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .header__search-form input[type="search"].placeholder {
-  color: #4F2683 !important;
+  color: #82B2FF !important;
 }
 
 .header__search-form input[type="search"]:focus {
@@ -2778,7 +2778,7 @@ body.search-is-visible {
   height: 20px;
   top: 12px;
   left: 22px;
-  background-color: #4F2683;
+  background-color: #82B2FF;
 }
 
 .header__search-close::before {
@@ -2827,7 +2827,7 @@ body.search-is-visible {
 
   .header__top {
     z-index: 100;
-    background: #111111;
+    background: #82B2FF;
     width: 100%;
     height: 78px;
     position: fixed;
@@ -3051,7 +3051,7 @@ body.search-is-visible {
 }
 
 .s-footer a {
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 /* -------------------------------------------------------------------
@@ -3100,7 +3100,7 @@ body.search-is-visible {
   color: rgba(255, 255, 255, 0.5);
   transition: all 0.3s;
   background-image: url(../images/icons/icon-arrow-up.svg);
-  background-color: #4F2683;
+  background-color: #82B2FF;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 7px 14px;
@@ -3198,7 +3198,7 @@ body.search-is-visible {
   font-weight: 300;
   line-height: 1.778;
   margin-left: 0;
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .entry__header-meta li {
@@ -3213,7 +3213,7 @@ body.search-is-visible {
 
 .entry__header-meta a:hover,
 .entry__header-meta a:focus {
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .entry__header-meta .cat-links a::after {
@@ -3234,7 +3234,7 @@ body.search-is-visible {
 
 .entry__tags span {
   font-weight: 500;
-  color: #4F2683;
+  color: #82B2FF;
   padding-right: 56px;
   margin-right: 1.6rem;
   position: relative;
@@ -3276,8 +3276,8 @@ body.search-is-visible {
 
 .entry__tags .entry__tag-list a:hover,
 .entry__tags .entry__tag-list a:focus {
-  background-color: #4F2683;
-  border-color: #4F2683;
+  background-color: #82B2FF;
+  border-color: #82B2FF;
   color: #ffffff;
 }
 
@@ -3318,7 +3318,7 @@ body.search-is-visible {
   font-weight: 500;
   font-size: 3rem;
   line-height: 1.333;
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .entry__nav a:hover span,
@@ -3524,7 +3524,7 @@ body.search-is-visible {
   font-size: 1.9rem;
   line-height: 1.684;
   font-style: normal;
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .comment__meta {
@@ -3553,7 +3553,7 @@ body.search-is-visible {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: #4F2683;
+  color: #82B2FF;
 }
 
 .comment__text {
