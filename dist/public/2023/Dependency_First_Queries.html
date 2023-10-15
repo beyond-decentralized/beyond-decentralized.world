@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <meta name="author" content="Artem V Shamsutdinov">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="icon" type="image/svg+xml" href="../images/brands/beyond-decentralized/favicon.svg">
+    <link rel="icon" type="image/png" href="../images/brands/beyond-decentralized/favicon.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+</head>
+
+<body onload="updateMenu('Repository_Loading', 2022)" onload="" class="ss-bg-white">
+
+    <!-- preloader
+================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+    ================================================== -->
+        <header class="s-header header">
+        </header> <!-- end s-header -->
+
+        <!-- site content
+    ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+
+                <article class="column large-full entry format-standard">
+
+                    <div class="media-wrap entry__media">
+                        <div class="entry__post-thumb" style="text-align: center">
+                            <img alt="Helion to build 500MW plant for Nucor" sizes="(max-width: 1000px) 100vw, 1000px"
+                                src="./images//helion-fusion-plasma.jpeg">
+                            <p style="text-align: center; width: 100%">
+                                Helion Energy is working with Nucor to deploy <a
+                                    href="https://www.helionenergy.com/articles/announcing-helion-collaboration-with-nucor/">a
+                                    500 MW fusion power plant</a> for a steelmaking facility.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="content__page-header entry__header">
+                        <h1 class="display-1 entry__title">
+                            Dependency-First Queries
+                        </h1>
+                        <ul class="entry__header-meta">
+                            <li class="author">By Artem V. Shamsutdinov</li>
+                            <li class="date">October 15th, 2023</li>
+                        </ul>
+                    </div> <!-- end entry__header -->
+
+                    <div class="entry__content">
+                        <p>
+                            This morning I finally arrived at the idea of how to efficiently and effectively ensure
+                            repository Atomicity at query time.
+                        </p>
+                        <p>
+                            The problem of Atomic Repository queries has to do with the duality of state of Automic
+                            Repositories.  This duality arises because Autonomous Repositories carry with them a local
+                            version of all the records they depend on.  This means that when an AIRport database does
+                            not have dependencies of a given Repository it can still provide full query results for that
+                            Repository by first querying against the records that are local to that Repository and
+                            subsequently checking other repository data for information.
+                        </p>
+                        <p>
+                            And it is exactly this thinking that got me stuck on the solution so far.  First checking
+                            local copies and then progressively loading remote data is a complex solution.  It requires
+                            constructing multiple versions of queries depending on what Repositories are loaded or are
+                            missing.  This is exactly why as of right now AIRport repositories rely on availability of
+                            Repository dependencies (progressively loading them and not checking local data records).
+                        </p>
+                        <p>
+                            The initial solution to this complexity is to flip the problem description on its head. 
+                            Instead of first checking local data, construct a join across Repository boundaries.  Then
+                            check the result object tree against non-null constraints and see what is missing.  If there
+                            is data that is missing then separate queries can be constructed against local data copies.
+                        </p>
+                        <p>
+                            This leaves the problem of WHERE clause statements against Repository dependencies.  In that
+                            case a query will return a result that is missing records completely.  The solution for that
+                            is to run a "fully local" query, detect missing records in the original query and stub them
+                            in as necessary.  This solution replaces the non-null constraint check above, since cross
+                            checking queries will both provide more accurate results and detect missing data at the same
+                            time.  And the cost of doing so is fixed - AIRport has to always run 2 queries instead of
+                            potentially any number of sub-queries.
+                        </p>
+                        <p>
+                            This works for both Observable and Promise queries since now instead of a single query run
+                            every query performs two runs and a combined result set is returned. And, this solution also
+                            covers the problem of having more missing data when immediate Repository dependencies are
+                            loaded.  The identical "second query" process will detect and additional repositories that
+                            must also be loaded to return the fully accurate query results.
+                        </p>
+                        <h2>Additional bonus - simple copy creation</h2>
+                        <p>
+                            An additional question came up on how to maintain the "copy records".  One approach is to
+                            try to update the copies with the latest available data from the related repositories. 
+                            However, this approach can get out of sync on different databases that have varying copies
+                            of the related repositories (causing a potentially infinite loop of data conflict
+                            resolutions).  On top of that this solution is not performant and requires additional
+                            queries, persistence operations and network round trips and storage.
+                        </p>
+                        <p>
+                            The solution to this question now appears to be simple - just write the copy records once,
+                            when the repository linking (or in most cases the linked data) is created.  This solves the
+                            above problems in a very elegant way - if related repositories cannot be loaded you simply
+                            see the original state of the linked data.
+                        </p>
+                    </div> <!-- end entry content -->
+
+                </article> <!-- end column large-full entry-->
+
+                <div class="comments-wrap">
+                </div> <!-- end comment-respond -->
+
+            </main>
+
+        </div> <!-- end s-content -->
+
+
+        <!-- footer
+================================================== -->
+        <footer class="s-footer footer">
+        </footer>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+================================================== -->
+    <script src="../js/post-component-loader.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
