@@ -640,7 +640,7 @@ blockquote,
 /* Background Dark */
 .bg-dark {
   background-color: rgb(50, 60, 130) !important;
-  background: linear-gradient(180deg, rgba(50,60,130,1) 0%, rgba(130,130,230,1) 70%, rgba(255,130,70,1) 100%);
+  background: linear-gradient(180deg, rgba(50,60,130,1) 0%, rgba(50,160,230,1) 70%, rgba(255,130,70,1) 100%);
 }
 
 .bg-dark-1 {

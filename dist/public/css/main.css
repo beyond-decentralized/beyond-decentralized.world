@@ -2273,7 +2273,7 @@ input::-moz-focus-inner {
   flex-flow: column nowrap;
   width: 300px;
   background-color: rgb(50, 60, 130);
-  background: linear-gradient(180deg, rgba(50,60,130,1) 0%, rgba(130,130,230,1) 70%, rgba(255,130,70,1) 100%);
+  background: linear-gradient(180deg, rgba(50,60,130,1) 0%, rgba(50,160,230,1) 70%, rgba(255,130,70,1) 100%);
   padding-top: 2.4rem;
   padding-right: 3.2rem;
   padding-left: 4.4rem;
@@ -2852,7 +2852,7 @@ body.search-is-visible {
   .header__nav-wrap {
     z-index: 99;
     background-color: rgb(50, 60, 130) !important;
-    background: linear-gradient(180deg, rgba(50,60,130,1) 0%, rgba(130,130,230,1) 70%, rgba(255,130,70,1) 100%);
+    background: linear-gradient(180deg, rgba(50,60,130,1) 0%, rgba(50,160,230,1) 70%, rgba(255,130,70,1) 100%);
     opacity: 0;
     visibility: hidden;
     position: fixed;
