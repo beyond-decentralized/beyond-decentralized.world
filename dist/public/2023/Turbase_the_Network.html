@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <meta name="author" content="Artem V Shamsutdinov">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="icon" type="image/svg+xml" href="../images/brands/beyond-decentralized/favicon.svg">
+    <link rel="icon" type="image/png" href="../images/brands/beyond-decentralized/favicon.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+</head>
+
+<body onload="updateMenu('Repository_Loading', 2022)" onload="" class="ss-bg-white">
+
+    <!-- preloader
+================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+    ================================================== -->
+        <header class="s-header header">
+        </header> <!-- end s-header -->
+
+        <!-- site content
+    ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+
+                <article class="column large-full entry format-standard">
+
+                    <!-- site summary
+                ================================================== -->
+                    <summary></summary>
+                    <!-- end site summary -->
+
+                    <div class="media-wrap entry__media">
+                        <div class="entry__post-thumb" style="text-align: center">
+                            <img alt="Helion to build 500MW plant for Nucor" sizes="(max-width: 1000px) 100vw, 1000px"
+                                src="./images/NearStar_Fusion_PowerPlant.jpeg">
+                            <p style="text-align: center; width: 100%">
+                                <a href="https://www.nearstarfusion.com">NearStar Fusion</a> is developing a simplified
+                                modular approach to nuclear fusion.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="content__page-header entry__header">
+                        <h1 class="display-1 entry__title">
+                            Turbase the Network
+                        </h1>
+                        <ul class="entry__header-meta">
+                            <li class="author">By Artem V. Shamsutdinov</li>
+                            <li class="date">December 6th, 2023</li>
+                        </ul>
+                    </div> <!-- end entry__header -->
+
+                    <div class="entry__content">
+                        <p>
+                            Storage of Repository data is pretty straight forward - every entry in its transaction log
+                            can be a separate file, timestamped at the time of its creation (preferably the proven time
+                            of persistence of the transaction log entry). But the retrieval of data is a lot more
+                            complex. The original idea was to store each repository in a folder, with data being broken
+                            out in chronological increments (days, months, years) into their own folders. Eventually the
+                            idea of rolling up older transactions into single files was added, so that data for a given
+                            year can be rolled up into a single file for faster retrieval (with a flat directory
+                            structure containing year, month, day aggregates and recent individual log entries that call
+                            all be retrieved at the same time after the directory contents are read).
+                        </p>
+                        <p>
+                            AIRport runs primarily on the client device, with the transaction logs being retrieved and
+                            composed into a working database right on user's phones or computers. This is needed to
+                            ensure data privacy, with transaction logs being encrypted (and decrypted) on user devices.
+                            This means that even in the optimal case of all data for a repository being created in a
+                            single year (and thus a single file) 2 serially placed network calls are required to
+                            retrieve the data. And in the ideal situation a single network call would be placed to
+                            retrieve all of the data for a Repository.
+                        </p>
+                        <p>
+                            So, my latest thinking has been on how to accomplish that and so far I see no way of doing
+                            so without introducing a dedicated network of database nodes that will aggregate the data.
+                            This is further reinforced by my recent findings on how Filecoin and Arweave work - both
+                            require CDN like networks on top of them to ensure fast data retrieval and persistence.
+                        </p>
+                        <p>
+                            This means that the original idea behind Turbase is now expanded into a fully blown network
+                            of nodes that will provide persistence and retrieval of database transaction logs.
+                            Internally these nodes can rely on Filecoin for data storage (primarily for backup purposes)
+                            and optional permanent archival (into Arweave). But for timely data retrieval they will
+                            likely have to maintain the transaction logs for as long as the user doesn't "file" them
+                            into infrequently accessed long term storage (on Filecoin or Arweave).
+                        </p>
+                        <p>
+                            The need for a full blown network of nodes is further reinforced by the fact that not all of
+                            the data will belong to the users - quite a bit of it will be open data shared by
+                            communities. Having Applications own that data isn't a good solution either, since they will
+                            be materially motivated to restrict access to that data.
+                        </p>
+                        <p>
+                            This is where the original idea behind Turbase re-enters but now in a new light. Instead of
+                            simply being a web-site that hosts the code necessary for a client device to talk to storage
+                            networks and run a database locally it now becomes a fully blown network of database nodes
+                            on top of which Applications run.
+                        </p>
+                        <p>
+                            Arguments on how to make sure such a network remains independent and decentralized are yet
+                            to be made but from a technological point of view this network is different from any
+                            distributed database because the Relational Database engine and applications still run on
+                            user devices. This means that for basic operation all that is needed is a (fast retrieval)
+                            file server (for composite records) and an efficient NoSQL database (for recent records, yet
+                            to be combined into the composite). Of course for community adta Apps will likely also need
+                            Full Text Search capability and also ability to make aggregate queries across repositories
+                            so additional (RDBMS and FTS) functionality can be provided by these nodes as well.
+                            Additional fast access storage may also be provided for the non-database data (images,
+                            video's, etc.) that is referenced from the (not yet-archived) Repositories.
+                        </p>
+                        <p>
+                            And since the network will serve both private and community based storage needs it can be
+                            scaled naturally within already existing community lines (metro areas, states/regions &
+                            countries). Given that most of human activity is usually limited to these geographical areas
+                            it only makes sense to partition the (non global) data in a corresponding way (but more on
+                            that in a future post).
+                        </p>
+                    </div> <!-- end entry content -->
+
+                </article> <!-- end column large-full entry-->
+
+                <div class="comments-wrap">
+                </div> <!-- end comment-respond -->
+
+            </main>
+
+        </div> <!-- end s-content -->
+
+
+        <!-- footer
+================================================== -->
+        <footer class="s-footer footer">
+        </footer>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+================================================== -->
+    <script src="../js/post-component-loader.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>

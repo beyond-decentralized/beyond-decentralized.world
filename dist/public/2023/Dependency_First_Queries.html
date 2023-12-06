@@ -141,6 +141,29 @@
                             above problems in a very elegant way - if related repositories cannot be loaded you simply
                             see the original state of the linked data.
                         </p>
+                        <h2>Update - Dec 6th, 2023</h2>
+                        <p>
+                            Since I wrote about copy objects last time I've been able to refine the concept further.
+                            Quite a bit of complexity can be removed if the objects (referenced via @ManyToOne()) are
+                            just copied into a Repository as is, maintaining their original IDs (that belong to another
+                            Repository). When a Repository is used in a database where the referenced Repository isn't
+                            yet loaded, when it does get loaded the synchronization code will just run UPDATES instead
+                            of INSERTS and update the present records. This increases the complexity of the
+                            synchronization code but removes the need for double queries on every read statement. This
+                            also removes the need for special "*_COPY_*" id fields on every @ManyToOne() relationship.
+                            Given that the number of read queries will be far greater than the number of synchronization
+                            updates there should be significant performance gains (as well as compartmentalization of
+                            complexity).
+                        </p>
+                        <p>
+                            On a separate note, maintaining copy objects greatly helps with synchronization code since
+                            it allows Repositories to be loaded in "no particular order", irrespective of what
+                            dependencies they have for each other. This means that given two Repositories that depend on
+                            each other either one can be loaded before the other. Finally, another thing that copy
+                            objects help with the enforcement of NOT NULL constraints, which can now be done on the
+                            database level since there will always be data at insertion time (even when it spans
+                            multiple repositories).
+                        </p>
                     </div> <!-- end entry content -->
 
                 </article> <!-- end column large-full entry-->
