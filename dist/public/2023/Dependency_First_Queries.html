@@ -107,8 +107,9 @@
                         <p>
                             The initial solution to this complexity is to flip the problem description on its head. 
                             Instead of first checking local data, construct a join across Repository boundaries.  Then
-                            check the result object tree against non-null constraints and see what is missing.  If there
-                            is data that is missing then separate queries can be constructed against local data copies.
+                            check the resulting object tree against non-null constraints and see what is missing.  If
+                            there is data that is missing then separate queries can be constructed against local data
+                            copies.
                         </p>
                         <p>
                             This leaves the problem of WHERE clause statements against Repository dependencies.  In that
@@ -160,7 +161,7 @@
                             it allows Repositories to be loaded in "no particular order", irrespective of what
                             dependencies they have for each other. This means that given two Repositories that depend on
                             each other either one can be loaded before the other. Finally, another thing that copy
-                            objects help with the enforcement of NOT NULL constraints, which can now be done on the
+                            objects help with is the enforcement of NOT NULL constraints, which can now be done on the
                             database level since there will always be data at insertion time (even when it spans
                             multiple repositories).
                         </p>
