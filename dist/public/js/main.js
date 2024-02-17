@@ -291,19 +291,18 @@
     })();
 
 })(jQuery);
+function selectYearOnPage(year) {
+    for (let i = 2019; i < 2128; i++) {
+        var articlesElem = document.getElementById(i + '-articles')
+        if (articlesElem) {
+            articlesElem.style.display = 'none'
+        }
+    }
+
+    document.getElementById(year + '-articles').style.display = 'block'
+}
 
 function selectYear(year) {
-    for (let i = 2019; i < 2023; i++) {
-        document.getElementById(i + '-articles').style.display = 'none'
-    }
-
-    document.getElementById(year + '-articles').style.display = 'block'
+    selectYearOnPage(year)
     document.getElementById(year + '-last-article').scrollIntoView()
-}
-function selectYearOnPage(year) {
-    for (let i = 2019; i < 2023; i++) {
-        document.getElementById(i + '-articles').style.display = 'none'
-    }
-
-    document.getElementById(year + '-articles').style.display = 'block'
 }
