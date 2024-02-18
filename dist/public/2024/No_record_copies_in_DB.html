@@ -67,8 +67,7 @@
                             <img alt="Helion Energy expects to capture electricity and projects net energy gain this year!"
                                 sizes="(max-width: 1000px) 100vw, 1000px" src="./images/Helion_Vacumn_Chaimber.jpeg">
                             <p style="text-align: center; width: 100%">
-                                <a
-                                    href="https://twitter.com/Helion_Energy/">Helion
+                                <a href="https://twitter.com/Helion_Energy/">Helion
                                     Energy</a> expects to capture electricity and projects net energy gain this year!
                             </p>
                         </div>
@@ -109,6 +108,29 @@
                             COPIED_RECORD_LEDGER table. During loading of repositories this table will be checked. If
                             any of the records in the loaded repository are present there they will be Updated instead
                             of being Created.
+                        </p>
+                        <h2>
+                            Update 2/18/2024
+                        </h2>
+                        <p>
+                            At the time of creation of record copies the general approach is to use the "save" operation
+                            for saving copies of data (across repositories). Cross repository copies will be disallowed
+                            in the lower level "insert" and "update" operations.
+                        </p>
+                        <p>
+                            A new COPY operation type will be recorded in the transaction log. It will contain the save
+                            timestamp of when the copy was made
+                        </p>
+                        <p>
+                            At the time of loading copy data a check will be made against COPIED_RECORD_LEDGER to see if
+                            the record is already present in the local database. If the Repository does not exist
+                            locally a check will be made against the save timestamp to see if the newly loaded copy is
+                            more recent than the existing one. If it is then the copy record will be replaced.
+                        </p>
+                        <p>
+                            When a Repository is being loaded all of its loaded records will also be checked against
+                            COPIED_RECORD_LEDGER existing records will be UPDATEd instead of being CREATEd (and the
+                            entries in COPIED_RECORD_LEDGER will be deleted).
                         </p>
                     </div> <!-- end entry content -->
 
