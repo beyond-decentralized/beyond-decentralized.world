@@ -1,0 +1,11 @@
+Actor signs transaction input.  This requires the same version of Repository (and its dependencies)
+to be present on all devices that execute business logic (originally or for verification)
+
+Peer-to-peer:
+Terminals rely on the self-specified timestamps to order messages. If they exectute an operation
+and earlier created data comes in they do conflict detection that will sync the data to the same
+state across all devices.
+
+In controlled environments the controlled Terminals are considered "the source of truth" and their
+versions will override the versions created by peer-to-peer Terminals.
+

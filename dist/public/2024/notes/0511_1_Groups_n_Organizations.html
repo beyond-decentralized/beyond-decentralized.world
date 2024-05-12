@@ -1,0 +1,28 @@
+<ul>
+    <li>Membership on organization level.</li>
+    <li>Permissions on repository level (read by default).</li>
+    <li>Hierarchy of Organizations.</li>
+</ul>
+<p>
+    Organizations often don't trust each other. Sometimes parts of the same organization don't trust
+    each other. Sometimes different parts of the same organization trust different parts of external
+    organizations than they do other parts of that same organization.
+</p>
+<p>
+    To solve this a single rooted organization tree structure is introduced. All organizations originate
+    from the same root but can have different permission walls. A permission system
+    allows to share repositories of other organizations that are not parent organizations.
+</p>
+<p>
+    Sometimes a cross cutting concern requires access to all repositories in all sub-organizations.
+    To solve this a rank system is introduced (12 levels of 20). Some combination of these levels
+    (and possibly steps within them) allows for cross cutting access. It is possible to allow
+    limited access across organization roots (to elevated rank in organization requesting access).
+</p>
+<p>
+    Think of the Orbital Fleet (as in the Solar system) that we will have one day. Every (at least
+    major) country will have a branch of it. Alliances of countries will have branches as well. They
+    all will be parts of Orbital Fleet but at the same time they serve their own national/alliance
+    interests. So there must be a data sharing scheme that allows to correctly share what is needed
+    without compromising national interests.
+</p>

@@ -1,0 +1,19 @@
+Useful in SSR.
+
+Basically the queries that a given UI runs when it displays a
+page can be recorded and it's output can be saved for quick 
+display of that page later - in an SSR environment or even
+on the client device.  So, instead of having to go through
+loading several repositories and then progressively
+constructing the view, it can be composed with a single
+data call and no data processing at all.
+
+This works really well for immutable views but also works
+for views where data changes.  For example when the
+data does change the combintation of all data that is
+provied to the UI can be diffed against the previous version.
+If it's different it can be updated.
+
+This can be easily done in a server environment that
+will crawl the data and have the permission to update the
+Versioned View data result.

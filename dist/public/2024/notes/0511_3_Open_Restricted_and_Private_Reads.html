@@ -1,0 +1,18 @@
+Every repository can have either read access or write access or both 
+granted to a given user.  Writes are really always creates, since
+every update and deletion can be tracked from the transaction log.
+This spitting th Create/Update/Delete permissions isn't really
+necessary.
+
+Some repositories can be wide open to the public.  Some must
+be restricted to several groups and some can be contained in a single
+group.  A given group may be able to modify a repository but possibly
+several other selected groups may be able to view the repository,
+without opening up the repository to the public.
+
+Again, in the case of OrbFleet, a certain unit may be able to
+make certain data modifications.  That unit may or may not be
+intergovernmental but additional units in each country may have
+read only access to this data.
+
+Thus thre is a need for "Restricted" reads.

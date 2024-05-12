@@ -3694,6 +3694,6 @@ body.search-is-visible {
 /*# sourceMappingURL=main.css.map */
 
 a.highlighted {
-  color: white;
+  color: white !important;
   font-weight: bold;
 }

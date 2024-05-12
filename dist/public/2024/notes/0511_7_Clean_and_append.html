@@ -1,0 +1,32 @@
+Peer to peer:
+
+Once all of the active Terminals with a Repository have shared a big
+enough number of Transaction Log entries a suitable Terminal is chosen
+to append the already shared log entries to a single file.
+
+Thus an entire Repository is stored in a single file that is periodically
+appended to.  This solves many issues with previous idea of maintaining
+a nested set of directories and compacting it overtime.  The retrieval
+of the entire repository becomes a single I/O + network operation,
+breaking the previously percieved performance barrier problem.
+
+If personal data is stored on an open network like Filecoin then the 
+Repository file will be encrypted, regenerated every time and
+completely replaced (with the old file being deleted).
+
+In a shared environment the recent data is stored in ScyllaDb.  It
+is periodically cleaned and appended to shared object storage (again
+into one file per Repository).  Solves the server-side performance
+problem.
+
+A similar archival process can be done with Vesa full text search,
+perhaps search entries for archived repositories will be removed.
+Repositories could be auto-archived after a certain period of
+inactivity.  This needs to be thought through more - the seed
+apps for Turbase will have full text search as a secondary navigation
+option and will be able to operate without it.  A small marker record
+will be kept for future lookup.
+
+Same goes for the CockroachDB RDBMS - archived repositories could be
+removed into long term storage.  Here also a marker record will
+be kept for future reference.

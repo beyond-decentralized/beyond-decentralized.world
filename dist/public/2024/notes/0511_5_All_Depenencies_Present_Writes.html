@@ -1,0 +1,19 @@
+<p>
+    To make a write on a repository all of its dependent repositories must be loaded.
+    All queries made during a write transaction into a repository are limited to only the dependent repositories.
+    Repository (or list of repositories) must be specified as an input to a write transaction.
+</p>
+
+<p>
+    When combined with signed inputs and synced time agreement, this allows to verify
+    that the data added to a Repository transaction log was indeed added through the
+    logic of the apps involved in the transaction.
+</p>
+
+<h2>Needs more thought:</h2>
+<p>
+    To avoid repository version dependency deadlock there must be a system to sync repository
+    versions across all of the dependencies of a given repository. Probably circular
+    dependencies will be disallowed in Private repositories and in Open & Restricted
+    repositories there must be a sync mechanism between the Write Logic servers.
+</p>
