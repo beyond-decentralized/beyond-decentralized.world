@@ -2346,7 +2346,7 @@ input::-moz-focus-inner {
   position: relative;
 }
 
-.header__nav li a {
+.header__nav ul ul li a {
   display: block;
   color: rgb(255, 255, 255);
   line-height: 4.4rem;
