@@ -1,0 +1,149 @@
+AIRport runs all operations directly on Terminals (user devices) this:
+<br>
+<br>
+<nl>
+    <li>Allows to verify that a given user indeed made the given (entire) modification to a Repository, via a given
+        device and using the given Application.</li>
+    <li>Allows the same user to make modifications to Repositories of multiple Organizations, without having to maintain
+        passwords in all of those Organizations. This is possible because the change is signed by the
+        User+Device+Application keys.</li>
+    <li>Improves thetraceability of the made transactions.</li>
+    <li>Allows users to work offline and sync their changes later.</li>
+    <li>Reduces load on the Organization's infrastructure (for read queries, and by an order of magnitude) since all
+        user queries are fulfilled from a wide-column database (with the relational structure reconstructed on the user
+        devices).</li>
+</nl>
+<br>
+This assumes Users are allowed remote access to Repositories at appropriate levels (maintained by Repository
+permissions). This also assumes that they are using a verified Framework version. For example, if they are using an
+in-browser, timestamped, seeded, and hash-summed version of the Framework (that uses this info to blockchain
+transactions and does not persist to permanent storage locally). The seed can be communicated securely to pre-verified
+Organizational servers by a mutually agreed upon (by all involved Organizations) authority.
+<br>
+<br>
+<br>
+Once Organizations start utilizing AIRport they will want to verify the data entered on user Terminals (Devices). This
+is possible by adding several constraints on what data can be added to Organizational Repositories.
+<br>
+<br>
+<br>
+1. Input into the operation sent along with the Repository Transaction Log entry.
+<br>
+<br>
+To verify a modification to a Repository the Application logic must be re-run in a environment controlled by the
+Organization. To do that the input (into the API that modified the Repository) will be saved (along with the resulting
+Transaction Log entries) and sent to the Organization servers for re-running.
+Organizations can peer review the Application code to ensure the validity of the modifying logic. That will ensure that
+only approved Application Versions are used to create a Repository change. Application versions can be verified by the
+verified Framework running on the devices, as well as seeded, hash-summed, and block-chained into the transaction.
+<br>
+<br>
+<br>
+2. Only Entity objects are allowed as inputs into Organizational Repository modifications.
+<br>
+<br>
+This prevents data leakage both in and out of Repositories. Only Entities belonging to the given Repository will be
+inserted/updated/deleted. Other (non-modified) passed-in records will be checked against the records on the
+Organizational servers. The modified records will have only the modifications applied to the existing records on the
+Organizational servers.
+<br>
+<br>
+Thus, only the IDs for all Entities (the input objects) and the modified fields for the (modified) Entities (in the
+modified Repository) will sent into the API.
+<br>
+<br>
+At commit time an additional verification will ensure that all modifications found in the input objects are committed.
+<br>
+<br>
+<br>
+3. Repositories can only reference records from lower-access level repositories.
+<br>
+<br>
+A global scheme of Repository access level classification will allow for the safe sharing of data between repositories:
+<br>
+<br>
+<table>
+    <tr>
+        <td>51 - 60</td>
+        <td>Internal Only</td>
+    </tr>
+    <tr>
+        <td>41 - 50</td>
+        <td>Top Secret</td>
+    </tr>
+    <tr>
+        <td>31 - 40</td>
+        <td>Secret</td>
+    </tr>
+    <tr>
+        <td>21 - 30</td>
+        <td>Confidential</td>
+    </tr>
+    <tr>
+        <td>11 - 20</td>
+        <td>Restricted</td>
+    </tr>
+    <tr>
+        <td>1 - 10</td>
+        <td>Inter-Organizational</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>Public</td>
+    </tr>
+</table>
+<br>
+An additional extension from 100 to 60,000 (times 100) can be allowed for finer grained access.
+<br>
+<br>
+By default an Organizational Repository could only reference records from Public Repositories. Organizations would
+establish relationships between themselves for higher-level access. Thus, if two Organizations established shared
+Restricted access their Repositories could reference records from Restricted and below-level Repositories of the other
+Organization. A one-way privilege elevation could also be possible with one Organization allowing Restricted and below
+access and the other allowing Secret and below access. Manual (and recorded) override will be allowed on a per-User
+basis.
+Only the Entities from eligible Repositories would be allowed in the (modifying API) inputs.
+<br>
+<br>
+<br>
+4. All queries in modifyingAPI are checked.
+<br>
+<br>
+Every query made during an API call (that modifies a Repository) limits the query results to only the valid set of
+Repositories. Parameters of every (sub)query will guarantee that the results come from specific (valid) Repositories.
+The outputted records will come only from the Repositories a given Repository depends on (this will be done by
+augmenting query parameters).
+<br>
+<br>
+<br>
+5. On the originating Terminal, Input records are filtered
+<br>
+<br>
+A given Transaction can modify multiple Repositories across multiple Organizational boundaries.
+<br>
+<br>
+NOTE: If a Repository record (which is referenced from the modified Repository) is present at a Terminal then the
+relationship between its Repository and the Repository being modified is also present.
+<br>
+<br>
+Thus, only if there is a cross-Repository relationship (or an inter-Organization access level rule) will the records
+from the inputted Repository be included in the API Input records (sent to the Organization's server).
+<br>
+<br>
+<br>
+6. Organizational server version overrides.
+<br>
+<br>
+The new version of the Transaction generated by the Organization's server will override the sent-in version. The
+inputting Terminal (and all other Terminals and servers) will subsequently merge the differences (if any).
+<br>
+<br>
+<br>
+7. Mutile Repositories of the same Organization
+<br>
+<br>
+When multiple Repositories of the same Organization are modified in the same API call (for the same Transaction) they
+all are sent in one batch. The GUID of the Repository with the highest ranking access level will be used for the key for
+the (server side) message topic partition. If there are multiple Repositories with the top access level, the one changed
+first (in chronological order) is used. This will ensure consistency and transactional atomicity if there are
+dependencies between the modifications (to different Repositories of the same Organization).
