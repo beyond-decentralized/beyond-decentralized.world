@@ -1,3 +1,6 @@
+<h1>Securing Repositories of Organizations</h1>
+<br>
+<h2>Organizational Repositories</h2>
 AIRport runs all operations directly on Terminals (user devices) this:
 <br>
 <br>
@@ -150,6 +153,9 @@ dependencies between the modifications (to different Repositories of the same Or
 <br>
 <br>
 <br>
-<br>
-NOTE: Organizational security also benefits personal/small group/serverless Repositories that also become more secure
-(with each group being treated as an Organization).
+<h2>Also applies to Small Group & Serverless Repositories</h2>
+Organizational security also benefits personal/small group/serverless Repositories that also become more secure (with
+each group being treated as an Organization). For this case, the exact block chain position of each of the referenced
+Repositories (both in the API inputs and in the Repository Transaction logs) will also be included in the shared chain
+block (the Repository modification). This will allow the decentralized Repositories to have Transaction order
+correctless (and seek additional modifications if they are needed) when applying the changes to the local Terminal.
