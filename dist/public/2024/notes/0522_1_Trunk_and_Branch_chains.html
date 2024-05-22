@@ -1,0 +1,17 @@
+<h1>Trunk and Branch chains</h1>
+<br>
+In a decentralized environment, once there is a consensus that enough Terminals have reported their changes, a Secretary
+Terminal is chosen. The Secretary Terminal will process all of the Branch chains, merge them into the Truck chain, and
+(re)write (to) the Repository Transaction Log file.
+<br>
+<br>
+The Trunk chain simply orders all of the blocks in the sub-chains. It is up to the nodes to run the conflict resolution
+logic to arrive at the same dataset as the Trunk chain. This the result of the conflict resolution logic must always be
+the same, no matter in what order the Branch chains are applied to a database.
+<br>
+<br>
+In a server environment, all Branch chains come sequentially (given that the synchronization timestamp overwrites the
+save timestamp and only one write node processes all Transaction log entries for a repository). The Transaction Log
+compaction (into the Repository Transaction Log file) happens periodically (taking all recent records in a Column
+database and appending them to the previous version of the file and subsequently removing them from the column
+database).
