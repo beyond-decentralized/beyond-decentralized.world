@@ -1,0 +1,15 @@
+<h1>TECHNOLOGY - SqLite multiple databases</h1>
+<br>
+This may be useful during schema migrations (for non-backward compatible changes, if they are eventually supported):
+<br>
+<br>
+SqLite allows multiple database files to be attached to the same SqLite runtime.
+<br>
+<br>
+<br>
+May be useful in servers, if we need to work on a Repository and its dependencies in isolation:
+<br>
+<br>
+SqLite allows multiple connections, with each one capable of performing its own transaction. Thus multiple concurrent
+transactions are supported. This, combined with loading multiple database files allows the same write (or other) node to
+process multiple requests for different Repositories at the same time (with each one having its own in-memory database).

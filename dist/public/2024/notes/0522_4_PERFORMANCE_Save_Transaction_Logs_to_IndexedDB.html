@@ -1,0 +1,14 @@
+<h1>PERFORMANCE - Save Transaction Logs to IndexedDB</h1>
+<br>
+For the in-browser version:
+<br>
+<br>
+Chrome unloads tabs when the user navigates away from them. To reduce tab-reload time save all Transaction Log entries
+in the database into IndexedDB. On tab-reload, first load from IndexedDB, and only then check over the network.
+<br>
+<br>
+Save the RepositoryBlock.data into IndexedDB, instead of in the database.
+<br>
+<br>
+To begin with (may change later): Do not save insert into the RepositoryTransactionHistory and lower entities. The data
+is already recorded in the RepositoryBlock.data and no analytical processing will be done in the in-browser apps.

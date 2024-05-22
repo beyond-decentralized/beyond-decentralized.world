@@ -1,0 +1,23 @@
+<h1>PERFORMANCE CPP - Minimal implementation</h1>
+<br>
+IF AND WHEN A C++ IMPLEMENTATION IS NEEDED:
+<br>
+<br>
+The key benefit of the C++ version is compiling the framework together with QuickJS and SQLite into a single WASM file.
+This would greatly improve framework load times and runtime performance.  This is even more important given that
+Chrome unloads tabs from memory, requiring a full reload on tab switch.
+<br>
+<br>
+The reference (TypeScript) implementation "dogfoods" wherever possible. C++ implementation should be coded for optimal
+performance. Thus:
+<br>
+<ul>
+    <li>Pre-define well-known internal queries in SQL strings.</li>
+    <li>Re-write the query serialization logic to create a flat JSON object tree of the query definition as seen in the
+        query definition code (very minimal). This will reduce the bundle size (and memory footprint) for every
+        Application loaded via QuickJS.</li>
+    <li>Re-write the query processing code in the framework to adjust for the new serialized format.</li>
+</ul>
+<br>
+In general, simplify the C++ version to improve runtime performance and memory footprint. This should also result in
+lower initial load times but that isn't a goal in and of itself.
