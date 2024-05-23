@@ -1,0 +1,17 @@
+<h1>SECURITY Terminal signature</h1>
+<br>
+Terminals should sign every block they produce. This will allow Repository members to verify that a given Repository
+modification was made on a given device.
+<br>
+<br>
+Terminals can be multi-user Terminals or single-user Terminals. In practice, they will be single-user Terminals - like
+phones or PCs. When a Terminal is created (either temporarily in-browser or permanently in a Mobile App) it gets
+an Owner User. The owning User signs the Terminal creation record, proving that this Terminal belongs to them.
+<br>
+<br>
+When a Terminal makes its first entry into a Repository it attaches the signed record of its own creation (which contains
+its public key and is self-signed as well).
+<br>
+<br>
+Thus in the scenario of a lost phone, as long as the date and time of the loss is known all subsequent modifications (to
+all Repositories) via that Phone can be easily tracked and reverted.
