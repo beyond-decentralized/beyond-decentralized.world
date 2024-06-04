@@ -1,0 +1,29 @@
+Following 5 things must be implemented (ad re-tested at every stage) before AIRport is ready for open alpha deployment
+(BC ov S):
+<br>
+<br>
+<ol>
+    <li><b>Block</b> - Blockchain implementation needs to be finished.</li>
+    <li><b>Copy Objects</b> - Right now Repositories are interedependent but are not fully autonomous. The final design
+        of Copied records (insert copy, update on load of source Repository) needs to be implemented.</li>
+    <li><b>Organizations</b> - Implement Organizations with permissions and repository hierarchy.</li>
+    <li><b>Validation</b> - Re-running of Operations based on saved inputs (by the elected owner/server) must be
+        implemented. This probably means a clean root chain and adjustments to the branch chains to get them synced to
+        the root chain (reworking of sync conflict code).</li>
+    <li><b>Server implementation</b> - Front+Read server (Rust), Write Queue, Write server (NodeJs), file compaction
+        server (NodeJs), Cross Node OAuth servers (Go) must be implemented. For prompt/affordable start, alpha version
+        can run in AWS (Realional DB, ColumnDB, Queue, Lamda/Kubernetes, S3).</li>
+</ol>
+<br>
+System First!
+<br>
+<br>
+<br>
+Subsequently following changes will have to be done for Beta:
+<br>
+<br>
+<ol>
+    <li><b>Serialized Query refactor</b> - Proxy based query generation to greatly reduce App bundles</li>
+    <li><b>Sandboxing</b> - Running Apps in QuickJS, polifylling UI access APIs</li>
+    <li><b>Block/Schema serialization</b> - PSON and related work</li>
+</ol>
