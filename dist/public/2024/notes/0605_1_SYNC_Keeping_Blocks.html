@@ -1,0 +1,29 @@
+<h1>SYNC: Keeping Blocks</h1>
+<br>
+Maintaining previous and current values of fields in the Transaction Log history is expensive. However, this is required
+for correct synchronization, especially in peer-to-peer environments.
+<br>
+<br>
+Alpha and Beta software versions will run in the browser, purely in memory thus maintaining transaction log history is
+very expensive. And in-browser versions will frequently sync so there needs to be a mechanism to clean out transaction
+log history often - as soon as there is a confirmation of merge with the branch chain (for each Repository).
+<br>
+<br>
+However, with frequent synchronization, conflicts will likely be rare. Another option is to keep un-merged blocks in
+local storage and retrieve them back when a merge is required (if necessary). Given that the elected owner will provide
+patch blocks for every un-merged branch this may not be required at all. If it will be required the blocks can be stored
+in encrypted form and an expiring access cookie to the KeyRing Repository would be the only thing that would temporarily
+allow access without a re-authentication action.
+<br>
+<br>
+The long-term value of the in-browser version is that it has ephemeral storage - you can log in from any device and as
+soon as the tab is closed (or in Chrome loses focus) your data is safe (maybe a PIN code will be required to access
+decrypt the temporary access cookie).
+<br>
+<br>
+As the framework advances, the Mobile App version of AIR-port will store the database on the File System so this won't
+be as much of an issue. It will be the Mobile App version that will first enable true peer-to-peer support through Wi-Fi
+connections (in-browser will require a server-side sync to get the IP address of all active nodes per Repository).
+<br>
+<br>
+<i>SF: no vailed threat in OF</i>
