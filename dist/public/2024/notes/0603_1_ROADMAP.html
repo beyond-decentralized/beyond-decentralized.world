@@ -19,12 +19,13 @@ System First
 <br>
 <br>
 <br>
-Subsequently following changes will have to be done for Beta:
+Subsequently following changes will have to be done for Beta (pq sib):
 <br>
 <br>
 <ol>
-    <li><b>Serialized Query refactor</b> - Proxy based query generation to remove per-app query object creation and greatly reduce App bundles and initialization time</li>
-    <li><b>Sandboxing</b> - Running Apps in QuickJS, polifylling UI access APIs</li>
-    <li><b>Block/Schema serialization</b> - PSON and related work</li>
-    <li><b>6/4/2024: Preload Internal Schemas</b> - load a database file with all initial data.</li>
+    <li><b>Portable Query rewrite</b> - Proxy based query generation to remove per-app query object creation and greatly reduce App bundles and initialization time</li>
+    <li><b>QuckJS Sandboxing</b> - Running Apps in QuickJS, polifylling UI access APIs</li>
+    <li><b>Serialization of Block and Schemas </b> to PSON and related work</li>
+    <li><b>Internal Schema Preload  </b> - load a database file with all initial data.</li>
+    <li><b>Block Persist Unsynced </b> to local storage (for later synchronization), in case of tab switch that unloads tab memory (and the data with it).</li>
 </ol>
