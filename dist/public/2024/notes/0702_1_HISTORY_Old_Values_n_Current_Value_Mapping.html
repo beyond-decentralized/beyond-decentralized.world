@@ -1,0 +1,31 @@
+<h1>HISTORY: Old Values and Current Value Mapping</h1>
+<br>
+Old Value history (of the Repository Transaction log) is useful for showing users exactly what was changed in a given
+Repository (and by who, what App, and when). This prevents data loss, adds accountability, and allows for historical
+analysis. Previously Old Value history saved the actual previous value of the field. This can however be extremely
+wasteful, especially with large data fields. The new approach is to point to the previous New Value. Most importantly,
+without this change, it was not possible to trace back from a given Repository Block to the Block that was changed.
+<br>
+<br>
+Old Value history only exists for the Trunk branch of a Repository. This saves processing and memory of the (potentially
+ephemeral, with the database running in memory) non-trunk merge nodes (browser tabs), which won't have to compute Old
+Values or the related Current Value Mappings (for the Repository branches they create). Thus, any node that becomes a
+(Repository) Trunk merge node can easily pull Old Values in (along with the trunk version of the Repository). It is also
+possible to load the Old Values subsequently if the part of the Trunk branch is already loaded.
+<br>
+<br>
+For the purpose of looking up the current New Values (during an Update or Delete operation) a new "CurrentValueMapping"s
+table is being created. It maintains all of the current value mappings for all of the Repositories (in a given
+database). These records simply have a pointer to the New Value records they represent. These mappings are only needed
+on the nodes that merge into (Repository) Trunk, since they are needed just for computing the "previous New Value"
+pointers of the Old Value records. Current Value Mapping records can be computed by re-processing a Repository
+Transaction Log. Alternatively, they can be tracked in the Transaction Log itself.
+<br>
+<br>
+In practice, only server and Mobile App nodes would do Trunk merging. They would both be going off of a database that
+has the Old Values and the Current Value Mappings pre-populated. When a new Repository is loaded on a different
+organization's server (or a different community-shared geo-partition) or a Mobile App it makes sense to save the
+computational cycles and load Current Value Mappings from the Transaction Log (instead of having to re-compute them).
+However, this leads to the potential for data corruption (since Current Value Mappings are a derived entity). Thus,
+given server-side or off-hours processing the (present) solution is to recompute Current Value Mappings on Trunk block
+processing/creation.
