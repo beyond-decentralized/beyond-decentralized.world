@@ -1,0 +1,47 @@
+Currently, there is no support for different permissions for different entities in a Repository. The Repository members
+are granted either Read-only or Read-Write access to a given Repository. The idea behind this setup is that data is
+already split into Repositories and should be granular. However, it is now becoming apparent that there are use cases
+where certain types of modification operations may be allowed for certain Repository Members while other types of
+modification operations may be allowed for other Repository Members on the same data, in the same Repository.
+<br>
+<br>
+Accomplishing this level of access granularity is possible with the assumption that all AIRport databases will be
+enforcing these access levels based on the permissions associated with the Repository Members. However, this does not
+work if a user performs an operation and subsequently has their access reduced, or vice versa, if a user is granted
+access but the access grant changes are not propagated across all member AIRport databases. This issue becomes apparent
+in pure Peer-to-Peer environments where there isn't a single source synchronization and updates can come separately from
+different sources.
+<br>
+<br>
+A way to resolve this issue may be to delay the update processing until synchronization takes place. However, this can
+block certain operations from happening, potentially deadlocking the User flow.
+<br>
+<br>
+Here is a possible deadlock scenario:
+<br>
+<ol>
+    <li>
+        Administrator User grants access to User 2 to make modifications.
+    </li>
+    <li>
+        User 2 makes changes to the Repository.
+    </li>
+    <li>
+        User 3 receives the changes made by User 2 but does not receive the change made by the Administrator User
+        that grants access to User 2.
+    </li>
+</ol>
+Another way to get around this problem is to include the access grant record (signed by the known Administrator User)
+along with every update operation. This will fix the issue as long as there isn't a synchronization issue with the
+addition of Administrator privileges to the user granting access in the first place.
+<br>
+<br>
+Thus without a synchronization guarantee, there may always be a scenario where User Access may be improperly blocked.
+Hence pure Peer-to-Peer environments will not be supported in the initial releases. Perhaps, in pure Peer-to-Peer
+networks, whenever the writing node is sharing the modifications made by a given Repository Member it will also share
+the initial grant given to that Repository Member to make the change in the first place.
+<br>
+<br>
+The presently expected setup is to have a group of server nodes that maintain a Repository Transaction Log with a high
+degree of synchronization. With such a setup the chance of the perceived "Write before Access Grant" error should be
+extremely small, thus enabling advanced in-Repository permission sets.
