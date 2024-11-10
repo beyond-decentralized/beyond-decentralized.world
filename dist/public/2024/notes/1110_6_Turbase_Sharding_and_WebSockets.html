@@ -1,0 +1,55 @@
+AIRport allows for off-line Repository modifications, which can lead to a multitude of sync-conflicts. These will be
+automatically resolved but users will be presented with out of sync data until they are resolved.
+<br>
+<br>
+To reduce data conflicts visible to the users the repositories will be split up into shards based on the first 128 bits
+of their GUID. A given shard (a physical node) will handle all reads and writes for a given repository. This allows for:
+<br>
+<br>
+Consistent repository history for non-private repositories. The Update Bun process will always get all Transaction Logs
+for a given Repository in the right order.
+Reduced need for update-time conflict resolution because the time order of Transaction History is guaranteed.
+Faster Transaction Log validation and conflict resolution - all changes are guaranteed to be into the local ScyllaDB
+database, and can be processed almost immediately after they are recorded there (otherwise an unknown timeout period
+would be required for all nodes to sync or out of order records would be possible).
+Consistent reads - there won't be out of sequence Transaction Log Entries (TLEs) coming to the client databases.
+<br>
+<br>
+Sharding also allows for moving to WebSocket connections. This provides real-time data responses because it feeds the
+data back to all interested clients without having to query ScyllaDB first. As soon as the write comes in it's echoed
+back to all clients that are listening for that Repository. This enables writing multi-player real-time games on top of
+TB (<a href="https://github.com/Past-The-War-Earth/the-struggle-continues-anew.xyz/">TSCA.XYZ</a> being the first one).
+<br>
+<br>
+WebSockets should take up less server resources than long polling (that otherwise would be required) "<a
+    href="https://stackoverflow.com/questions/23314964/is-there-a-server-cost-to-using-websockets">provided your OS
+    open file descriptor settings are high enough</a>" and optimizations are applied. With the move to WebSockets TB
+becomes a real-time data framework.
+<br>
+<br>
+For now just implement in Bun. Do NOT optimize data structures (do not create a contiguous byte array) unless absolutely
+necessary. Once (and if) optimizations are required just re-write in Zig/ZZZ for optimal performance.
+<br>
+<br>
+Benchmarks & frameworks:
+<br>
+<br>
+https://hashrocket.com/blog/posts/websocket-shootout
+https://github.com/zaphoyd/websocketpp
+<br>
+<br>
+Most likely the fastest is:
+https://github.com/uNetworking/uWebSockets
+https://github.com/uNetworking/uWebSockets.js
+apparently Bun is based on it
+<br>
+<br>
+AND:
+<br>
+<br>
+In a later release re-balancing of shards will be enabled to allow for more even distribution of load and outage
+recoveries.
+<br>
+<br>
+Going forward, when load-scaling it makes sense to subdivide the repository GUID fragments by the next significant byte
+(and building up its Repository TLE last timestamp+sequence map as requests come in).

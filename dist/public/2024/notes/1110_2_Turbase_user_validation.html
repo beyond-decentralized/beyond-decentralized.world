@@ -1,0 +1,11 @@
+The idea is to validate that the user has a valid e-mail address as a base. This will be used to verify that they can
+download their KeyRing Repository in the first place. Also when they pick their home region/metro area that email will
+be associated with that region and their default data will be displayed from that region. This is needed going forward
+to enable Votecube voting validation - they will only be eligible to vote in their region. Besides, email is already
+trackable anyway, no need to obscure it - instead fix it at Metro Area association when audits and external security
+tracking requirements come in.
+<br>
+<br>
+Once the user's KeyRing Repository is retrieved they decrypt it on the client side using the password is specified. The
+password itself will be encrypted in a special segment that will be encrypted using 3 to 5 security questions. This way
+they will be able to recover in case of a lost password and re-encrypted with a new password.

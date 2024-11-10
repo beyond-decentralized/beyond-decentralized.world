@@ -1,0 +1,210 @@
+TB is a cross-community framework, that connects geographical and topical communities. Communities maintain their own
+infrastructure. TB site connects them and provides load distribution and balancing.
+A community must maintain a network of at least 5 nodes (which can be condensed to 3 physical nodes, possibly
+geographically distributed across the community).
+<br>
+<br>
+<b>1. Minimum requirements</b>
+<br>
+<br>
+3 Service+DB Nodes:
+<br>
+<br>
+8 VCPU (4 physical)
+<br>
+64 GB RAM6 TB storage (in RAID 1)
+<br>
+<br>
++
+<br>
+<br>
+1 Management node
+<br>
+Minimal specs that fit (4 VCPU 16 GB RAM)
+<br>
+<br>
+Running Linux (no virtualization to save resources and for better ScyllaDB and SeaweedFS performance)
+<br>
+<br>
+Scylla DB (recent Transaction Log entry, message queue, counters)
+<br>
+2 VCPU
+<br>
+32 GB RAM
+<br>
+500 GB storage (SSD or better)
+<br>
+<br>
+Yugabyte (relational db for SSR queries, update verification and reporting queries)
+<br>
+2 VCPU
+<br>
+16 GB RAM
+<br>
+1 TB storage (SSD or better)
+<br>
+<br>
+Shared by OS:
+<br>
+4 VCPU
+<br>
+16 GB RAM
+<br>
+remainder of storage
+<br>
+by:
+<br>
+Seaweed DB (long term Transaction Log file storage, thumbnail storage)4 TB storage (HD+pass-through-cache or better)At
+least for now use Bun to serve everything:
+<br>
+<ul>
+    <li>
+        For initial (non-incremental, ScyllaDb only) read requests it will attempt to bundle the history file from
+        Seaweed FS and recent records from ScyllaDB. If Seaweed FS returns the history file first it will respond and
+        store subsequent ScyllaDB in the LRE cache for subsequent retrieval.
+    </li>
+    <li>
+        For Data write requests it will write the data directly into ScyllaDB.
+    </li>
+    <li>
+        For Thumbnail writes validate for size and put in in-memory queue before storing in Seaweed FS.
+    </li>
+    <li>
+        Keep a marker in the queues and add an additional (per second?) processing loop. On each iteration, send
+        updates to all clients that are listening for related repositories (keep a map of the listened repository to the
+        connected client). For real-time send data to listening repositories immediately.
+    </li>
+    <li>
+        SSR, client request driven, reading from Yugabyte.
+    </li>
+</ul>
+<br>
+<br>
+Because time is needed for Yugabyte nodes to sync, a separate (lower OS priority) Bun process will be needed for
+validating writes and recording them in Yugabyte. A cross node process that verifies presence of cross-node Repository
+TLEs (via Yugabyte queries) and delay processing if necessary will run separately.
+<br>
+<br>
+All Read and Write requests are handled locally (against local ScyllaDb, Seaweed FS and Yugabyte DB). This ensures
+quick response times. The underlying synching mechanisms of these storage engines will ensure eventual consistency
+across the aggregate cluster. The Clients will be in charge of ensuring consistency in the client-side storage and
+attached UIs.
+<br>
+<br>
+Notes will be sharded, with each node serving a stable fragment of Repositories, ensuring accurate reads, fast
+verification and allowing for WebSockets. Subsequently re-sharding will be supported, driven by a new process running
+on the management node.
+<br>
+<br>
+Management node: to properly run Scylla DB requires a small management node. Same node will run Portier for
+Email Authentication (with the remainder being done in KeyRing repository on client-side). For minimum setup 4 VCPU +
+16GB RAM box is sufficient. Additional reporting and aggregation tools can run here as well.
+<br>
+<br>
+Media nodes:
+<br>
+<br>
+Additionally 2 more (fully redundant) nodes with large storage arrays can be added for reduced size videos and images
+(much larger than thumbnails). Large (non-thumbnail) media storage requests will be send directly to these servers.
+They will be validated for being pre-processed (resolution and possibly frame rate reduction, length and overall size)
+as a preceding step on the client and stored into the large storage Seaweed FS cluster.
+<br>
+<br>
+TB Apps are to be designed to show full media only on the detail pages associated with that media and showing thumbnails
+(potentially animated gifs for videos) everywhere else.
+<br>
+<br>
+<b>2. Preferred minimum requirements:</b>
+<br>
+<br>
+5 nodes (max for free version of Scylla DB, which can only scale vertically from then but should be enough for a
+metro-area, the intended granularity for non-governmental needs) + 1 Management node (larger depending on reporting
+tools needs and post-processing).
+<br>
+<br>
+16 VCPU (8 physical)
+<br>
+128 GB ECC RAM
+<br>
+6 TB Storage
+<br>
+<br>
+with CPU and RAM split update to:
+<br>
+<br>
+Scylla DB:
+<br>
+6 VCPU (spits by physical cores only and completely takes over them)
+<br>
+80 GB RAM
+<br>
+<br>
+Yugabyte
+<br>
+2 VCPU (Priority - serving SSR, updates and sync can wait => one full core is enough)
+<br>
+32 GB RAM
+<br>
+<br>
+Shared by OS
+<br>
+8 VCPU
+<br>
+16 GB RAM
+<br>
+<br>
+OS (Seaweed DB) - 2 cores - needs to quickly retrieve files for data requests => one full core
+<br>
+Web Socket (ACK+ScyllaDB+SeaweedDB reads)/SSR/Modifications (Bun, at least for now) - 6 cores
+<br>
+<br>
+Bun - 6 cores. It can run multiple workers on multiple CPUs (https://bun.sh/guides/http/cluster). All workers should
+be able to process all request types, though prioritize ACKing data back to users (and then SSR). This will give the
+best utilization of CPUs under load spikes.
+<br>
+<br>
+In this setup (with 3 physical cores) it makes sense to start 3 processes:
+<br>
+<br>
+1 higher priority (-nice) process with a single Bun server (will use one CPU) for SSR - these need to be fast
+<br>
+? https://github.com/bun-community/sveltekit-adapter-bun ?
+<br>
+<br>
+1 normal priority Bun process with a two server cluster (will use up to 2 CPUs) for WebSocket requests (all non-SSR
+requests) - it needs to be fast but not as fast as SSR.
+<br>
+<br>
+One process is needed to re-use the IP of the box. The GUID range of Repositories can be subdivided by the next most
+significant bit (practically in case of 5 nodes, effectively 10 servers will be used, thus a near perfect distribution
+and plenty of room for further subdivision it makes sense to use first 4 bytes and split the ranges accordingly)
+Custom load balancing will be required in such scenario:
+https://medium.com/all-things-ebpf/ebpf-powered-load-balancing-for-so-reuseport-30acb395e1d6
+<br>
+<br>
+To avoid the complexity might as well just start 2 Bun processes (each listening on a different port) and do load
+balancing on the client (which will already perform it) or on a separate server-side load balancer if one is available
+and if it allows custom load balancing algorithms. Also there is no easy way to share memory between Bun processes
+right now so two separate (normal priority) processes appear to be the way to go.
+<br>
+<br>
+1 lower priority (+nice) Bun process with a single server (will use up to 1 CPU) for queue-driven Yugabyte
+population/TLE validation work - it does not need to be fast and can wait if needed.
+Media nodes:
+<br>
+<br>
+Additionally 3 more (fully redundant) nodes with large storage arrays can be added for reduced size videos and images
+(much larger than thumbnails).
+<br>
+<br>
+3. All storage should be in RAID 1 (or better) to allow for disk size upgrades (and redundancy and faster
+performance). Scylla DB and Seaweed FS should have NVME cache in front of them (Scylla 1/2 of storage, Seaweed FS 1/4
+of storage in size).
+<br>
+<br>
+4. Front end
+<br>
+<br>
+TB shared app run from static files on distributed CDN (CloudFlare?) and contains periodically updated topology for all
+communities. The front end (Browser, eventually App) does load balancing between servers, which report load factor to
+the UI for more accurate splits?)

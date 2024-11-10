@@ -1,0 +1,58 @@
+WebSocket architecture will lead to clients always up to date with Repository states across all shards. But the
+server-side Yugabyte cluster will be further behind. This means that:
+<br>
+<br>
+Chances of synchronization errors coming from clients will be very (probably extremely) low.
+<br>
+Server side validation will have to be delayed to ensure not introducing conflicts.
+<br>
+<br>
+Previous design assumed that the sync server would be the "source of true sync state" but WebSocket design makes the
+clients that source. Thus validation is only needed to ensure correctness (prevent malicious errors). Given that
+validation is also performed on every client the chance of malicious errors affecting non-compromised clients is very
+(probably extremely) low. Thus, there is no need to do real-time validation.
+<br>
+<br>
+However validation cannot be batched to day increments (during low traffic period) because Yugabyte is used for SSR.
+Hence validation and recording in Yugabyte must be done after a sufficient period of time for all Yugabyte nodes to sync
+(to prevent causing sync conflicts, probably several minutes). This also means that SSR must be driven by the same node
+that contains the repository (duable by including the GUID of the repository with the screen-main data in the URL).
+Once the client is loaded it will quickly be updated and with reactive (Observable based) re-rendering the screen will
+be updated with the latest data.
+<br>
+<br>
+<b>Syncing Yugabyte</b>
+<br>
+<br>
+When performing validation (and the associated Yugabyte DB population) for every TLE the ids referenced TLEs from other
+Repositories (Design Needed) will be provided as well. This will allow to look them up (in Yugabyte TL History). If
+they were entered via other (Yugabyte) nodes then they may not have been synced yet. In that case processing of this
+TLE and all subsequent TLEs for that Repository is postponed and the validation/population process moves on to TLEs of
+another Repository and will revisit these TLEs (for this Repository) later (or sooner, depending on the length of the
+queue being processed).
+<br>
+<br>
+<b>In millisecond, TLE sequence</b>
+<br>
+<br>
+Sometimes clients will be re-connecting (hours or even days) having existing data on a given repository that may not
+have been updated. Without any additional features the client will have to query for recent data from ScyllaDB and if
+days passed would have to pull the entire Repository TL file from FS. To ensure not causing excess load on ScyllaDB and
+especially on Seaweed FS an in-millisecond TLE sequence will be added on every write. This is possible because the same
+service will always process all write requests for a given Repository. It will also keep a by repository id
+timestamp+sequence (combined into a single long int) map. Once a stale client connects it will make a request for that
+record for all Repositories it contains. If any of the returned time+sequence combinations are ahead only then would it
+make the request for data.
+<br>
+<br>
+Just like with client installations, server installations should maintain a central Repository Id counter tables and
+assign unique long it values that will supplement the GUIDs. This will greatly reduce the memory requirements for the
+read-service (by making map keys very small).
+<br>
+<br>
+<b>Streaming only what's needed from FS</b>
+<br>
+<br>
+In cases where a client does need data that is already in FS but not all of it, the storage file should be streamed.
+The format of the will consist of [timestamp+sequence, # bytes of TLE, TLE contents]. Thus it will be possible to check
+if no further streaming is necessary (and sending the whole file or even reading the whole file is not necessary).

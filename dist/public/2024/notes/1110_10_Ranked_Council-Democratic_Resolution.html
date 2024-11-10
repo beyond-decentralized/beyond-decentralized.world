@@ -1,0 +1,118 @@
+The technical design of Application Usage system flows into a number of factors that evolved around AIRport and Turbase,
+which together result in an implementable idea with potential for lasting value:
+<br>
+<br>
+Votecube was inspired by a dream of a rotating cube, shimmering with bright colors that came with a "Give it to the
+Children" directive. The following inspiration led to a collaborative development of the UI prototype and subsequent
+discussions of the Votecube platform and the subsequently developed idea of the Sapoto.net project (the support
+network).
+At its core, Votecube is a polling mechanism that can gather public opinion. When combined with AIRport technology and
+its (technologically driven) nested community approach it can become a Council based (with direct Democratic fall backs
+at higher levels) community decision making system.
+The core idea behind Council Democracy is progressive self governance. People naturally organized by their work or
+their residence form councils that democratically govern their own affairs. Via an open vote system (everyone in the
+council knows who voted for who, which provides bounded, electorate accountability) a representative is chosen to go to
+the municipal level where a derived council is formed. The selected representative can be re-called back at any time by
+the council that elected him (which provides representative accountability). This mutual accountability system can then
+be applied one more level up (with municipal Councils electing representatives to regional Councils).
+<br>
+<br>
+AIRport's Repository system of independent, interlinked repositories works well with having dedicated repositories to
+each council and its deliberations and decisions. It solves the scalability problem of maintaining records - each
+Repository is completely independent. At the same time Repositories provide a way to link together records of different
+assemblies of the same council into one grouping.
+<br>
+<br>
+The initial discussions of building an online community around Votecube ended up in the common realization that to build
+a thriving community a ranking system will be required which would take into account the experience and time invested of
+the individual contributors to the community.
+<br>
+<br>
+Thus combining the Repository and Derived/Listing Repository concept of AIRport (which overlaps the multi-step council
+system) with the seemingly undemocratic concepts of expertise and ranking can lead to a decision making system that can
+solve any number of problems.
+<br>
+<br>
+A good example is the need for reconciliation of Turbase benefits from Application and UI usage (whatever form they will
+take). Any application can base its own screens on any number of other applications and any UI can call any Application
+API. To prevent plagiarism (besides the requirement of a different Root Object for the query, belonging to the
+Application building the new join Query) a system will be implemented where all of the up-stream Apps will be notified
+of a to-be-published Application and can petition changes to the Application if it isn't adding enough value.
+<br>
+<br>
+This petition will be community reviewed and voted upon based on any combination of factors (specified by the
+petitioners and the defendant at least) that the community chooses as the deciding ones. But a simple count of votes
+can be easily manipulated. Thus a balanced governance system will be developed that will take into account:
+<br>
+<ul>
+    <li>
+        Opinions of the users using impacted applications (local popular council), weighted by their rankings and time
+        present, opinions of the automatically picked to vote (from all impacted users) "elders" (most ranked most
+        dedicated users) and (in high profile cases or voluntarily) weighted opinions of all users.
+    </li>
+    <li>
+        Technical opinions of the Application Developers, based on their expertise in the domains related to the new
+        Application (local expert council), technical opinions delegated to Application Developer representatives
+        (higher level council), and optionally (in high profile cases or voluntarily) technical opinions of all
+        Developers.
+    </li>
+    <li>
+        Decisions of the governing assembly & if necessary decision of the steering council chosen from that
+        assembly.TECH NOTE: Turbase keeps stats on user activity in public repositories (efficiently due to its modular
+        and optionally hierarchical data storage nature). All AIRport Repositories share a common (likely
+        cross-connected) knowledge tree. User participation stats will allow to track how much users have been
+        contributing, over which time and in which knowledge sub-trees.
+    </li>
+</ul>
+<br>
+TECH NOTE: Users rank posts/entries by other users in a Turbase wide shared (but partitioned and used for tracking only
+in open Repositories) ranking schema/App, possibly on a multi-dimensional scape (adding emoji reactions). Theser
+rankings aggregate overtime and are weighted by their participation in given knowledge sub-trees. Thus, this allows for
+automatically selecting "elders" in given areas of concern.
+<br>
+<br>
+TECH NOTE: Domain specific Applications are assign sub-knowledge trees. Cross domain Applications are assumed to cover
+the entire knowledge tree. This allows to correctly (automatically) select "elders" that can vote on
+Application-specific issues (such as approval for publishing).
+<br>
+<br>
+TECH NOTE: Disputed Applications are allowed to execute on the platform for the purpose of evaluation (while not
+collecting any benefits that would otherwise be split by all participating Apps and UIs) while the Resolution process is
+ongoing.
+<br>
+<br>
+BALANCE NOTE: Users represent the interest of the user echo-system. Does the UI/App add value to the users, often no
+matter how fair it is to other Apps and UIs.
+<br>
+<br>
+BALANCE NOTE: App Dev Council represents the interests of the Applications, including fair distribution benefit streams
+and ability to develop further improvements vs ability to delegate separate domain concerns to other UIs/Apps
+<br>
+<br>
+BALANCE NOTE: Governing assembly has the interests of the entire ecosystem as their primary concern.
+<br>
+<br>
+NOTE: For expedience, the decisions made by the representatives quickly resolve the issue. If the decisions made by the
+representatives prove to be out of sync with the decisions of their constituency, their vote can be reverted and their
+ranking can be dropped (in more serious cases dropping them out of the status of representatives). This would apply at
+all levels (3rd level representatives can be overruled and even recalled if there is sufficient, near unanimous
+consensus by their 1st level constituency).
+<br>
+<br>
+NOTE: User representatives gain their ranking based on ratings given by users. Application Developers have a
+(professionally beneficial) virtual council and vote in/out their representatives. Assembly delegates are periodically
+voted in by User Representatives (one sub-assembly) and Application Developer representatives (another assembly).
+Steering council may not be needed in a virtual system.
+<br>
+<br>
+SCALABILITY NOTE: Scaling such a decision system can be very hard due to the huge number of resources required to
+maintain the necessary infrastructure. AIRport's hierarchical Repository design greatly limits the needed resources
+(every council is an organization with a limited set of Repositories that reliate and derive vote counts
+hierarchically), thus making an O(n^x) problem a O(x*log(n)) problem.
+<br>
+<br>
+Thus even with a basic (albeit motivated) draft of a possible decision making system, a balanced democratic system is
+becoming apparent that can be applied to any number of domains within or across any number of communities. Given
+expected materialization of fusion energy and robotization and the resulting shift to work towards societal betterment,
+there may be a need for such systems in the future (likely several decades away once the actualities of the resource and
+social frameworks change as a result of underlying drivers).

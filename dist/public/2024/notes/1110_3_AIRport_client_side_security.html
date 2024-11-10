@@ -1,0 +1,16 @@
+Run Apps in the same process as the framework but lock down all network storage and DOM apis by polyfilling.
+Do the same thing for the UI frame.
+<br>
+<br>
+Also during the event capturing phase make sure no link ever submits data or navigates to an external URL. Do the same
+thing for form submissions.
+<br>
+<br>
+This gives the most flexibility to UI developers.
+<br>
+<br>
+Add support for main frameworks so that direct dom access is gated (a core bundle for those frameworks would be
+pre-packaged by AIRport and lazy loaded would be provided by App Developers.
+<br>
+<br>
+Initial support - Svelte.

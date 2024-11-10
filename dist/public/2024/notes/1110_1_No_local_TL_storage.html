@@ -1,0 +1,13 @@
+Probably recorded already but jik: Storage of Transaction Logs (TL)s is needed on the server to ensure correct
+processing across nodes (ensuring that records across repositories are recorded in the correct order), and for data
+analytics (of open-access repositories). Once a TL Entry (TLE) is synced it can be safely deleted from the client.
+<br>
+<br>
+Given that the regional (metro area) public servers will be in charge of syncing all Repositories (including private
+ones, which just need to be in the right order, no matter that their TLEs are client-side encrypted and secret) there is
+also no need for clients to run conflict detection. Thus there is no need to keep TLEs on the client for that reason
+either.
+<br>
+<br>
+Temporarily (off-line or until sync verification) stored TCEs shouldn't go into SqLite but be in file (IndexedDb)
+storage.

@@ -1,0 +1,76 @@
+Necessarily leaving the important national systems (and related issues) aside, besides being useful for municipal and
+regional polling (and potentially popular decision making, likely in some distant future), Votecube can also be useful
+in gathering public opinion on global issues, such as Global Warming.
+<br>
+<br>
+However dealing with gathering billions of multi-dimensional based votes on many topics presents a scaling problem. 
+This is where the newly discovered sharding system, combined with geographic distribution of regional/metro-area
+clusters can turn the O(nx)  (and with advanced reporting breakdowns O (n ^ x) problem into an O(x * log(n)) problem
+because Turbase can collectively act like a persistence/processing tree (having an alike effect on the eventually needed
+advanced reporting).
+<br>
+<br>
+ScyllaDB has a very efficient counter subsystem.  However scaling it and accounting for usage spikes is
+(potentially extremely) resource prohibitive and necessarily centralized data processing and storage.
+<br>
+<br>
+Following implementation can reduce resource requirements from O(n ^ x) to (roughly) O(x * log (n * X)) with X being the
+number of nodes (given that advanced reporting would be done on per-node basis and aggregated up):
+<br>
+<br>
+Having a 2-3 tier tree of processing sub-systems (municipal, metro-area, regional), needing no more than preferred
+minimal requirements.
+<br>
+<br>
+Shard (already metro-area/regional and potentially municipal level assigned) users by their GUID to a given node.  For
+all votes ( sum(dimension(a-z), 3)  dimension=0-100 ) for a given user a given node will be processing and collecting
+counters.  It will subsequently do advanced reporting on all users assigned to that node (greatly reducing n and x given
+a small number of users and only a fraction of the processing filters relevant to that community).
+<br>
+<br>
+Periodically batch the counter updates based on the incoming vote volume (once per minute), thus greatly reducing any
+usage spikes and reducing the per-node counter updates to once per minute/vote.  With aggregations done in services,
+backed up by re-send capability built into client (local db driven) nodes. Batching further reduces n to C (constant).
+<br>
+<br>
+After batches are processed then up the chain to the next tier.  Where they are once again aggregated (and advanced
+reporting, performed on first tier nodes in off hours for that region is also aggregated in off hours).
+<br>
+<br>
+All regional level (2-3 tier) systems (again not needing much resources) continuously share the Global (not their own)
+vote counter aggregations (and within 24 hours advanced reporting results) with all other regional systems (providing
+redundancy).  Once the counters stabilize they can be sent down to (1-2) tier sub-systems to be served for reading (and
+can further be continuously optimized into a single file, per page data sets for O(1), timestamp+sequence and WebSocket
+per shared-email gated, and one request per WebSocket per version/minute throttled read efficiency).  And assuming
+dedicated to voting sub-clusters, only tier 1 nodes need to be publically accessible, safeguarding the tier 2 (and 3 if
+one is needed), more centralized and vulnerable to attack nodes.  Additional per-IP (with repeated invalid calls)
+blacklisting can further insulate nodes from any DDOS attacks.  And of course, to due the distributed nature of Turbase
+even taking down a tier 1 cluster only affects a small portion of the overall network.
+<br>
+<br>
+Thus it is possible to within several minutes hold quick global opinion polls  and provide optimally performing (updated
+by the minute) read access to core counters (and within 48 hours advanced statistics) to the entire population of the
+globe.
+<br>
+<br>
+Of course the nature of AIRport ensures that a given email did indeed perform a given vote because it's signed with the
+private key of the user, which only the client knows (given that the user keyring is only decrypted on their client
+device).   The willingness of regional/local governments to register a given email to a given voter (and share those
+registrations across their region/globe for verification) as well as the timing of such implementations is entirely up
+to the regions/nations where such registration may or may not be performed, likely in some distant future with some
+regions leading and others taking (potentially much) longer time to do so.
+<br>
+<br>
+Cross region validation can be performed using a required subset of anonymized attributes used by Turbase of its
+incentive system.  The combination of age group, gender and ethnicity (of voters with proven existing vote history) will
+give fine grained enough statistical breakdown that, when combined with metro/area region level, publicly known
+statistics and likely segment distributions for trained AI (or statistical algorithms) to near-real-time validate
+regional results.  For voting with decision making weight, an in-person proof of Id with a standardized validation
+system guarantee the accuracy of the anonymized attributes.  Governmental implementation of such a system (with a
+parallel independent audit system) would allow for official and rigging-free polling.
+<br>
+<br>
+So, in terms of storage what you have is an interconnected network of multi-branch trees.  Literarily speaking: "If you
+want to know what people think, make a cube and 'knock it' down the tree and if your question is globally relevant
+you'll know what all of the interested people on the planet think, in 5 minutes."  And with multi-generational record of
+past opinions you'll know where things are coming from and what is the default forward direction. :)

@@ -1,0 +1,16 @@
+Full text search will rely on a hierarchy of repositories and will be done on the client side. The idea is to correctly
+(sub-)group repositories and do an index on the metadata of each (sub-)group. Top level search will return the top level
+groups (categories, organizations, etc) in all indexes. Subsequent searches would be done on navigation of that group
+and within that group (on its sub-groups until the are the final source repositories).
+<br>
+<br>
+The global text search can be provided by search engines, further enabled by SSR of public repositories. All initial
+Apps will be written in Svelte and thus a simple SSR server will be sufficient. This also means that Yugabyte will also
+be used for read-queries but only for SSR. Naturally this will reduce latency on first page loads.
+<br>
+<br>
+When a user enters value into the search bar, an iframe (or if not possible a tab) with Google search can be shown that
+will match the search, filtered down to turbase.app. Then when the user navigates in that frame/tab on page bootstrap
+(of the loaded turbase.app page) a script will be run that will detect if this app can be loaded in the existing UI
+iframe and if it can it will be. The idea is that if the underlying components and framework are already loaded, it's
+simpler to just fetch the data and re-render the UI on the client (needs to be proven).

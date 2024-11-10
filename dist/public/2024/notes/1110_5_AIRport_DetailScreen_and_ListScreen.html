@@ -1,0 +1,45 @@
+Manual Repository creation is very flexible but is difficult and error prone. And there are two use-cases that likely
+cover 80% of all scenarios and vast majority of scenarios for simple apps:
+<br>
+<ul>
+    <li>Showing a screen for a particular related set of records</li>
+    <li>Showing a listing summary of those record-sets. This summary is often chunked by a fixed number of records (ex.
+        25, 50, 100)</li>
+</ul>
+These scenarios fit perfectly well with the goals of AIRport - a given Repository covering everything that is needed to
+render a given screen. And, these scenarios can have a performant implementation in TB.
+<br>
+<br>
+The implementation starts with annotating a given query with @DetailScreen(name="THE_SCREEN_NAME"). This query
+determines the boundaries of a Repository and always returns a single root record. To make it work a corresponding a
+'screenName' parameter to the ThatRootRecordDao.saveScreen(rootRecord, "THE_SCREEN_NAME") is provided (vs
+".save(rootRecord)"). At development time the save call is compared to the corresponding query and is evaluated for
+completion. If there are records that are missing a (development time) warning is issued. Optionally a
+"required({...subQuery})" function or equivalent can be added that will throw an error if that part of the data tree is
+missing from the ".save" parameters (or from the query results).
+<br>
+<br>
+Similarly a @ListScreen(name="THE_SCREEN_NAME") will provide a way to automatically maintain a listing repository when
+changes to the related @DetailScreen Repositories are made. @ListScreen will be driven by query parameters that
+determine which @DetailScreen records are in it. When @ListScreen query is created the metadata for its corresponding
+@DetailScreen record is modified and the marked query parameters are added. In addition to that the fields present in
+the @ListScreen query results are also tracked. Thus when a detailed screen Repository is changed the corresponding
+@ListingScreen is updated.
+<br>
+<br>
+Build time checks can verify that a given @ListScreen query only references data from a given @DetailScreen.
+<br>
+<br>
+@ListingScreen will be stored in chronological order all will break up into pages of listings as records come in. This
+enabled loading very long listings in chunks. Additional pre-built filters are also possible, at the cost of additional
+processing time & storage (and needing to maintain an insert/delete tree structure).
+<br>
+<br>
+Along with TL storage, computed queryResult JSON representations (for open Repositoriesonly) can also be stored
+(whenever a List or a Detail is added or modified). The front-end server can maintain an LRE cache of most frequently
+used lists and details allowing for O(1) access time during usage spies for specific topics (this works because of
+Repository GUID based sharding of front-end servers).
+<br>
+<br>
+Thus, @DetailScreen and @ListScreen allow to build Apps that do not explicitly deal with the concepts Repository and do
+not require custom modification logic (are purely query based).
