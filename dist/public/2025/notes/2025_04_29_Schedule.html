@@ -1,0 +1,58 @@
+To continue the push towards release of <a href="https://github.com/Past-The-War-Earth/the-struggle-continues-anew.xyz/">TSCA</a> (and eventually Votecube) the following blog release schedule is proposed:
+<br>
+<br>
+Beyond Decentralized and Data Independence Network sites will be bundled with the Turbase site and run on Cloudflare - Turbase will always only have static resources on it (and a descriptor of all public Turbase servers).
+<br>
+<br>
+1.  2025.08.16 - Initial Turbase servers.  Minimal "Droplets" running Bun and SqLite and storing data in NFS (deployed to Digital Ocean or alike for 4-6$/month).  No need for a Column Database or Full Text Search Engine - just the core logic and persistence necessary.  This fits the initial goal of a family organizer and will support up to 40 read/write + 40 read simulation participants for TSCA (requiring two servers).
+<br>
+<br>
+2.  2025.09.16 - Server-side apps.  To be developed eventually for security - not needed for TSCA and built in modules (Votecube, Sapoto, Organizer):  Transpile TypeScript source into a JSON descriptor.  Then at App initialization time compile it to JavaScript.  This ensures that no unsafe code is run.
+<br>
+<br>
+3. 2025.10.16 - Client-side UIs.  For security and interoperability - transpile Svelte TypeScript and HTML into descriptors and compile the descriptors in-client at run-time (and store compiled Apps and UIs in IndexedDb for quick lookup subsequently).
+<br>
+<br>
+4. 2025.11.16 - enforcing code quality.  At transpilation step code quality will be enforced, ensuring usage of proper validation, decision trees and correct logic grouping (UIs containing only presentation logic, app logic being in Apps, split between well defined block types a la BPMN and eventually presentable via a graphical UI while still being plain code).
+<br>
+<br>
+5. 2025.12.16 - Server-side caching.  Cacheable queries will be simple and tailored towards seeing the latest records of a given set.  These will be put into an LRU cache in the App server, keyed by each object, indexed and maintained by timestamps.  For TSCA, when all participant clients have received a given record (and acknowledged its reception) that record will be cleaned up from the LRU cache.  For other apps a page-view based limit can be set to maintain only the needed number of records.  Thus, simple SQL queries will be parsed and executed in memory and use in-memory cache to serve frequent requests.  Going forward, given that Votecube servers are geographically partitioned and a single (optionally multi-CPU-core) App server will be sufficient for a geographical partition (and can be re-started, with a clear cache if it goes down).  This allows to reduce resource usage, allowing for fast operation with minimal resources.  This also works because clients are thick and don't need a server to operate on already loaded data.
+<br>
+<br>
+Coding to resume on 2025.12.25
+<br>
+<br>
+6. 2026.02.15 -  User connectivity. For the initial version of TSCA up to 40 participants will be involved on each side (1 + 3 + 9 + 27).  They will have hierarchically controlled write access to variously split repositories.  The opposite side will have read access to the repositories that contain physical locations and other information visually or audibly derivable.  Going forward such a setup will be used in other applications (thinking of Orb Fleet where national partitioning will gate certain information).
+<br>
+<br>
+7. 2026.05.16 - running TSCA on server.  If a participant disconnects at any point during a collaborative simulation a server side rules engine will step in as an active party in his place.  This will also fit the needs of future server side App logic for all Apps.
+<br>
+<br>
+8. 2026.08.16 - rate limiting Apps and setting priority.  During running of TSCA simulations all remaining Apps will be downgraded in priority with a potential of requests being denied if no spare cycles are left after TSCA.  This implementation will be used for Votecube during active voting days.
+<br>
+<br>
+9. 2026.11.16 - server interconnectability.  Servers will be connected in a "network of forests" structures with each "forest" representing a Metro Area (this is how Votecube will work and the rest of the Apps will provide the same global query feature).  Most capable servers will be chosen to be trunks and will be redundantly connected to "trunks" of other "forests".
+<br>
+<br>
+10.  2027.03.01 - TBD
+<br>
+<br>
+11.  2027.07.01 - TBD
+<br>
+<br>
+12.  2027.11.01 - TBD
+<br>
+<br>
+13.  2028.04.01 - TBD
+<br>
+<br>
+14.  2028.10.01 - TBD
+<br>
+<br>
+15.  2029.07.01 - TBD
+<br>
+<br>
+No posts in 2030
+<br>
+<br>
+16. 2031.01.01 - marks initial release of TSCA
