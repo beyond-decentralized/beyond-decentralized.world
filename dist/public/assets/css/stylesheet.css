@@ -162,14 +162,15 @@ img {
 
 a,
 a:focus {
-  color: orange;
+  color: black;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  text-decoration: underline;
 }
 
 a:hover,
 a:active {
-  color: orange;
+  color: black;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -639,8 +640,8 @@ blockquote,
 
 /* Background Dark */
 .bg-dark {
-  background-color: rgb(50, 60, 130) !important;
-  background: linear-gradient(180deg, rgba(50,60,130,1) 0%, rgba(50,160,230,1) 70%, rgba(255,130,70,1) 100%);
+  background-color: rgb(135, 205, 235) !important;
+  background: linear-gradient(180deg, rgba(135,206,235,1) 0%, rgba(135,205,255,1) 70%, rgba(255,255,135,1) 100%);
 }
 
 .bg-dark-1 {
@@ -749,7 +750,7 @@ hr {
 }
 
 .idocs-navigation .nav .nav .nav-item .nav-link.active:after {
-  border-color: orange;
+  border-color: yellow;
   border-width: 2px;
 }
 
@@ -802,7 +803,7 @@ hr {
 }
 
 .idocs-navigation.docs-navigation-dark .nav .nav .nav-item .nav-link.active:after {
-  border-color: orange;
+  border-color: yellow;
 }
 
 /*=== 3.2 Docs Content ===*/
@@ -988,7 +989,7 @@ hr {
 
 .primary-menu ul.navbar-nav>li:hover>a:not(.btn),
 .primary-menu ul.navbar-nav>li>a.active:not(.btn) {
-  color: orange;
+  color: yellow;
   text-decoration: none;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1008,7 +1009,7 @@ hr {
 }
 
 .primary-menu ul.navbar-nav>li.dropdown .dropdown-menu li:hover>a:not(.btn) {
-  color: orange;
+  color: yellow;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -1195,12 +1196,12 @@ hr {
 }
 
 .primary-menu.navbar-dropdown-primary ul.navbar-nav>li.dropdown .dropdown-menu {
-  background-color: orange;
+  background-color: yellow;
   color: #fff;
 }
 
 .primary-menu.navbar-dropdown-primary ul.navbar-nav>li.dropdown .dropdown-menu .dropdown-menu {
-  background-color: orange;
+  background-color: yellow;
 }
 
 .primary-menu.navbar-dropdown-primary ul.navbar-nav>li.dropdown:hover>a:after {
@@ -1400,11 +1401,11 @@ hr {
 }
 
 .navbar-expand-none.navbar-dropdown-primary .navbar-collapse {
-  background-color: orange;
+  background-color: yellow;
 }
 
 .navbar-expand-none.navbar-dropdown-primary ul.navbar-nav>li.dropdown .dropdown-menu .dropdown-menu {
-  background-color: orange;
+  background-color: yellow;
 }
 
 .navbar-expand-none.navbar-dropdown-dark ul.navbar-nav li {
@@ -1534,11 +1535,11 @@ hr {
   }
 
   .navbar-expand-sm.navbar-dropdown-primary .navbar-collapse {
-    background-color: orange;
+    background-color: yellow;
   }
 
   .navbar-expand-sm.navbar-dropdown-primary ul.navbar-nav>li.dropdown .dropdown-menu .dropdown-menu {
-    background-color: orange;
+    background-color: yellow;
   }
 
   .navbar-expand-sm.navbar-dropdown-dark ul.navbar-nav li {
@@ -1669,11 +1670,11 @@ hr {
   }
 
   .navbar-expand-md.navbar-dropdown-primary .navbar-collapse {
-    background-color: orange;
+    background-color: yellow;
   }
 
   .navbar-expand-md.navbar-dropdown-primary ul.navbar-nav>li.dropdown .dropdown-menu .dropdown-menu {
-    background-color: orange;
+    background-color: yellow;
   }
 
   .navbar-expand-md.navbar-dropdown-dark ul.navbar-nav li {
@@ -1804,11 +1805,11 @@ hr {
   }
 
   .navbar-expand-lg.navbar-dropdown-primary .navbar-collapse {
-    background-color: orange;
+    background-color: yellow;
   }
 
   .navbar-expand-lg.navbar-dropdown-primary ul.navbar-nav>li.dropdown .dropdown-menu .dropdown-menu {
-    background-color: orange;
+    background-color: yellow;
   }
 
   .navbar-expand-lg.navbar-dropdown-dark ul.navbar-nav li {
@@ -1939,11 +1940,11 @@ hr {
   }
 
   .navbar-expand-xl.navbar-dropdown-primary .navbar-collapse {
-    background-color: orange;
+    background-color: yellow;
   }
 
   .navbar-expand-xl.navbar-dropdown-primary ul.navbar-nav>li.dropdown .dropdown-menu .dropdown-menu {
-    background-color: orange;
+    background-color: yellow;
   }
 
   .navbar-expand-xl.navbar-dropdown-dark ul.navbar-nav li {
@@ -2059,7 +2060,7 @@ hr {
 }
 
 .accordion:not(.accordion-alternate) .card-header a {
-  background-color: orange;
+  background-color: yellow;
   color: #fff;
 }
 
@@ -2264,11 +2265,11 @@ hr {
 
 .nav:not(.nav-pills) .nav-item .nav-link.active,
 .nav:not(.nav-pills) .nav-item .nav-link:hover {
-  color: orange;
+  color: yellow;
 }
 
 .nav-pills .nav-link:not(.active):hover {
-  color: orange;
+  color: yellow;
 }
 
 .nav-pills .nav-link.active,
@@ -2325,7 +2326,7 @@ hr {
   height: 2px;
   width: 100%;
   content: ' ';
-  background-color: orange;
+  background-color: yellow;
   display: block;
   position: absolute;
   bottom: -3px;
@@ -2335,7 +2336,7 @@ hr {
 }
 
 .nav-tabs .nav-item .nav-link:not(.active):hover {
-  color: orange;
+  color: yellow;
 }
 
 .nav-tabs.flex-column {
@@ -2363,7 +2364,7 @@ hr {
 
 .nav-tabs.flex-column .nav-item .nav-link.active {
   background-color: transparent;
-  color: orange;
+  color: yellow;
 }
 
 .nav-tabs.flex-column .nav-item .nav-link.active:after {
@@ -2713,7 +2714,7 @@ hr {
 }
 
 #footer .nav .nav-item .nav-link:focus {
-  color: orange;
+  color: yellow;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -2727,7 +2728,7 @@ hr {
 }
 
 #footer .nav .nav-link:hover {
-  color: orange;
+  color: yellow;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -2743,7 +2744,7 @@ hr {
 }
 
 #footer .footer-copyright .nav .nav-link:hover {
-  color: orange;
+  color: yellow;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -2896,7 +2897,7 @@ hr {
 }
 
 #back-to-top:hover {
-  background-color: orange;
+  background-color: yellow;
   -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
   -webkit-transition: all 0.3s ease-in-out;
@@ -3233,8 +3234,8 @@ button.bg-primary:hover {
 }
 
 .btn-primary {
-  background-color: orange;
-  border-color: orange;
+  background-color: yellow;
+  border-color: yellow;
 }
 
 .btn-primary:hover {
@@ -3269,15 +3270,15 @@ button.bg-primary:hover {
 .btn-outline-primary,
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .btn-outline-primary:not(:disabled):not(.disabled):active {
-  color: orange;
-  border-color: orange;
+  color: yellow;
+  border-color: yellow;
 }
 
 .btn-outline-primary:hover,
 .btn-outline-primary:not(:disabled):not(.disabled).active:hover,
 .btn-outline-primary:not(:disabled):not(.disabled):active:hover {
-  background-color: orange;
-  border-color: orange;
+  background-color: yellow;
+  border-color: yellow;
   color: #fff;
 }
 
@@ -3297,7 +3298,7 @@ button.bg-primary:hover {
 .nav-pills .show>.nav-link,
 .dropdown-item.active,
 .dropdown-item:active {
-  background-color: orange;
+  background-color: yellow;
 }
 
 .page-item.active .page-link,
@@ -3305,17 +3306,17 @@ button.bg-primary:hover {
 .custom-control-input:checked~.custom-control-label::before,
 .custom-checkbox .custom-control-input:checked~.custom-control-label:before,
 .custom-control-input:checked~.custom-control-label:before {
-  background-color: orange;
-  border-color: orange;
+  background-color: yellow;
+  border-color: yellow;
 }
 
 .list-group-item.active {
-  background-color: orange;
-  border-color: orange;
+  background-color: yellow;
+  border-color: yellow;
 }
 
 .page-link {
-  color: orange;
+  color: yellow;
 }
 
 .page-link:hover {

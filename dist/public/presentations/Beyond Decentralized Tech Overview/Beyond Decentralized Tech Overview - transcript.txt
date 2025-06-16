@@ -3,7 +3,7 @@ Slide 1.
 Hello, I'm Artem Shamsutdinov and here is a brief introduction of 
 Beyond Decentralized technology stack.
 
-Beyond Decentralized is a new non-profit company meant to facilitate 
+Beyond Decentralized is meant to facilitate 
 creation of open source software.
 
 
