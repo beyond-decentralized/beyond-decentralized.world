@@ -10,17 +10,13 @@
   <rect width="500" height="500" style="paint-order: stroke markers; fill: rgb(135, 206, 235);" transform="matrix(1, 0, 0, 1, 0, 0)"/>
   <g transform="matrix(1, 0, 0, 1, 3, 0)">
     <g transform="matrix(1, 0.000001, 0.000001, 1, 0.878242, -3.82177)" style="transform-origin: 259.704px 250.35px;">
-      <path d="M 18.921 5.164 Q 19.22 -1.475 19.518 5.164 L 26.022 149.951 Q 26.32 156.59 25.724 156.59 L 12.715 156.59 Q 12.119 156.59 12.417 149.951 Z" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(255, 165, 0); stroke: rgb(255, 165, 0); stroke-width: 1; transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0.000053, -1, 1, -0.004432, -0.147073, 91.980052)" bx:shape="triangle 12.119 -1.475 14.201 158.065 0.5 0.042 1@bef6459a"/>
-      <path d="M 18.921 5.164 Q 19.22 -1.475 19.518 5.164 L 26.022 149.951 Q 26.32 156.59 25.724 156.59 L 12.715 156.59 Q 12.119 156.59 12.417 149.951 Z" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(255, 165, 0); stroke: rgb(255, 165, 0); stroke-width: 1; transform-origin: 19.22px 79.217px;" transform="matrix(0.000053, -1, 1, -0.004432, -0.492229, 118.434659)" bx:shape="triangle 12.119 -1.475 14.201 158.065 0.5 0.042 1@bef6459a"/>
-      <path d="M 18.921 5.164 Q 19.22 -1.475 19.518 5.164 L 26.022 149.951 Q 26.32 156.59 25.724 156.59 L 12.715 156.59 Q 12.119 156.59 12.417 149.951 Z" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(255, 165, 0); stroke: rgb(255, 165, 0); stroke-width: 1; transform-origin: 19.22px 79.217px;" transform="matrix(0.000053, -1, 1, -0.004432, 0.067256, 224.731156)" bx:shape="triangle 12.119 -1.475 14.201 158.065 0.5 0.042 1@bef6459a"/>
-      <path d="M 18.921 5.164 Q 19.22 -1.475 19.518 5.164 L 26.022 149.951 Q 26.32 156.59 25.724 156.59 L 12.715 156.59 Q 12.119 156.59 12.417 149.951 Z" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(255, 165, 0); stroke: rgb(255, 165, 0); stroke-width: 1; transform-origin: 19.22px 79.217px;" transform="matrix(0.000053, -1, 1, -0.004432, 0.327933, 251.873857)" bx:shape="triangle 12.119 -1.475 14.201 158.065 0.5 0.042 1@bef6459a"/>
-      <path d="M 23.267 1.107 Q 23.634 -0.316 24.001 1.107 L 31.998 32.144 Q 32.365 33.567 31.632 33.567 L 15.636 33.567 Q 14.903 33.567 15.27 32.144 Z" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(255, 255, 0); stroke: rgb(255, 255, 0);" transform="matrix(-0.001973, 0.99999805, -1.0000069, 0.00251203, 237.62756348, 147.55635071)" bx:shape="triangle 14.903 -0.316 17.462 33.883 0.5 0.042 1@22e65b02"/>
+      <path d="M 18.921 5.164 Q 19.22 -1.475 19.518 5.164 L 26.022 149.951 Q 26.32 156.59 25.724 156.59 L 12.715 156.59 Q 12.119 156.59 12.417 149.951 Z" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(255, 165, 0); stroke: rgb(4, 217, 255); stroke-width: 5; transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0.000053, -1, 1, -0.004432, 0.276424, 92.768318)" bx:shape="triangle 12.119 -1.475 14.201 158.065 0.5 0.042 1@bef6459a"/>
+      <path d="M 18.921 5.164 Q 19.22 -1.475 19.518 5.164 L 26.022 149.951 Q 26.32 156.59 25.724 156.59 L 12.715 156.59 Q 12.119 156.59 12.417 149.951 Z" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(255, 165, 0); stroke: rgb(4, 217, 255); stroke-width: 5; transform-origin: 19.22px 79.217px;" transform="matrix(0.000053, -1, 1, -0.004432, -0.492238, 118.011214)" bx:shape="triangle 12.119 -1.475 14.201 158.065 0.5 0.042 1@bef6459a"/>
+      <path d="M 18.921 5.164 Q 19.22 -1.475 19.518 5.164 L 26.022 149.951 Q 26.32 156.59 25.724 156.59 L 12.715 156.59 Q 12.119 156.59 12.417 149.951 Z" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(255, 165, 0); stroke: rgb(4, 217, 255); stroke-width: 5; transform-origin: 19.22px 79.217px;" transform="matrix(0.000053, -1, 1, -0.004432, 0.067245, 225.731171)" bx:shape="triangle 12.119 -1.475 14.201 158.065 0.5 0.042 1@bef6459a"/>
+      <path d="M 18.921 5.164 Q 19.22 -1.475 19.518 5.164 L 26.022 149.951 Q 26.32 156.59 25.724 156.59 L 12.715 156.59 Q 12.119 156.59 12.417 149.951 Z" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(255, 165, 0); stroke: rgb(4, 217, 255); stroke-width: 5; transform-origin: 19.22px 79.217px;" transform="matrix(0.000053, -1, 1, -0.004432, 0.074542, 250.877946)" bx:shape="triangle 12.119 -1.475 14.201 158.065 0.5 0.042 1@bef6459a"/>
       <rect x="66.109" y="134.936" width="136.977" height="17.278" style="stroke: rgb(255, 255, 255); fill-rule: nonzero; paint-order: fill; fill: rgb(255, 255, 255);" transform="matrix(0.999997, -0.002256, -0.002221, 1.000008, 16.481541, 28.042849)"/>
-      <path d="M 23.267 1.107 Q 23.634 -0.316 24.001 1.107 L 31.998 32.144 Q 32.365 33.567 31.632 33.567 L 15.636 33.567 Q 14.903 33.567 15.27 32.144 Z" style="fill-rule: nonzero; paint-order: stroke; stroke: rgb(255, 255, 0); fill: rgb(255, 255, 0);" transform="matrix(-0.001973, 0.99999805, -1.0000069, 0.00251203, 237.83561707, 173.17529297)" bx:shape="triangle 14.903 -0.316 17.462 33.883 0.5 0.042 1@22e65b02"/>
       <rect x="66.197" y="154.45" width="136.977" height="17.278" style="stroke: rgb(255, 255, 255); fill-rule: nonzero; paint-order: fill; fill: rgb(255, 255, 255);" transform="matrix(0.999997, -0.002256, -0.002221, 1.000008, 16.636776, 34.123634)"/>
-      <path d="M 23.267 1.107 Q 23.634 -0.316 24.001 1.107 L 31.998 32.144 Q 32.365 33.567 31.632 33.567 L 15.636 33.567 Q 14.903 33.567 15.27 32.144 Z" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(255, 255, 0); stroke: rgb(255, 255, 0);" transform="matrix(-0.001973, 0.99999805, -1.0000069, 0.002512, 237.43777466, 280.38369751)" bx:shape="triangle 14.903 -0.316 17.462 33.883 0.5 0.042 1@22e65b02"/>
       <rect x="66.109" y="134.936" width="136.977" height="17.278" style="stroke: rgb(255, 255, 255); fill-rule: nonzero; paint-order: fill; fill: rgb(255, 255, 255);" transform="matrix(0.999997, -0.002256, -0.002221, 1.000008, 16.291662, 160.868927)"/>
-      <path d="M 23.267 1.107 Q 23.634 -0.316 24.001 1.107 L 31.998 32.144 Q 32.365 33.567 31.632 33.567 L 15.636 33.567 Q 14.903 33.567 15.27 32.144 Z" style="fill-rule: nonzero; paint-order: stroke; stroke: rgb(255, 255, 0); fill: rgb(255, 255, 0);" transform="matrix(-0.001973, 0.99999805, -1.0000069, 0.002512, 237.64584351, 306.00360107)" bx:shape="triangle 14.903 -0.316 17.462 33.883 0.5 0.042 1@22e65b02"/>
       <rect x="66.197" y="154.45" width="136.977" height="17.278" style="stroke: rgb(255, 255, 255); fill-rule: nonzero; paint-order: fill; fill: rgb(255, 255, 255);" transform="matrix(0.999997, -0.002256, -0.002221, 1.000008, 16.44689, 166.949722)"/>
       <path d="M 132.001 -55.84 L 261.408 96.164 L 2.594 96.164 L 132.001 -55.84 Z" style="fill-rule: nonzero; paint-order: stroke; stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255);" transform="matrix(0.00109, 0.99999941, -0.99999941, 0.00109, 220.95527649, 118.23596191)" bx:shape="triangle 2.594 -55.84 258.814 152.004 0.5 0 1@5c616451"/>
       <rect x="87.35" y="120.6" width="37.269" height="259.5" style="stroke: rgb(255, 255, 255); fill-rule: nonzero; paint-order: fill; fill: rgb(255, 255, 255);"/>
@@ -36,12 +32,102 @@
       <text style="fill: rgb(255, 255, 255); font-family: Artifika; font-size: 30px; letter-spacing: 2.5px; word-spacing: 10px; white-space: pre;" x="80.667" y="43.876"><textPath href="#path-0">FAIR DATA OWNERSHIP</textPath></text>
       <path d="M 470 250 A 220 220 0 0 1 250 470 A 220 220 0 0 1 30 250 A 220 220 0 0 1 250 30 A 220 220 0 0 1 470 250 Z" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); fill-opacity: 0; paint-order: stroke; stroke-opacity: 0;" id="path-0"/>
     </g>
-    <g style="transform-origin: 241.289px 235.024px;" transform="matrix(0.951057, 0.309017, -0.309017, 0.951057, 0.162148, 0.15741)">
+    <g style="transform-origin: 241.289px 235.024px;" transform="matrix(0.951057, 0.309017, -0.309017, 0.951057, -0.049581, -1.324705)">
       <path d="M 469.737 250.15 C 469.737 371.653 371.24 470.15 249.737 470.15 C 128.234 470.15 29.737 371.653 29.737 250.15 C 29.737 128.647 128.234 30.15 249.737 30.15 C 371.24 30.15 469.737 128.647 469.737 250.15 Z" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-box: fill-box; transform-origin: 50% 50%; fill-opacity: 0; stroke-opacity: 0;" id="path-1" transform="matrix(0.999391, -0.0349, 0.0349, 0.999391, -0.000001, 0)"/>
       <text style="fill: rgb(255, 255, 255); font-family: Artifika; font-size: 23px; letter-spacing: 2.5px; word-spacing: 8.3px; white-space: pre; transform-box: fill-box; transform-origin: 246.371px 252.473px;" transform="matrix(0.999848, 0.017452, -0.017452, 0.999848, 0.000017, 0.000019)" x="-12.614" y="490.357"><textPath href="#path-1">INDEPENDENT SOFTWARE DEVELOPMENT</textPath></text>
       <text style="fill: rgb(255, 255, 255); font-family: Artifika; font-size: 23px; white-space: pre; transform-box: fill-box; transform-origin: 9.61443px 2.56667px;" transform="matrix(0.999391, -0.0349, 0.0349, 0.999391, -0.313739, -7.733999)"><textPath href="#path-1">I</textPath></text>
       <text style="fill: rgb(255, 255, 0); font-family: Artifika; font-size: 44px; line-height: 60.7999px; white-space: pre;" transform="matrix(0.951057, -0.309017, 0.309017, 0.951057, 120.031984, 126.125139)">Beyond</text>
       <text style="fill: rgb(255, 255, 0); font-family: Artifika; font-size: 38px; line-height: 63.9999px; white-space: pre;" transform="matrix(0.951057, -0.309017, 0.309017, 0.951057, 168.254016, 445.915107)">Decentralized</text>
     </g>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="434" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="434" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="427" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="427" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="420" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="420" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="413" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="413" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="406" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="406" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="399" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="399" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="392" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="392" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="385" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="385" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="378" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="378" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="371" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="371" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="364" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="364" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="357" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="357" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="350" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="350" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="343" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="343" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="336" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="336" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="329" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="329" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="322" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="322" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="315" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="315" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="308" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="308" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="301" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="301" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="294" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="294" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="287" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="287" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="280" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="280" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="273" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="273" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="266" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="266" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="259" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="259" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="252" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="252" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="245" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="245" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="238" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="238" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="231" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="231" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="224" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="224" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="217" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="217" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="210" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="210" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="203" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="203" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="196" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="196" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="189" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="189" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="182" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="182" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="175" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="175" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="168" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="168" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="161" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="161" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="154" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="154" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="147" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="147" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="140" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="140" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="133" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="133" cy="236.4" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="126" cy="259.9" rx="1.28" ry="0.54"/>
+    <ellipse style="stroke: rgb(135, 206, 235); fill: rgb(135, 206, 235);" cx="126" cy="236.4" rx="1.28" ry="0.54"/>
   </g>
 </svg>
