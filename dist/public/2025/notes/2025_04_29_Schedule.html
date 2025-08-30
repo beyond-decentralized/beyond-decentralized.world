@@ -8,13 +8,13 @@ NOTE: Beyond Decentralized and Data Independence Network sites will be bundled w
 2026 - start of the "TSCA" cycle
 <br>
 <br>
-1.  2026.03.12 - Initial Turbase servers.  Minimal "Droplets" running Bun and SqLite and storing data in NFS (deployed to Digital Ocean or alike for 4-6$/month).  No need for a Column Database or Full Text Search Engine - just the core logic and persistence necessary.  This fits the initial goal of a family organizer and will support up to 40 read/write + 40 read simulation participants for TSCA (requiring two servers).
+1.  2026.03.12 - Initial Turbase servers.  Minimal "Droplets" running GraalVM and SqLite and storing data in NFS (deployed to Digital Ocean or alike for 4-6$/month).  No need for a Column Database or Full Text Search Engine - just the core logic and persistence necessary.  This fits the initial goal of a family organizer and will support up to 40 read/write + 40 read simulation participants for TSCA (requiring two servers).
 <br>
 <br>
 2.  2026.05.24 - Server-side apps.  To be developed eventually for security - not needed for TSCA and built in modules (Votecube, Sapoto, Organizer):  Transpile TypeScript source into a JSON descriptor.  Then at App initialization time compile it to JavaScript.  This ensures that no unsafe code is run.
 <br>
 <br>
-3. 2026.08.06 - Client-side UIs.  For security and interoperability - transpile Svelte TypeScript and HTML into descriptors and compile the descriptors in-client at run-time (and store compiled Apps and UIs in IndexedDb for quick lookup subsequently).
+3. 2026.08.06 - Client-side UIs.  For security and interoperability - scan frameworkless Svelte-based, UI-framework cross-navigated web components at run-time (and store compiled Apps and UIs in IndexedDb for quick lookup subsequently).
 <br>
 <br>
 4. 2026.10.18 - enforcing code quality.  At transpilation step code quality will be enforced, ensuring usage of proper validation, decision trees and correct logic grouping (UIs containing only presentation logic, app logic being in Apps, split between well defined block types a la BPMN and eventually presentable via a graphical UI while still being plain code).
@@ -62,4 +62,5 @@ NOTE: Beyond Decentralized and Data Independence Network sites will be bundled w
 <br>
 <br>
 <br>
-?? Приблизительно 2068 ?? - Start of the "Thought Dialog & Orbfleet" cycle - Hypersonic aviation
+?? Приблизительно 2068 ?? - Start of the "Thought Dialog & Orbfleet" cycle - Hypersonic aviation - site(s) back
+up only at that point, probably, unless there is rapid movement in NLNM direction (run locally for docs).

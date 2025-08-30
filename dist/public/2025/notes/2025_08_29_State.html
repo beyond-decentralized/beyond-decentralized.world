@@ -1,0 +1,22 @@
+State
+<br><br>
+Without getting too much into the
+tentatively-scheduled-to-start-in-17+-years-from-now-register-thinking
+State management has been thought about before and now is the time to mention it.
+<br><br>
+While AIRport and its Apps are Object Oriented, every Service Object is by design
+stateless.  In fact classes are realy only used for namespacing (and I guess
+familiarity).  There were already plants to allow for pre-processed (like the
+current depencency injection - another nice wrapper) state pointers in classes but
+ultimately there will be 2 storage containers - Request and Session and any
+state that appears to be in a framework maintained object will actually be in
+one of those.  (Of course all objects will only be reachable from framework
+maintained objects).
+<br><br>
+Request scope spans multiple applications and the framework and is short lived.
+Session scope is compartmentalized in the App and is loaded as long as the
+Application is loaded.
+<br><br>
+This of course allows for file grained memory management and will likely be
+implemented several years from now, thinking of a future migration to WASM-bound
+AssemblyScript and eventually beyond.
